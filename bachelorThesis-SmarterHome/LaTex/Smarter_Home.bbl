@@ -1,0 +1,516 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{apa}
+    \entry{IoTDef1}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=2710e37a7e37dd6f0a784ffd7e37e589}{Ashton}{A\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2710e37a7e37dd6f0a784ffd7e37e589}{Ashton}{A\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2710e37a7e37dd6f0a784ffd7e37e589}
+      \strng{fullhash}{2710e37a7e37dd6f0a784ffd7e37e589}
+      \field{sortinit}{A}
+      \field{labelyear}{1999}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{IoT Definition}
+      \field{title}{IoT Definition}
+      \field{year}{1999}
+    \endentry
+    \entry{SmartThingsCompat}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=07df5dffef4f5ab75d0814584def0ef1}{Carey}{C\bibinitperiod}{Bridget}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=07df5dffef4f5ab75d0814584def0ef1}{Carey}{C\bibinitperiod}{Bridget}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{07df5dffef4f5ab75d0814584def0ef1}
+      \strng{fullhash}{07df5dffef4f5ab75d0814584def0ef1}
+      \field{sortinit}{C}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{A Renter's Guide to a Smart Home}
+      \field{title}{A Renter's Guide to a Smart Home}
+      \field{year}{2015}
+    \endentry
+    \entry{CPUComputingPower}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=8713fc4321826af2d3493cf109e8fbb0}{Chacos}{C\bibinitperiod}{Brad}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8713fc4321826af2d3493cf109e8fbb0}{Chacos}{C\bibinitperiod}{Brad}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8713fc4321826af2d3493cf109e8fbb0}
+      \strng{fullhash}{8713fc4321826af2d3493cf109e8fbb0}
+      \field{sortinit}{C}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Why Moore's Law, not mobility, is killing the PC}
+      \field{title}{Why Moore's Law, not mobility, is killing the PC}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.pcworld.com/article/2030005/why-moores-law-not-mobility-is-killing-the-pc.html
+      \endverb
+    \endentry
+    \entry{Knuth}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=fcbea740aeb72b8e941e0d4aa9f6a9c6}{Knuth}{K\bibinitperiod}{Donald\bibnamedelima E.}{D\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=fcbea740aeb72b8e941e0d4aa9f6a9c6}{Knuth}{K\bibinitperiod}{Donald\bibnamedelima E.}{D\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Redwood City, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \strng{fullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
+      \field{sortinit}{K}
+      \field{labelyear}{1998}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{The Art of Computer Programming, Volume 3: (2Nd Ed.) Sorting and Searching}
+      \field{isbn}{0-201-89685-0}
+      \field{title}{The Art of Computer Programming, Volume 3: (2Nd Ed.) Sorting and Searching}
+      \field{year}{1998}
+    \endentry
+    \entry{SamsungComputerBild}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=c09455f6152419dd138304eac1ca7e1e}{Lohmann}{L\bibinitperiod}{Rike\bibnamedelima Fabia}{R\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c09455f6152419dd138304eac1ca7e1e}{Lohmann}{L\bibinitperiod}{Rike\bibnamedelima Fabia}{R\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c09455f6152419dd138304eac1ca7e1e}
+      \strng{fullhash}{c09455f6152419dd138304eac1ca7e1e}
+      \field{sortinit}{L}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Samsung Smart Home: Den Haushalt per App steuern}
+      \field{title}{Samsung Smart Home: Den Haushalt per App steuern}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.computerbild.de/artikel/cb-News-PC-Hardware-Samsung-Smart-Home-App-Haushalt-steuern-9963297.html
+      \endverb
+    \endentry
+    \entry{TechnologicalMinimalism}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=adca05ef68d4057d1fc969745d5843d1}{Machine}{M\bibinitperiod}{Coke\bibnamedelima Vending}{C\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=adca05ef68d4057d1fc969745d5843d1}{Machine}{M\bibinitperiod}{Coke\bibnamedelima Vending}{C\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{adca05ef68d4057d1fc969745d5843d1}
+      \strng{fullhash}{adca05ef68d4057d1fc969745d5843d1}
+      \field{sortinit}{M}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{The "Only" Coke Machine on the Internet}
+      \field{title}{The "Only" Coke Machine on the Internet}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.cs.cmu.edu/~coke/history_long.txt
+      \endverb
+    \endentry
+    \entry{E-Tagging}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=1155a1864710cc1a73e7fb5721c12b1c}{Magrassi}{M\bibinitperiod}{Paolo}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1155a1864710cc1a73e7fb5721c12b1c}{Magrassi}{M\bibinitperiod}{Paolo}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1155a1864710cc1a73e7fb5721c12b1c}
+      \strng{fullhash}{1155a1864710cc1a73e7fb5721c12b1c}
+      \field{sortinit}{M}
+      \field{labelyear}{2001}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{E-Tagging: From Niches to the Supranet}
+      \field{title}{E-Tagging: From Niches to the Supranet}
+      \field{year}{2001}
+    \endentry
+    \entry{SmartObjects}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=1155a1864710cc1a73e7fb5721c12b1c}{Magrassi}{M\bibinitperiod}{Paolo}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1155a1864710cc1a73e7fb5721c12b1c}{Magrassi}{M\bibinitperiod}{Paolo}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1155a1864710cc1a73e7fb5721c12b1c}
+      \strng{fullhash}{1155a1864710cc1a73e7fb5721c12b1c}
+      \field{sortinit}{M}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{A World of Smart Objects}
+      \field{title}{A World of Smart Objects}
+      \field{year}{2002}
+    \endentry
+    \entry{cokeVendingMachineIoT}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=a73f686af8858805d9c1e0a8fd440e8a}{Martellaro}{M\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a73f686af8858805d9c1e0a8fd440e8a}{Martellaro}{M\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a73f686af8858805d9c1e0a8fd440e8a}
+      \strng{fullhash}{a73f686af8858805d9c1e0a8fd440e8a}
+      \field{sortinit}{M}
+      \field{labelyear}{1990}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{That Thing You do With Apple? Don’t Do it}
+      \field{title}{That Thing You do With Apple? Don’t Do it}
+      \field{year}{1990}
+      \verb{url}
+      \verb http://www.macobserver.com/tmo/article/that-thing-you-do-with-apple-dont-do-it
+      \endverb
+    \endentry
+    \entry{IntroToHomeKit}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=73375f627661723ff0972500cb2bc2dc}{McLaughlin}{M\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=73375f627661723ff0972500cb2bc2dc}{McLaughlin}{M\bibinitperiod}{Kevin}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Apple WWDC14}%
+      }
+      \strng{namehash}{73375f627661723ff0972500cb2bc2dc}
+      \strng{fullhash}{73375f627661723ff0972500cb2bc2dc}
+      \field{sortinit}{M}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Introduction to Homekit}
+      \field{note}{[Online; accessed 10 June 2015]}
+      \field{title}{Introduction to Homekit}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://developer.apple.com/videos/wwdc/2014/#213
+      \endverb
+    \endentry
+    \entry{FrankLeo}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=ef98c4e344f745bc51d04546dfd2c3bc}{Mielke}{M\bibinitperiod}{Frank\bibnamedelima Leo}{F\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=ef98c4e344f745bc51d04546dfd2c3bc}{Mielke}{M\bibinitperiod}{Frank\bibnamedelima Leo}{F\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ef98c4e344f745bc51d04546dfd2c3bc}
+      \strng{fullhash}{ef98c4e344f745bc51d04546dfd2c3bc}
+      \field{sortinit}{M}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{howpublished}{personal communication}
+      \field{note}{Frank Leo Mielke, IBM Employee}
+      \field{year}{2015}
+    \endentry
+    \entry{SamsungEncryption}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=731a2e9abab8956de4dd6da3a3743233}{Mottl}{M\bibinitperiod}{Judy}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=731a2e9abab8956de4dd6da3a3743233}{Mottl}{M\bibinitperiod}{Judy}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{731a2e9abab8956de4dd6da3a3743233}
+      \strng{fullhash}{731a2e9abab8956de4dd6da3a3743233}
+      \field{sortinit}{M}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Samsung Smart TV Doesn't Encrypt Voice Data: Hackers' Delight?}
+      \field{title}{Samsung Smart TV Doesn't Encrypt Voice Data: Hackers' Delight?}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.techtimes.com/articles/33805/20150219/samsung-smart-tv-doesnt-encrypt-voice-data-hackers-delight.htm
+      \endverb
+    \endentry
+    \entry{SmartTrust}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=b3b87d16b671eb906396dc245763e300}{Oliver\bibnamedelima Sack}{O\bibinitperiod\bibinitdelim S\bibinitperiod}{Carsten\bibnamedelima Röcker}{C\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b3b87d16b671eb906396dc245763e300}{Oliver\bibnamedelima Sack}{O\bibinitperiod\bibinitdelim S\bibinitperiod}{Carsten\bibnamedelima Röcker}{C\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b3b87d16b671eb906396dc245763e300}
+      \strng{fullhash}{b3b87d16b671eb906396dc245763e300}
+      \field{sortinit}{O}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{"Like a Family Member Who Takes Care of Me" Users' Anthropomorphic Representations and Trustworthiness of Smart Home Environments}
+      \field{title}{"Like a Family Member Who Takes Care of Me" Users' Anthropomorphic Representations and Trustworthiness of Smart Home Environments}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://vwhci.avestia.com/2014/004.html
+      \endverb
+    \endentry
+    \entry{websters1}{book}{}
+      \field{sortinit}{o}
+      \field{labelyear}{nodate}
+      \field{labeltitle}{Webster’s New World College Dictionary}
+      \field{title}{Webster’s New World College Dictionary}
+      \verb{url}
+      \verb http://websters.yourdictionary.com
+      \endverb
+    \endentry
+    \entry{youngRefugees}{book}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Raising young refugees' voices in Europe and beyond}
+      \field{title}{Raising young refugees' voices in Europe and beyond}
+      \field{year}{2008}
+      \verb{url}
+      \verb https://www.coe.int/t/dg4/youth/Resources/Publications/Presentations/069_Young_Refugees_Voices_en.asp
+      \endverb
+    \endentry
+    \entry{SmartThingsKick}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{SmartThings: Security Issue}
+      \field{title}{SmartThings: Security Issue}
+      \field{year}{2012}
+      \verb{url}
+      \verb https://community.smartthings.com/t/security-announcement-from-smartthings/10950
+      \endverb
+    \endentry
+    \entry{AppleHomeKitSample}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Apple HomeKit sample app}
+      \field{title}{Apple HomeKit sample app}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html
+      \endverb
+    \endentry
+    \entry{HomeKitFutureProofness}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Future Proofing Your Smart Home for Apple HomeKit Compatibility}
+      \field{title}{Future Proofing Your Smart Home for Apple HomeKit Compatibility}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.makeuseof.com/tag/future-proofing-smart-home-apple-homekit-compatibility/
+      \endverb
+    \endentry
+    \entry{BrilloHeise}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Google Brillo und Weave: Ein Android fürs Internet der Dinge}
+      \field{title}{Google Brillo und Weave: Ein Android fürs Internet der Dinge}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.heise.de/newsticker/meldung/Google-Brillo-und-Weave-Ein-Android-fuers-Internet-der-Dinge-2670592.html
+      \endverb
+    \endentry
+    \entry{Brillo}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Google Developers - Brillo}
+      \field{note}{CNET Magazine}
+      \field{title}{Google Developers - Brillo}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://developers.google.com/brillo/
+      \endverb
+    \endentry
+    \entry{SmartHome-Techcrunch}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{In The U.S. Smart Home Market, Don’t Rule Out China}
+      \field{title}{In The U.S. Smart Home Market, Don’t Rule Out China}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://techcrunch.com/2015/06/11/in-the-u-s-smart-home-market-dont-rule-out-china/#.dpvbs4:xPfK
+      \endverb
+    \endentry
+    \entry{IoT-Techcrunch}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Internet of Things - Techcrunch}
+      \field{title}{Internet of Things - Techcrunch}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://techcrunch.com/topic/subject/internet-of-things/
+      \endverb
+    \endentry
+    \entry{IoTFoundationOverview}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{IoT Foundation Ceoncept}
+      \field{title}{IoT Foundation Ceoncept}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://docs.internetofthings.ibmcloud.com/reference/concepts.html
+      \endverb
+    \endentry
+    \entry{lutron}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Lutron History}
+      \field{title}{Lutron History}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.lutron.com/en-US/Company-Info/Pages/AboutUS/OurStory.aspx
+      \endverb
+    \endentry
+    \entry{GoogleAcquiresNest}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Nest: Erstmals neue Smart-Home-Geräte seit Übernahme durch Google}
+      \field{title}{Nest: Erstmals neue Smart-Home-Geräte seit Übernahme durch Google}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.heise.de/newsticker/meldung/Nest-Erstmals-neue-Smart-Home-Geraete-seit-Uebernahme-durch-Google-2714910.html
+      \endverb
+    \endentry
+    \entry{SmartThingsCloud}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Smart Home: SmartThings wendet sich von der Cloud ab}
+      \field{title}{Smart Home: SmartThings wendet sich von der Cloud ab}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.heise.de/newsticker/meldung/Smart-Home-SmartThings-wendet-sich-von-der-Cloud-ab-2594477.html
+      \endverb
+    \endentry
+    \entry{SmartThingsSecurityIssue}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{SmartThings: Make Your World Smarter}
+      \field{title}{SmartThings: Make Your World Smarter}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.kickstarter.com/projects/smartthings/smartthings-make-your-world-smarter
+      \endverb
+    \endentry
+    \entry{WhyIsMySmartHome}{web}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Why Is My Smart Home So Fucking Dumb?}
+      \field{title}{Why Is My Smart Home So Fucking Dumb?}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://gizmodo.com/why-is-my-smart-home-so-fucking-dumb-1684949715
+      \endverb
+    \endentry
+    \entry{PatriziaGufler}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=9e7a8756ced3443b1631c5b56b812e25}{PatriziaGufler}{P\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9e7a8756ced3443b1631c5b56b812e25}{PatriziaGufler}{P\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9e7a8756ced3443b1631c5b56b812e25}
+      \strng{fullhash}{9e7a8756ced3443b1631c5b56b812e25}
+      \field{sortinit}{P}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{howpublished}{personal communication}
+      \field{note}{PatriziaGufler, IBM Employee}
+      \field{year}{2015}
+    \endentry
+    \entry{SHP}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=aa4be0b127123d7a35e7b741b8c8b1b8}{Pochanke}{P\bibinitperiod}{Steffen}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=aa4be0b127123d7a35e7b741b8c8b1b8}{Pochanke}{P\bibinitperiod}{Steffen}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{aa4be0b127123d7a35e7b741b8c8b1b8}
+      \strng{fullhash}{aa4be0b127123d7a35e7b741b8c8b1b8}
+      \field{sortinit}{P}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{CES 2014: Samsung zeigt neues Smart Home-Konzept}
+      \field{title}{CES 2014: Samsung zeigt neues Smart Home-Konzept}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.giga.de/events/ces/news/ces-2014-samsung-zeigt-neues-smart-home-konzept/
+      \endverb
+    \endentry
+    \entry{IoTDef2}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=2f3d17f78c6819cd2c5e5db2d0f97e0d}{Raji}{R\bibinitperiod}{Reza}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2f3d17f78c6819cd2c5e5db2d0f97e0d}{Raji}{R\bibinitperiod}{Reza}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2f3d17f78c6819cd2c5e5db2d0f97e0d}
+      \strng{fullhash}{2f3d17f78c6819cd2c5e5db2d0f97e0d}
+      \field{sortinit}{R}
+      \field{labelyear}{nodate}
+      \field{labeltitle}{IoT Definition}
+      \field{title}{IoT Definition}
+    \endentry
+    \entry{HomeKitComputingPower}{web}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=915d3d9e19deaca42f4083ce3af2189d}{Rossignol}{R\bibinitperiod}{Joe}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=915d3d9e19deaca42f4083ce3af2189d}{Rossignol}{R\bibinitperiod}{Joe}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{915d3d9e19deaca42f4083ce3af2189d}
+      \strng{fullhash}{915d3d9e19deaca42f4083ce3af2189d}
+      \field{sortinit}{R}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Apple's Strict Bluetooth LE Security Requirements Slowing Rollout of HomeKit Accessories}
+      \field{title}{Apple's Strict Bluetooth LE Security Requirements Slowing Rollout of HomeKit Accessories}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.macrumors.com/2015/07/22/apple-bluetooth-le-security-slowing-homekit/
+      \endverb
+    \endentry
+    \entry{FFF}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=214d0d239f3c6da8e185d3673a9cd7d8}{Sullivan}{S\bibinitperiod}{Louis}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=214d0d239f3c6da8e185d3673a9cd7d8}{Sullivan}{S\bibinitperiod}{Louis}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{214d0d239f3c6da8e185d3673a9cd7d8}
+      \strng{fullhash}{214d0d239f3c6da8e185d3673a9cd7d8}
+      \field{sortinit}{S}
+      \field{labelyear}{1930}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Form follows function}
+      \field{note}{rediscovered in 1930, originally between 1805-1852}
+      \field{title}{Form follows function}
+      \field{year}{1930}
+    \endentry
+  \endsortlist
+  \missing{SullivansRule}
+  \missing{homeFunctionality}
+\endrefsection
+\endinput
+

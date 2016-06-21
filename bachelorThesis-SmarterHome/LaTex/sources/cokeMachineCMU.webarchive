@@ -1,0 +1,175 @@
+bplist00Ñ_WebMainResourceÕ	
+_WebResourceTextEncodingName_WebResourceFrameName^WebResourceURL_WebResourceData_WebResourceMIMETypeUUTF-8_livinginternet_ext_.http://www.cs.cmu.edu/%7Ecoke/history_long.txtO%	<html><head><style></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">	       The "Only" Coke Machine on the Internet
+
+Hi, I'm the CMU CS Department Coke Machine.  A lot of folks have
+written a quite a bit about me in the last couple of years, and most
+of them can tell you more about the history of me and my family than I
+can.  Before I worked here, my Mom, and I think her Pop (heh heh :-)
+used to sell sodas to the folks in the Computer Science Department.
+In fact, my family has been here longer than most of the students, and
+even a lot of the faculty.  We moved to the third floor of the
+computer science building (Wean Hall) in the 70's.  I still sell Coke 
+in bottles, but they're big 20 oz plastic things these days.  They go
+for 50 cents each, which I guess isn't too bad considering inflation.
+And at least they don't break inside me any more like the glass ones
+used to.  What a mess...
+
+Tom Lane had the following to say about us:
+
+&gt; Since time immemorial (well, maybe 1970) the Carnegie-Mellon CS
+&gt; department has maintained a departmental Coke machine which sells
+&gt; bottles of Coke for a dime or so less than other vending machines
+&gt; around campus. As no Real Programmer can function without caffeine,
+&gt; the machine is very popular. (I recall hearing that it had the highest
+&gt; sales volume of any Coke machine in the Pittsburgh area.) The machine
+&gt; is loaded on a rather erratic schedule by grad student volunteers.
+&gt; 
+&gt; In the mid-seventies expansion of the department caused people's
+&gt; offices to be located ever further away from the main terminal room
+&gt; where the Coke machine stood. It got rather annoying to traipse down
+&gt; to the third floor only to find the machine empty - or worse, to shell
+&gt; out hard-earned cash to receive a recently loaded, still-warm Coke.
+&gt; One day a couple of people got together to devise a solution.
+&gt; 
+&gt; They installed micro-switches in the Coke machine to sense how many
+&gt; bottles were present in each of its six columns of bottles. The
+&gt; switches were hooked up to CMUA, the PDP-10 that was then the main
+&gt; departmental computer. A server program was written to keep tabs on
+&gt; the Coke machine's state, including how long each bottle had been in
+&gt; the machine. When you ran the companion status inquiry program, you'd
+&gt; get a display that might look like this:
+&gt; 
+&gt;                 EMPTY   EMPTY   1h 3m
+&gt;                 COLD    COLD    1h 4m
+&gt; 
+&gt; This let you know that cold Coke could be had by pressing the
+&gt; lower-left or lower-center button, while the bottom bottles in the two
+&gt; right-hand columns had been loaded an hour or so beforehand, so were
+&gt; still warm. (I think the display changed to just "COLD" after the
+&gt; bottle had been there 3 hours.)
+&gt; 
+&gt; The final piece of the puzzle was needed to let people check Coke
+&gt; status when they were logged in on some other machine than CMUA. CMUA's
+&gt; Finger server was modified to run the Coke status program whenever
+&gt; someone fingered the nonexistent user "coke". (For the uninitiated,
+&gt; Finger normally reports whether a specified user is logged in, and if
+&gt; so where.) Since Finger requests are part of standard ARPANET (now
+&gt; Internet) protocols, people could check the Coke machine from any CMU
+&gt; computer by saying "finger coke@cmua". In fact, you could discover the
+&gt; Coke machine's status from any machine anywhere on the Internet!  Not
+&gt; that it would do you much good if you were a few thousand miles away...
+
+(Which is not to say that I haven't had a lot of electronic visits and
+kind email from folks all over the country and all over the world.)
+
+Tom continues:
+&gt; The Coke machine programs were used for over a decade and were even
+&gt; rewritten for Unix Vaxen when CMUA was retired in the early eighties.
+&gt; The end came just a couple years ago when the local Coke bottler
+&gt; discontinued the returnable, coke-bottle-shaped bottles. The old
+&gt; machine couldn't handle the non-returnable, totally-uninspired-shape
+&gt; bottles, so it was replaced by a new vending machine. This was not long
+&gt; after the New Coke fiasco (undoubtedly the century's greatest example
+&gt; of fixing what wasn't broken). The combination of these events left CMU
+&gt; Coke lovers sufficiently disgruntled that no one has bothered to wire
+&gt; up the new machine.
+&gt; 
+&gt; I'm a little fuzzy about the dates, but I believe all the other
+&gt; details are accurate. The man page for the second-generation (Unix)
+&gt; Coke programs credits the hardware work to John Zsarnay, the software
+&gt; to David Nichols and Ivor Durham. I don't recall who did the original
+&gt; PDP-10 programs.
+
+Steve Berman then chimed in:
+
+&gt; In 1992, a second year graduate student and a full time staff member
+&gt; of the CMU CS department decided to re-connect the coke machine to the
+&gt; internet.  The new Coke Machine Interface passively senses the
+&gt; presence of bottles in the machine by the state of the "empty" light
+&gt; for each column.  The status of the nearby M&amp;M machine is also
+&gt; monitored.  The new Coke Machine Interface is based on home-brew
+&gt; optical isolators designed by John Zsarnay before he left CMU in 1991.
+&gt; The new Coke Machine Interface resides on a PC-XT class machine whose 
+&gt; host name is COKE.ELAB.CS.CMU.EDU at IP address 128.2.209.43.
+&gt; 
+&gt; The Coke Machine Interface hardware was constructed by Steve Berman who 
+&gt; also integrated the network interface software.  Greg Nelson architected 
+&gt; the machine status software and installed the interface.
+
+For the "CMU SCS 25th Anniversary Symposium," Craig Everhart, Eddie
+Caplan, and Robert Frederking described things this way:
+
+&gt; The only problem with the Coke machine was that after trekking down to
+&gt; buy something it was found to be either empty or newly-filled (and
+&gt; there are few more revolting substances that warm Coke; ideally it is
+&gt; served just slightly above freezing).  John Zsarnay created an
+&gt; interface between the six little "empty" lights and a serial port.
+&gt; These lights would flash when a bottle was dispensed and would stay
+&gt; lit when a column was empty.  Mike Kazar programmed a server machine
+&gt; to track the time of the last transition for each column.  Mike and
+&gt; Dave Nichols put together a simple network protocol by which any
+&gt; machine on the local Ethernet (and eventually on the Internet) could
+&gt; probe the current status of the Coke machine.  Dave wrote the program
+&gt; that printed out the length of time since each column had been totally
+&gt; empty.  Ivor Durham wrote the "Finger" server so that if you fingered
+&gt; the user "coke" you would get the status of the columns.  One of the
+&gt; most-used Perq/Canvas applications displayed the coldness as an array
+&gt; of bar graphs in the same layout as the selector buttons on the
+&gt; machine itself.
+
+Glenn Meter made the following comments:
+
+&gt; The first coke machine information that could be gotten over the net
+&gt; was on the old CS coke machine.  It used the old-style coke bottles,
+&gt; the tall ones which curved in and out.  The machine was near the old
+&gt; CS terminal room, just off the elevators of the third floor.  They
+&gt; used to have an Alto or two (early grahical workstations) showing the
+&gt; coke status through the glass walls of the terminal room.  So, when a
+&gt; guest was shown the facilities, one of the first things they saw was
+&gt; the status of the coke machine.
+&gt; 
+&gt; When the local coke supplier no longer could supply the old-style
+&gt; bottles, a new machine with the current squat and cylindrical bottles
+&gt; was installed.  It took a while for people to reconfigure the new
+&gt; machine so that it's status could be fingered over the net.
+&gt; 
+&gt; Around 1990, the new machine was finally connected to the net, along
+&gt; with the M&amp;M machine next to it (actually, the M&amp;M machine was
+&gt; connected first).  At first, you had to run a program called 'jf' (for
+&gt; Junk Food) to get the information.
+
+(However, my interface has changed again and at the moment much of the
+old software to access me is out of date.  Some day, some kind soul
+will put that back on line, and will give my little friend the M&amp;M
+machine a proper sensor so that his status is meaningful.)
+
+Glenn continues:
+
+&gt; Later on, someone added the interface so you could finger the machine from
+&gt; anywhere on the internet. 
+
+In fact there are now a number of machines available on the net, so
+it's not at all fair to call me the *only* Coke machine on the
+Internet. 
+
+From Bennet Yee:
+
+&gt;This is a list of various coke or other vending machines that are accessible
+&gt;via the Internet. 
+&gt;* Carnegie Mellon University coke and M&amp;M machine (Fixed!) 
+&gt;* Cocacola and Pepsi at Columbia University 
+&gt;* University of Wisconsin (appears to be just a maintennance account, not a
+&gt;  real coke-machine-on-the-net) 
+&gt;* UC Berkeley 
+&gt;* Rochester Institute of Technology, Computer Science House 
+&gt;	* Soda machine status 
+&gt;	* stock details 
+&gt;	* graphical display and coke temperatures 
+&gt;* University of Western Australia 
+&gt;* Coffee machine (Cambridge) 
+
+So, that's a bit of my history, captured by the words of those who
+have love me and and used me.
+
+The Carnegie Mellon University Computer Science Department Coke Machine
+</pre></body></html>Ztext/plain    ( F ] l ~ ” š ¯ à%í                           %ø

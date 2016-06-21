@@ -1,0 +1,1235 @@
+// ~->[DNET-1]->~
+
+// File created by an unlicensed user using Netica 5.15 on Jan 10, 2015 at 23:14:09.
+
+bnet entwurf {
+AutoCompile = TRUE;
+autoupdate = TRUE;
+whenchanged = 1420928028;
+
+visual V2 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 9;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	windowposn = (26, 68, 1462, 819);
+	scrollposn = (0, 71);
+	resolution = 72;
+	drawingbounds = (1453, 779);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0x00E1E1E1;};
+	NodeSet Nature {BuiltIn = 1; Color = 0x00F8EED2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0x00D3CAA6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0x00C8C8C8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0x00FFFFFF;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0x00FFFFB4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0x00FFBDBD;};
+	NodeSet Decision {BuiltIn = 1; Color = 0x00DEE8FF;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0x00F0FAFA;};
+	NodeSet Title {BuiltIn = 1; Color = 0x00FFFFFF;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		};
+	};
+
+node Qualifikation {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (Abitur, Meister, FHReife, Techniker);
+	parents = ();
+	probs = 
+		// Abitur       Meister      FHReife      Techniker    
+		  (0.79,        0.03000009,  0.16,        0.02000009);
+	numcases = 100;
+	whenchanged = 1420928006;
+	belief = (0.79, 0.03000009, 0.16, 0.02000009);
+	visual V2 {
+		center = (606, 102);
+		height = 2;
+		};
+	};
+
+node Studierfaehigkeitstest {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s7o0, s9o0, s8o0, s6o0, s5o0, s4o0, s3o0, s2o0, s1o0, s0o0);
+	statetitles = ("7.0", "9.0", "8.0", "6.0", "5.0", "4.0", "3.0", "2.0", "1.0", "0.0");
+	parents = (Qualifikation);
+	probs = 
+		// 7.0          9.0          8.0          6.0          5.0          4.0          3.0          2.0          1.0          0.0           // Qualifikation 
+		  (0.3333256,   0.3333256,   0.3333256,   3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6,  // Abitur        
+		   9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // Meister       
+		   0.3749983,   0.3124987,   0.125,       0.1874994,   6.249961e-7, 6.249961e-7, 6.249961e-7, 6.249961e-7, 6.249961e-7, 6.249961e-7,  // FHReife       
+		   0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6);    // Techniker     ;
+	numcases = 
+		                 // Qualifikation 
+		  (3.0001,       // Abitur        
+		   1.0001,       // Meister       
+		   16.0001,      // FHReife       
+		   1.0001);      // Techniker     ;
+	whenchanged = 1420928006;
+	belief = (0.3433255, 0.3133274, 0.3133247, 0.03000305, 3.233196e-6, 3.233196e-6, 3.233196e-6, 3.233196e-6, 3.233196e-6, 3.233196e-6);
+	visual V2 {
+		center = (150, 228);
+		height = 12;
+		};
+	};
+
+node Schultyp {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (AllgemeinbildendesGymnasium, Wirtschaftsgymnasium, TechnischesGymnasium);
+	parents = (Qualifikation);
+	probs = 
+		// Allgemeinbildend Wirtschaftsgymna TechnischesGymna  // Qualifikation 
+		  (0.7721518,   0.1265824,   0.1012659,    // Abitur        
+		   3.3333e-6,   3.3333e-6,   0.9999933,    // Meister       
+		   6.249988e-7, 6.249988e-7, 0.9999987,    // FHReife       
+		   4.999925e-6, 4.999925e-6, 0.99999);     // Techniker     ;
+	numcases = 
+		                 // Qualifikation 
+		  (79,           // Abitur        
+		   3.00003,      // Meister       
+		   16,           // FHReife       
+		   2.00003);     // Techniker     ;
+	whenchanged = 1420928006;
+	belief = (0.61, 0.1, 0.29);
+	visual V2 {
+		center = (822, 228);
+		height = 1;
+		};
+	};
+
+node Alter {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (jung, teen, teeth);
+	parents = (Qualifikation);
+	probs = 
+		// jung         teen         teeth         // Qualifikation 
+		  (0.1898735,   0.6455695,   0.164557,     // Abitur        
+		   3.3333e-6,   3.3333e-6,   0.9999933,    // Meister       
+		   0.06250051,  0.25,        0.6874993,    // FHReife       
+		   4.999925e-6, 4.999925e-6, 0.99999);     // Techniker     ;
+	numcases = 
+		                 // Qualifikation 
+		  (79,           // Abitur        
+		   3.00003,      // Meister       
+		   16,           // FHReife       
+		   2.00003);     // Techniker     ;
+	whenchanged = 1420928006;
+	belief = (0.16, 0.55, 0.29);
+	visual V2 {
+		center = (1134, 216);
+		height = 6;
+		};
+	};
+
+node Mathe {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s2o5, keine, s1o0, s2o0, s1o5, s3o0, s3o5);
+	statetitles = ("2.5", , "1.0", "2.0", "1.5", "3.0", "3.5");
+	parents = (Schultyp);
+	probs = 
+		// 2.5          keine        1.0          2.0          1.5          3.0          3.5           // Schultyp         
+		  (0.2459015,   1.639342e-7, 0.1311475,   0.2786884,   0.2295081,   0.01639359,  0.09836071,   // Allgemeinbildend 
+		   0.1,         9.999929e-7, 0.4999975,   0.2999989,   0.1,         9.999929e-7, 9.999929e-7,  // Wirtschaftsgymna 
+		   0.1034484,   0.7241365,   0.03448302,  0.0689657,   0.0689657,   3.448268e-7, 3.448268e-7); // TechnischesGymna ;
+	numcases = 
+		                 // Schultyp         
+		  (61.00007,     // Allgemeinbildend 
+		   10.00007,     // Wirtschaftsgymna 
+		   29.00007);    // TechnischesGymna ;
+	whenchanged = 1420928006;
+	belief = (0.19, 0.2099995, 0.14, 0.22, 0.17, 0.01000029, 0.06000023);
+	visual V2 {
+		center = (1254, 390);
+		height = 5;
+		link 1 {
+			path = ((909, 261), (1181, 363));
+			};
+		};
+	};
+
+node Deutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s2o0, keine, s1o0, s1o5, s2o5, s3o5, s3o0);
+	statetitles = ("2.0", , "1.0", "1.5", "2.5", "3.5", "3.0");
+	parents = (Schultyp);
+	probs = 
+		// 2.0          keine        1.0          1.5          2.5          3.5          3.0           // Schultyp         
+		  (0.2459015,   1.639342e-7, 0.1967212,   0.3278686,   0.2131147,   0.01639359,  1.639342e-7,  // Allgemeinbildend 
+		   0.1,         9.999929e-7, 0.2999989,   0.1999996,   0.3999982,   9.999929e-7, 9.999929e-7,  // Wirtschaftsgymna 
+		   0.0689657,   0.7241365,   0.0689657,   0.137931,    3.448268e-7, 3.448268e-7, 3.448268e-7); // TechnischesGymna ;
+	numcases = 
+		                 // Schultyp         
+		  (61.00007,     // Allgemeinbildend 
+		   10.00007,     // Wirtschaftsgymna 
+		   29.00007);    // TechnischesGymna ;
+	whenchanged = 1420928006;
+	belief = (0.18, 0.2099995, 0.17, 0.26, 0.17, 0.01000029, 2.999992e-7);
+	visual V2 {
+		center = (798, 426);
+		height = 9;
+		};
+	};
+
+node Staatsbuergerschaft {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (deutsch, NonEuropean, EUBuerger);
+	parents = ();
+	probs = 
+		// deutsch      NonEuropean  EUBuerger    
+		  (0.91,        0.05000009,  0.04000009);
+	numcases = 100;
+	whenchanged = 1420928006;
+	belief = (0.91, 0.05000008, 0.04000008);
+	visual V2 {
+		center = (450, 228);
+		height = 3;
+		};
+	};
+
+node Bundesland {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (Baden_Wuerttemberg, Nordrhein_Westfalen, Bayern, Sachsen, Thueringen, Bremen, Schleswig_Holstein, Hamburg, Mecklenburg_Vorpommern, Brandenburg, Sachsen_Anhalt, Niedersachsen, Rheinland_Pfalz, Saarland, Hessen, Berlin);
+	statetitles = ("Baden-Wuerttemberg", "Nordrhein-Westfalen", , , , , , , , , , , , , , );
+	parents = (Staatsbuergerschaft);
+	probs = 
+		// Baden-Wuerttembe Nordrhein-Westfa Bayern Sachsen    Thueringen   Bremen       Schleswig Holste Hamburg  Mecklenburg Vorp Brandenburg Sachsen Anhalt Niedersachsen Rheinland Pfalz Saarland Hessen  Berlin        // Staatsbuergerschaft 
+		  (0.7912075,   0.06593406,  0.06593406,  0.05494507,  0.0109891,   0.0109891,   1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7, 1.098899e-7,  // deutsch             
+		   0.3999892,   1.999936e-6, 1.999936e-6, 0.3999892,   1.999936e-6, 0.1999956,   1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6, 1.999936e-6,  // NonEuropean         
+		   0.2499925,   0.4999825,   2.4999e-6,   2.4999e-6,   0.2499925,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6,   2.4999e-6);   // EUBuerger           ;
+	numcases = 
+		                 // Staatsbuergerschaft 
+		  (91.00016,     // deutsch             
+		   5.00016,      // NonEuropean         
+		   4.00016);     // EUBuerger           ;
+	whenchanged = 1420928006;
+	belief = (0.7499979, 0.07999942, 0.06000018, 0.06999959, 0.0199999, 0.02, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7, 2.99993e-7);
+	visual V2 {
+		center = (402, 420);
+		height = 14;
+		};
+	};
+
+node Jahreseinkommen {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s0o0, s4o0, s7o0, s5o0, s9o0, s8o0, s1o0, s2o0, s3o0, s6o0);
+	statetitles = ("0.0", "4.0", "7.0", "5.0", "9.0", "8.0", "1.0", "2.0", "3.0", "6.0");
+	parents = (Deutsch, Schultyp, Bundesland);
+	probs = 
+		// 0.0          4.0          7.0          5.0          9.0          8.0          1.0          2.0          3.0          6.0           // Deutsch Schultyp         Bundesland       
+		  (0.3076907,   7.692248e-7, 0.07692326,  7.692248e-7, 0.07692326,  0.2307682,   7.692248e-7, 0.07692326,  0.1538457,   0.07692326,   // 2.0     Allgemeinbildend Baden-Wuerttembe 
+		   9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.0     Allgemeinbildend Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.0     Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Berlin           
+		   9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Berlin           
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.999955,    4.99975e-6,  4.99975e-6,  4.99975e-6,   // 2.0     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Berlin           
+		   0.2499991,   0.06250024,  6.249961e-7, 0.06250024,  6.249961e-7, 6.249961e-7, 0.125,       0.2499991,   0.2499991,   6.249961e-7,  // keine   TechnischesGymna Baden-Wuerttembe 
+		   4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,   // keine   TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Bayern           
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // keine   TechnischesGymna Sachsen          
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,     // keine   TechnischesGymna Thueringen       
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // keine   TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Berlin           
+		   1.249984e-6, 0.2499981,   0.125,       1.249984e-6, 1.249984e-6, 1.249984e-6, 0.125,       0.499995,    1.249984e-6, 1.249984e-6,  // 1.0     Allgemeinbildend Baden-Wuerttembe 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Allgemeinbildend Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Allgemeinbildend Bayern           
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,      // 1.0     Allgemeinbildend Sachsen          
+		   9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Berlin           
+		   4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,      // 1.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Berlin           
+		   0.49998,     0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,   // 1.0     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Berlin           
+		   7.142806e-7, 0.2142849,   0.07142878,  7.142806e-7, 0.07142878,  0.07142878,  0.07142878,  0.4285691,   7.142806e-7, 0.07142878,   // 1.5     Allgemeinbildend Baden-Wuerttembe 
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  0.49998,     4.99975e-6,   // 1.5     Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Bayern           
+		   3.333222e-6, 3.333222e-6, 0.3333256,   3.333222e-6, 0.3333256,   3.333222e-6, 3.333222e-6, 3.333222e-6, 0.3333256,   3.333222e-6,  // 1.5     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Thueringen       
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.5     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Berlin           
+		   4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,   // 1.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Berlin           
+		   2.499937e-6, 2.499937e-6, 0.49999,     2.499937e-6, 0.2499962,   2.499937e-6, 2.499937e-6, 2.499937e-6, 2.499937e-6, 0.2499962,    // 1.5     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Berlin           
+		   1.111099e-6, 0.4444406,   1.111099e-6, 1.111099e-6, 1.111099e-6, 0.111111,    0.111111,    1.111099e-6, 0.2222209,   0.111111,     // 2.5     Allgemeinbildend Baden-Wuerttembe 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.5     Allgemeinbildend Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.5     Allgemeinbildend Bayern           
+		   4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,   // 2.5     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Berlin           
+		   4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,      // 2.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,      // 2.5     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Baden-Wuerttembe 
+		   0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 3.5     Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Allgemeinbildend Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     Wirtschaftsgymna Berlin           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Schleswig Holste 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Hamburg          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Mecklenburg Vorp 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Brandenburg      
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Sachsen Anhalt   
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Niedersachsen    
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Rheinland Pfalz  
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Saarland         
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0     TechnischesGymna Hessen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1);         // 3.0     TechnischesGymna Berlin           ;
+	numcases = 
+		                 // Deutsch Schultyp         Bundesland       
+		  (13.0001,      // 2.0     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 2.0     Allgemeinbildend Nordrhein-Westfa 
+		   1.0001,       // 2.0     Allgemeinbildend Bayern           
+		   1e-4,         // 2.0     Allgemeinbildend Sachsen          
+		   1e-4,         // 2.0     Allgemeinbildend Thueringen       
+		   1e-4,         // 2.0     Allgemeinbildend Bremen           
+		   1e-4,         // 2.0     Allgemeinbildend Schleswig Holste 
+		   1e-4,         // 2.0     Allgemeinbildend Hamburg          
+		   1e-4,         // 2.0     Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // 2.0     Allgemeinbildend Brandenburg      
+		   1e-4,         // 2.0     Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // 2.0     Allgemeinbildend Niedersachsen    
+		   1e-4,         // 2.0     Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // 2.0     Allgemeinbildend Saarland         
+		   1e-4,         // 2.0     Allgemeinbildend Hessen           
+		   1e-4,         // 2.0     Allgemeinbildend Berlin           
+		   1.0001,       // 2.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 2.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 2.0     Wirtschaftsgymna Bayern           
+		   1e-4,         // 2.0     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 2.0     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 2.0     Wirtschaftsgymna Bremen           
+		   1e-4,         // 2.0     Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // 2.0     Wirtschaftsgymna Hamburg          
+		   1e-4,         // 2.0     Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // 2.0     Wirtschaftsgymna Brandenburg      
+		   1e-4,         // 2.0     Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // 2.0     Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // 2.0     Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // 2.0     Wirtschaftsgymna Saarland         
+		   1e-4,         // 2.0     Wirtschaftsgymna Hessen           
+		   1e-4,         // 2.0     Wirtschaftsgymna Berlin           
+		   2.0001,       // 2.0     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 2.0     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 2.0     TechnischesGymna Bayern           
+		   1e-4,         // 2.0     TechnischesGymna Sachsen          
+		   1e-4,         // 2.0     TechnischesGymna Thueringen       
+		   1e-4,         // 2.0     TechnischesGymna Bremen           
+		   1e-4,         // 2.0     TechnischesGymna Schleswig Holste 
+		   1e-4,         // 2.0     TechnischesGymna Hamburg          
+		   1e-4,         // 2.0     TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // 2.0     TechnischesGymna Brandenburg      
+		   1e-4,         // 2.0     TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // 2.0     TechnischesGymna Niedersachsen    
+		   1e-4,         // 2.0     TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // 2.0     TechnischesGymna Saarland         
+		   1e-4,         // 2.0     TechnischesGymna Hessen           
+		   1e-4,         // 2.0     TechnischesGymna Berlin           
+		   1e-4,         // keine   Allgemeinbildend Baden-Wuerttembe 
+		   1e-4,         // keine   Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // keine   Allgemeinbildend Bayern           
+		   1e-4,         // keine   Allgemeinbildend Sachsen          
+		   1e-4,         // keine   Allgemeinbildend Thueringen       
+		   1e-4,         // keine   Allgemeinbildend Bremen           
+		   1e-4,         // keine   Allgemeinbildend Schleswig Holste 
+		   1e-4,         // keine   Allgemeinbildend Hamburg          
+		   1e-4,         // keine   Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // keine   Allgemeinbildend Brandenburg      
+		   1e-4,         // keine   Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // keine   Allgemeinbildend Niedersachsen    
+		   1e-4,         // keine   Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // keine   Allgemeinbildend Saarland         
+		   1e-4,         // keine   Allgemeinbildend Hessen           
+		   1e-4,         // keine   Allgemeinbildend Berlin           
+		   1e-4,         // keine   Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // keine   Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // keine   Wirtschaftsgymna Bayern           
+		   1e-4,         // keine   Wirtschaftsgymna Sachsen          
+		   1e-4,         // keine   Wirtschaftsgymna Thueringen       
+		   1e-4,         // keine   Wirtschaftsgymna Bremen           
+		   1e-4,         // keine   Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // keine   Wirtschaftsgymna Hamburg          
+		   1e-4,         // keine   Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // keine   Wirtschaftsgymna Brandenburg      
+		   1e-4,         // keine   Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // keine   Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // keine   Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // keine   Wirtschaftsgymna Saarland         
+		   1e-4,         // keine   Wirtschaftsgymna Hessen           
+		   1e-4,         // keine   Wirtschaftsgymna Berlin           
+		   16.0001,      // keine   TechnischesGymna Baden-Wuerttembe 
+		   2.0001,       // keine   TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // keine   TechnischesGymna Bayern           
+		   1.0001,       // keine   TechnischesGymna Sachsen          
+		   1.0001,       // keine   TechnischesGymna Thueringen       
+		   1.0001,       // keine   TechnischesGymna Bremen           
+		   1e-4,         // keine   TechnischesGymna Schleswig Holste 
+		   1e-4,         // keine   TechnischesGymna Hamburg          
+		   1e-4,         // keine   TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // keine   TechnischesGymna Brandenburg      
+		   1e-4,         // keine   TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // keine   TechnischesGymna Niedersachsen    
+		   1e-4,         // keine   TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // keine   TechnischesGymna Saarland         
+		   1e-4,         // keine   TechnischesGymna Hessen           
+		   1e-4,         // keine   TechnischesGymna Berlin           
+		   8.0001,       // 1.0     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 1.0     Allgemeinbildend Nordrhein-Westfa 
+		   1.0001,       // 1.0     Allgemeinbildend Bayern           
+		   1.0001,       // 1.0     Allgemeinbildend Sachsen          
+		   1.0001,       // 1.0     Allgemeinbildend Thueringen       
+		   1e-4,         // 1.0     Allgemeinbildend Bremen           
+		   1e-4,         // 1.0     Allgemeinbildend Schleswig Holste 
+		   1e-4,         // 1.0     Allgemeinbildend Hamburg          
+		   1e-4,         // 1.0     Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // 1.0     Allgemeinbildend Brandenburg      
+		   1e-4,         // 1.0     Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // 1.0     Allgemeinbildend Niedersachsen    
+		   1e-4,         // 1.0     Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // 1.0     Allgemeinbildend Saarland         
+		   1e-4,         // 1.0     Allgemeinbildend Hessen           
+		   1e-4,         // 1.0     Allgemeinbildend Berlin           
+		   2.0001,       // 1.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 1.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   1.0001,       // 1.0     Wirtschaftsgymna Bayern           
+		   1e-4,         // 1.0     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 1.0     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 1.0     Wirtschaftsgymna Bremen           
+		   1e-4,         // 1.0     Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // 1.0     Wirtschaftsgymna Hamburg          
+		   1e-4,         // 1.0     Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // 1.0     Wirtschaftsgymna Brandenburg      
+		   1e-4,         // 1.0     Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // 1.0     Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // 1.0     Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // 1.0     Wirtschaftsgymna Saarland         
+		   1e-4,         // 1.0     Wirtschaftsgymna Hessen           
+		   1e-4,         // 1.0     Wirtschaftsgymna Berlin           
+		   2.0001,       // 1.0     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 1.0     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 1.0     TechnischesGymna Bayern           
+		   1e-4,         // 1.0     TechnischesGymna Sachsen          
+		   1e-4,         // 1.0     TechnischesGymna Thueringen       
+		   1e-4,         // 1.0     TechnischesGymna Bremen           
+		   1e-4,         // 1.0     TechnischesGymna Schleswig Holste 
+		   1e-4,         // 1.0     TechnischesGymna Hamburg          
+		   1e-4,         // 1.0     TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // 1.0     TechnischesGymna Brandenburg      
+		   1e-4,         // 1.0     TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // 1.0     TechnischesGymna Niedersachsen    
+		   1e-4,         // 1.0     TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // 1.0     TechnischesGymna Saarland         
+		   1e-4,         // 1.0     TechnischesGymna Hessen           
+		   1e-4,         // 1.0     TechnischesGymna Berlin           
+		   14.0001,      // 1.5     Allgemeinbildend Baden-Wuerttembe 
+		   2.0001,       // 1.5     Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // 1.5     Allgemeinbildend Bayern           
+		   3.0001,       // 1.5     Allgemeinbildend Sachsen          
+		   1e-4,         // 1.5     Allgemeinbildend Thueringen       
+		   1.0001,       // 1.5     Allgemeinbildend Bremen           
+		   1e-4,         // 1.5     Allgemeinbildend Schleswig Holste 
+		   1e-4,         // 1.5     Allgemeinbildend Hamburg          
+		   1e-4,         // 1.5     Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // 1.5     Allgemeinbildend Brandenburg      
+		   1e-4,         // 1.5     Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // 1.5     Allgemeinbildend Niedersachsen    
+		   1e-4,         // 1.5     Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // 1.5     Allgemeinbildend Saarland         
+		   1e-4,         // 1.5     Allgemeinbildend Hessen           
+		   1e-4,         // 1.5     Allgemeinbildend Berlin           
+		   2.0001,       // 1.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 1.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 1.5     Wirtschaftsgymna Bayern           
+		   1e-4,         // 1.5     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 1.5     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 1.5     Wirtschaftsgymna Bremen           
+		   1e-4,         // 1.5     Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // 1.5     Wirtschaftsgymna Hamburg          
+		   1e-4,         // 1.5     Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // 1.5     Wirtschaftsgymna Brandenburg      
+		   1e-4,         // 1.5     Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // 1.5     Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // 1.5     Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // 1.5     Wirtschaftsgymna Saarland         
+		   1e-4,         // 1.5     Wirtschaftsgymna Hessen           
+		   1e-4,         // 1.5     Wirtschaftsgymna Berlin           
+		   4.0001,       // 1.5     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 1.5     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 1.5     TechnischesGymna Bayern           
+		   1e-4,         // 1.5     TechnischesGymna Sachsen          
+		   1e-4,         // 1.5     TechnischesGymna Thueringen       
+		   1e-4,         // 1.5     TechnischesGymna Bremen           
+		   1e-4,         // 1.5     TechnischesGymna Schleswig Holste 
+		   1e-4,         // 1.5     TechnischesGymna Hamburg          
+		   1e-4,         // 1.5     TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // 1.5     TechnischesGymna Brandenburg      
+		   1e-4,         // 1.5     TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // 1.5     TechnischesGymna Niedersachsen    
+		   1e-4,         // 1.5     TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // 1.5     TechnischesGymna Saarland         
+		   1e-4,         // 1.5     TechnischesGymna Hessen           
+		   1e-4,         // 1.5     TechnischesGymna Berlin           
+		   9.0001,       // 2.5     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 2.5     Allgemeinbildend Nordrhein-Westfa 
+		   1.0001,       // 2.5     Allgemeinbildend Bayern           
+		   2.0001,       // 2.5     Allgemeinbildend Sachsen          
+		   1e-4,         // 2.5     Allgemeinbildend Thueringen       
+		   1e-4,         // 2.5     Allgemeinbildend Bremen           
+		   1e-4,         // 2.5     Allgemeinbildend Schleswig Holste 
+		   1e-4,         // 2.5     Allgemeinbildend Hamburg          
+		   1e-4,         // 2.5     Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // 2.5     Allgemeinbildend Brandenburg      
+		   1e-4,         // 2.5     Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // 2.5     Allgemeinbildend Niedersachsen    
+		   1e-4,         // 2.5     Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // 2.5     Allgemeinbildend Saarland         
+		   1e-4,         // 2.5     Allgemeinbildend Hessen           
+		   1e-4,         // 2.5     Allgemeinbildend Berlin           
+		   2.0001,       // 2.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 2.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   2.0001,       // 2.5     Wirtschaftsgymna Bayern           
+		   1e-4,         // 2.5     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 2.5     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 2.5     Wirtschaftsgymna Bremen           
+		   1e-4,         // 2.5     Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // 2.5     Wirtschaftsgymna Hamburg          
+		   1e-4,         // 2.5     Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // 2.5     Wirtschaftsgymna Brandenburg      
+		   1e-4,         // 2.5     Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // 2.5     Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // 2.5     Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // 2.5     Wirtschaftsgymna Saarland         
+		   1e-4,         // 2.5     Wirtschaftsgymna Hessen           
+		   1e-4,         // 2.5     Wirtschaftsgymna Berlin           
+		   1e-4,         // 2.5     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 2.5     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 2.5     TechnischesGymna Bayern           
+		   1e-4,         // 2.5     TechnischesGymna Sachsen          
+		   1e-4,         // 2.5     TechnischesGymna Thueringen       
+		   1e-4,         // 2.5     TechnischesGymna Bremen           
+		   1e-4,         // 2.5     TechnischesGymna Schleswig Holste 
+		   1e-4,         // 2.5     TechnischesGymna Hamburg          
+		   1e-4,         // 2.5     TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // 2.5     TechnischesGymna Brandenburg      
+		   1e-4,         // 2.5     TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // 2.5     TechnischesGymna Niedersachsen    
+		   1e-4,         // 2.5     TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // 2.5     TechnischesGymna Saarland         
+		   1e-4,         // 2.5     TechnischesGymna Hessen           
+		   1e-4,         // 2.5     TechnischesGymna Berlin           
+		   1e-4,         // 3.5     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 3.5     Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // 3.5     Allgemeinbildend Bayern           
+		   1e-4,         // 3.5     Allgemeinbildend Sachsen          
+		   1e-4,         // 3.5     Allgemeinbildend Thueringen       
+		   1e-4,         // 3.5     Allgemeinbildend Bremen           
+		   1e-4,         // 3.5     Allgemeinbildend Schleswig Holste 
+		   1e-4,         // 3.5     Allgemeinbildend Hamburg          
+		   1e-4,         // 3.5     Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // 3.5     Allgemeinbildend Brandenburg      
+		   1e-4,         // 3.5     Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // 3.5     Allgemeinbildend Niedersachsen    
+		   1e-4,         // 3.5     Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // 3.5     Allgemeinbildend Saarland         
+		   1e-4,         // 3.5     Allgemeinbildend Hessen           
+		   1e-4,         // 3.5     Allgemeinbildend Berlin           
+		   1e-4,         // 3.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 3.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 3.5     Wirtschaftsgymna Bayern           
+		   1e-4,         // 3.5     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 3.5     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 3.5     Wirtschaftsgymna Bremen           
+		   1e-4,         // 3.5     Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // 3.5     Wirtschaftsgymna Hamburg          
+		   1e-4,         // 3.5     Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // 3.5     Wirtschaftsgymna Brandenburg      
+		   1e-4,         // 3.5     Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // 3.5     Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // 3.5     Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // 3.5     Wirtschaftsgymna Saarland         
+		   1e-4,         // 3.5     Wirtschaftsgymna Hessen           
+		   1e-4,         // 3.5     Wirtschaftsgymna Berlin           
+		   1e-4,         // 3.5     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 3.5     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 3.5     TechnischesGymna Bayern           
+		   1e-4,         // 3.5     TechnischesGymna Sachsen          
+		   1e-4,         // 3.5     TechnischesGymna Thueringen       
+		   1e-4,         // 3.5     TechnischesGymna Bremen           
+		   1e-4,         // 3.5     TechnischesGymna Schleswig Holste 
+		   1e-4,         // 3.5     TechnischesGymna Hamburg          
+		   1e-4,         // 3.5     TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // 3.5     TechnischesGymna Brandenburg      
+		   1e-4,         // 3.5     TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // 3.5     TechnischesGymna Niedersachsen    
+		   1e-4,         // 3.5     TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // 3.5     TechnischesGymna Saarland         
+		   1e-4,         // 3.5     TechnischesGymna Hessen           
+		   1e-4,         // 3.5     TechnischesGymna Berlin           
+		   1e-4,         // 3.0     Allgemeinbildend Baden-Wuerttembe 
+		   1e-4,         // 3.0     Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // 3.0     Allgemeinbildend Bayern           
+		   1e-4,         // 3.0     Allgemeinbildend Sachsen          
+		   1e-4,         // 3.0     Allgemeinbildend Thueringen       
+		   1e-4,         // 3.0     Allgemeinbildend Bremen           
+		   1e-4,         // 3.0     Allgemeinbildend Schleswig Holste 
+		   1e-4,         // 3.0     Allgemeinbildend Hamburg          
+		   1e-4,         // 3.0     Allgemeinbildend Mecklenburg Vorp 
+		   1e-4,         // 3.0     Allgemeinbildend Brandenburg      
+		   1e-4,         // 3.0     Allgemeinbildend Sachsen Anhalt   
+		   1e-4,         // 3.0     Allgemeinbildend Niedersachsen    
+		   1e-4,         // 3.0     Allgemeinbildend Rheinland Pfalz  
+		   1e-4,         // 3.0     Allgemeinbildend Saarland         
+		   1e-4,         // 3.0     Allgemeinbildend Hessen           
+		   1e-4,         // 3.0     Allgemeinbildend Berlin           
+		   1e-4,         // 3.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 3.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 3.0     Wirtschaftsgymna Bayern           
+		   1e-4,         // 3.0     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 3.0     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 3.0     Wirtschaftsgymna Bremen           
+		   1e-4,         // 3.0     Wirtschaftsgymna Schleswig Holste 
+		   1e-4,         // 3.0     Wirtschaftsgymna Hamburg          
+		   1e-4,         // 3.0     Wirtschaftsgymna Mecklenburg Vorp 
+		   1e-4,         // 3.0     Wirtschaftsgymna Brandenburg      
+		   1e-4,         // 3.0     Wirtschaftsgymna Sachsen Anhalt   
+		   1e-4,         // 3.0     Wirtschaftsgymna Niedersachsen    
+		   1e-4,         // 3.0     Wirtschaftsgymna Rheinland Pfalz  
+		   1e-4,         // 3.0     Wirtschaftsgymna Saarland         
+		   1e-4,         // 3.0     Wirtschaftsgymna Hessen           
+		   1e-4,         // 3.0     Wirtschaftsgymna Berlin           
+		   1e-4,         // 3.0     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 3.0     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 3.0     TechnischesGymna Bayern           
+		   1e-4,         // 3.0     TechnischesGymna Sachsen          
+		   1e-4,         // 3.0     TechnischesGymna Thueringen       
+		   1e-4,         // 3.0     TechnischesGymna Bremen           
+		   1e-4,         // 3.0     TechnischesGymna Schleswig Holste 
+		   1e-4,         // 3.0     TechnischesGymna Hamburg          
+		   1e-4,         // 3.0     TechnischesGymna Mecklenburg Vorp 
+		   1e-4,         // 3.0     TechnischesGymna Brandenburg      
+		   1e-4,         // 3.0     TechnischesGymna Sachsen Anhalt   
+		   1e-4,         // 3.0     TechnischesGymna Niedersachsen    
+		   1e-4,         // 3.0     TechnischesGymna Rheinland Pfalz  
+		   1e-4,         // 3.0     TechnischesGymna Saarland         
+		   1e-4,         // 3.0     TechnischesGymna Hessen           
+		   1e-4);        // 3.0     TechnischesGymna Berlin           ;
+	whenchanged = 1420928028;
+	belief = (0.09256181, 0.1409399, 0.1105032, 0.04141419, 0.05220582, 0.07078013, 0.1142529, 0.1792845, 0.1142364, 0.08382127);
+	visual V2 {
+		center = (630, 528);
+		height = 15;
+		};
+	};
+
+node OltMathe {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s4o0, s3o0, s9o0, s7o0, s6o0, s1o0, s5o0, s8o0, s2o0, s0o0);
+	statetitles = ("4.0", "3.0", "9.0", "7.0", "6.0", "1.0", "5.0", "8.0", "2.0", "0.0");
+	parents = (Mathe, Schultyp);
+	probs = 
+		// 4.0          3.0          9.0          7.0          6.0          1.0          5.0          8.0          2.0          0.0           // Mathe Schultyp         
+		  (0.4666642,   0.06666689,  6.666622e-7, 6.666622e-7, 6.666622e-7, 6.666622e-7, 0.4666642,   6.666622e-7, 6.666622e-7, 6.666622e-7,  // 2.5   Allgemeinbildend 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // 2.5   Wirtschaftsgymna 
+		   3.333222e-6, 3.333222e-6, 3.333222e-6, 0.99997,     3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6,  // 2.5   TechnischesGymna 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine Allgemeinbildend 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine Wirtschaftsgymna 
+		   0.3333322,   0.2380946,   4.761882e-7, 4.761882e-7, 4.761882e-7, 0.1428569,   4.761882e-7, 4.761882e-7, 0.2857134,   4.761882e-7,  // keine TechnischesGymna 
+		   1.249984e-6, 1.249984e-6, 1.249984e-6, 0.2499981,   0.2499981,   1.249984e-6, 1.249984e-6, 0.499995,    1.249984e-6, 1.249984e-6,  // 1.0   Allgemeinbildend 
+		   1.99996e-6,  1.99996e-6,  0.59999,     0.199998,    1.99996e-6,  1.99996e-6,  1.99996e-6,  0.199998,    1.99996e-6,  1.99996e-6,   // 1.0   Wirtschaftsgymna 
+		   9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0   TechnischesGymna 
+		   0.117647,    5.882318e-7, 5.882318e-7, 0.117647,    0.5882324,   5.882318e-7, 0.1764701,   5.882318e-7, 5.882318e-7, 5.882318e-7,  // 2.0   Allgemeinbildend 
+		   3.333222e-6, 3.333222e-6, 3.333222e-6, 3.333222e-6, 0.6666478,   3.333222e-6, 0.3333256,   3.333222e-6, 3.333222e-6, 3.333222e-6,  // 2.0   Wirtschaftsgymna 
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,   // 2.0   TechnischesGymna 
+		   7.142806e-7, 7.142806e-7, 7.142806e-7, 0.4285691,   0.1428568,   7.142806e-7, 7.142806e-7, 0.4285691,   7.142806e-7, 7.142806e-7,  // 1.5   Allgemeinbildend 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,     // 1.5   Wirtschaftsgymna 
+		   4.99975e-6,  4.99975e-6,  0.999955,    4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,   // 1.5   TechnischesGymna 
+		   0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 3.0   Allgemeinbildend 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0   Wirtschaftsgymna 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.0   TechnischesGymna 
+		   1.666639e-6, 0.8333211,   1.666639e-6, 1.666639e-6, 1.666639e-6, 1.666639e-6, 1.666639e-6, 1.666639e-6, 0.1666656,   1.666639e-6,  // 3.5   Allgemeinbildend 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5   Wirtschaftsgymna 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1);         // 3.5   TechnischesGymna ;
+	numcases = 
+		                 // Mathe Schultyp         
+		  (15.0001,      // 2.5   Allgemeinbildend 
+		   1.0001,       // 2.5   Wirtschaftsgymna 
+		   3.0001,       // 2.5   TechnischesGymna 
+		   1e-4,         // keine Allgemeinbildend 
+		   1e-4,         // keine Wirtschaftsgymna 
+		   21.0001,      // keine TechnischesGymna 
+		   8.0001,       // 1.0   Allgemeinbildend 
+		   5.0001,       // 1.0   Wirtschaftsgymna 
+		   1.0001,       // 1.0   TechnischesGymna 
+		   17.0001,      // 2.0   Allgemeinbildend 
+		   3.0001,       // 2.0   Wirtschaftsgymna 
+		   2.0001,       // 2.0   TechnischesGymna 
+		   14.0001,      // 1.5   Allgemeinbildend 
+		   1.0001,       // 1.5   Wirtschaftsgymna 
+		   2.0001,       // 1.5   TechnischesGymna 
+		   1.0001,       // 3.0   Allgemeinbildend 
+		   1e-4,         // 3.0   Wirtschaftsgymna 
+		   1e-4,         // 3.0   TechnischesGymna 
+		   6.0001,       // 3.5   Allgemeinbildend 
+		   1e-4,         // 3.5   Wirtschaftsgymna 
+		   1e-4);        // 3.5   TechnischesGymna ;
+	whenchanged = 1420928006;
+	belief = (0.1699995, 0.11, 0.059999, 0.149999, 0.16, 0.03000132, 0.1199996, 0.129999, 0.07000093, 1.559938e-6);
+	visual V2 {
+		center = (1008, 570);
+		height = 7;
+		link 2 {
+			path = ((840, 261), (968, 495));
+			};
+		};
+	};
+
+node Abschluss {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (nichtAbgebrochen, abgebrochen);
+	parents = (Mathe);
+	probs = 
+		// nichtAbgebrochen abgebrochen  // Mathe 
+		  (0.9999995,   5.263153e-7,  // 2.5   
+		   0.2857145,   0.7142855,    // keine 
+		   0.9999993,   7.142847e-7,  // 1.0   
+		   0.9999995,   4.54545e-7,   // 2.0   
+		   0.9999994,   5.882346e-7,  // 1.5   
+		   0.99999,     9.9998e-6,    // 3.0   
+		   0.6666661,   0.3333339);   // 3.5   ;
+	numcases = 
+		                 // Mathe 
+		  (19,           // 2.5   
+		   21,           // keine 
+		   14,           // 1.0   
+		   22,           // 2.0   
+		   17,           // 1.5   
+		   1.00002,      // 3.0   
+		   6.00002);     // 3.5   ;
+	whenchanged = 1420928006;
+	belief = (0.83, 0.17);
+	visual V2 {
+		center = (1242, 588);
+		height = 4;
+		};
+	};
+
+node OltDeutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s5o0, s9o0, s7o0, s8o0, s2o0, s6o0, s4o0, s3o0, s0o0, s1o0);
+	statetitles = ("5.0", "9.0", "7.0", "8.0", "2.0", "6.0", "4.0", "3.0", "0.0", "1.0");
+	parents = (Deutsch);
+	probs = 
+		// 5.0          9.0          7.0          8.0          2.0          6.0          4.0          3.0          0.0          1.0           // Deutsch 
+		  (0.333332,    5.555524e-7, 0.1666663,   5.555524e-7, 5.555524e-7, 0.4999978,   5.555524e-7, 5.555524e-7, 5.555524e-7, 5.555524e-7,  // 2.0     
+		   0.2380946,   4.761882e-7, 0.0476193,   4.761882e-7, 0.2857134,   0.1904758,   0.1904758,   0.0476193,   4.761882e-7, 4.761882e-7,  // keine   
+		   5.882318e-7, 0.2352933,   0.3529397,   0.4117629,   5.882318e-7, 5.882318e-7, 5.882318e-7, 5.882318e-7, 5.882318e-7, 5.882318e-7,  // 1.0     
+		   0.07692317,  3.846139e-7, 0.3461529,   0.2307687,   3.846139e-7, 0.3461529,   3.846139e-7, 3.846139e-7, 3.846139e-7, 3.846139e-7,  // 1.5     
+		   0.5294092,   5.882318e-7, 5.882318e-7, 5.882318e-7, 5.882318e-7, 0.2941165,   0.1764701,   5.882318e-7, 5.882318e-7, 5.882318e-7,  // 2.5     
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 3.5     
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1);         // 3.0     ;
+	numcases = 
+		                 // Deutsch 
+		  (18.0001,      // 2.0     
+		   21.0001,      // keine   
+		   17.0001,      // 1.0     
+		   26.0001,      // 1.5     
+		   17.0001,      // 2.5     
+		   1.0001,       // 3.5     
+		   1e-4);        // 3.0     ;
+	whenchanged = 1420928006;
+	belief = (0.2199993, 0.04000039, 0.19, 0.13, 0.0699995, 0.2699992, 0.07000018, 0.01000056, 6.2999e-7, 6.2999e-7);
+	visual V2 {
+		center = (810, 606);
+		height = 8;
+		};
+	};
+
+node Geschlecht {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (m, w);
+	parents = ();
+	probs = 
+		// m            w            
+		  (0.67,        0.33);
+	numcases = 100;
+	whenchanged = 1420928006;
+	belief = (0.67, 0.33);
+	visual V2 {
+		center = (114, 528);
+		height = 10;
+		};
+	};
+
+node Studiengang {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (Maschinenbau, SozialeArbeit, Elektrotechnik, Wirtschaftswissenschaften, Informatik);
+	parents = (Geschlecht, OltDeutsch, Staatsbuergerschaft);
+	probs = 
+		// Maschinenbau SozialeArbeit Elektrotechnik Wirtschaftswisse Informatik  // Geschlecht OltDeutsch Staatsbuergerschaft 
+		  (0.6923058,   7.692278e-7, 0.1538463,   7.692278e-7, 0.1538463,    // m          5.0        deutsch             
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // m          5.0        NonEuropean         
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,      // m          5.0        EUBuerger           
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // m          9.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          9.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          9.0        EUBuerger           
+		   0.2307691,   7.692278e-7, 0.3846147,   0.07692355,  0.3076919,    // m          7.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          7.0        NonEuropean         
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // m          7.0        EUBuerger           
+		   0.4999985,   0.1000005,   0.399999,    9.99995e-7,  9.99995e-7,   // m          8.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          8.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          8.0        EUBuerger           
+		   0.6666589,   3.333278e-6, 3.333278e-6, 0.3333311,   3.333278e-6,  // m          2.0        deutsch             
+		   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,   9.9995e-6,    // m          2.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          2.0        EUBuerger           
+		   0.3888884,   0.05555596,  0.3888884,   0.05555596,  0.1111114,    // m          6.0        deutsch             
+		   4.999875e-6, 4.999875e-6, 4.999875e-6, 0.99998,     4.999875e-6,  // m          6.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          6.0        EUBuerger           
+		   0.3333311,   0.3333311,   3.333278e-6, 3.333278e-6, 0.3333311,    // m          4.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          4.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          4.0        EUBuerger           
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          3.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          3.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          3.0        EUBuerger           
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          0.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          0.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          0.0        EUBuerger           
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          1.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          1.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          1.0        EUBuerger           
+		   0.2857137,   1.428561e-6, 0.2857137,   0.4285698,   1.428561e-6,  // w          5.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          5.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          5.0        EUBuerger           
+		   3.333278e-6, 0.6666589,   3.333278e-6, 0.3333311,   3.333278e-6,  // w          9.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          9.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          9.0        EUBuerger           
+		   0.399998,    0.2,         0.2,         0.2,         1.99998e-6,   // w          7.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          7.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          7.0        EUBuerger           
+		   3.333278e-6, 0.9999866,   3.333278e-6, 3.333278e-6, 3.333278e-6,  // w          8.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          8.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          8.0        EUBuerger           
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // w          2.0        deutsch             
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // w          2.0        NonEuropean         
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // w          2.0        EUBuerger           
+		   0.1428576,   1.428561e-6, 0.1428576,   0.714282,    1.428561e-6,  // w          6.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          6.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          6.0        EUBuerger           
+		   3.333278e-6, 0.9999866,   3.333278e-6, 3.333278e-6, 3.333278e-6,  // w          4.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          4.0        NonEuropean         
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // w          4.0        EUBuerger           
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // w          3.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          3.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          3.0        EUBuerger           
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          0.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          0.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          0.0        EUBuerger           
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          1.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          1.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2);         // w          1.0        EUBuerger           ;
+	numcases = 
+		                 // Geschlecht OltDeutsch Staatsbuergerschaft 
+		  (13.00005,     // m          5.0        deutsch             
+		   1.00005,      // m          5.0        NonEuropean         
+		   1.00005,      // m          5.0        EUBuerger           
+		   1.00005,      // m          9.0        deutsch             
+		   5e-5,         // m          9.0        NonEuropean         
+		   5e-5,         // m          9.0        EUBuerger           
+		   13.00005,     // m          7.0        deutsch             
+		   5e-5,         // m          7.0        NonEuropean         
+		   1.00005,      // m          7.0        EUBuerger           
+		   10.00005,     // m          8.0        deutsch             
+		   5e-5,         // m          8.0        NonEuropean         
+		   5e-5,         // m          8.0        EUBuerger           
+		   3.00005,      // m          2.0        deutsch             
+		   1.00005,      // m          2.0        NonEuropean         
+		   5e-5,         // m          2.0        EUBuerger           
+		   18.00005,     // m          6.0        deutsch             
+		   2.00005,      // m          6.0        NonEuropean         
+		   5e-5,         // m          6.0        EUBuerger           
+		   3.00005,      // m          4.0        deutsch             
+		   5e-5,         // m          4.0        NonEuropean         
+		   5e-5,         // m          4.0        EUBuerger           
+		   5e-5,         // m          3.0        deutsch             
+		   5e-5,         // m          3.0        NonEuropean         
+		   5e-5,         // m          3.0        EUBuerger           
+		   5e-5,         // m          0.0        deutsch             
+		   5e-5,         // m          0.0        NonEuropean         
+		   5e-5,         // m          0.0        EUBuerger           
+		   5e-5,         // m          1.0        deutsch             
+		   5e-5,         // m          1.0        NonEuropean         
+		   5e-5,         // m          1.0        EUBuerger           
+		   7.00005,      // w          5.0        deutsch             
+		   5e-5,         // w          5.0        NonEuropean         
+		   5e-5,         // w          5.0        EUBuerger           
+		   3.00005,      // w          9.0        deutsch             
+		   5e-5,         // w          9.0        NonEuropean         
+		   5e-5,         // w          9.0        EUBuerger           
+		   5.00005,      // w          7.0        deutsch             
+		   5e-5,         // w          7.0        NonEuropean         
+		   5e-5,         // w          7.0        EUBuerger           
+		   3.00005,      // w          8.0        deutsch             
+		   5e-5,         // w          8.0        NonEuropean         
+		   5e-5,         // w          8.0        EUBuerger           
+		   1.00005,      // w          2.0        deutsch             
+		   1.00005,      // w          2.0        NonEuropean         
+		   1.00005,      // w          2.0        EUBuerger           
+		   7.00005,      // w          6.0        deutsch             
+		   5e-5,         // w          6.0        NonEuropean         
+		   5e-5,         // w          6.0        EUBuerger           
+		   3.00005,      // w          4.0        deutsch             
+		   5e-5,         // w          4.0        NonEuropean         
+		   1.00005,      // w          4.0        EUBuerger           
+		   1.00005,      // w          3.0        deutsch             
+		   5e-5,         // w          3.0        NonEuropean         
+		   5e-5,         // w          3.0        EUBuerger           
+		   5e-5,         // w          0.0        deutsch             
+		   5e-5,         // w          0.0        NonEuropean         
+		   5e-5,         // w          0.0        EUBuerger           
+		   5e-5,         // w          1.0        deutsch             
+		   5e-5,         // w          1.0        NonEuropean         
+		   5e-5);        // w          1.0        EUBuerger           ;
+	whenchanged = 1420928006;
+	belief = (0.3623417, 0.1234474, 0.2177993, 0.1890478, 0.1073639);
+	visual V2 {
+		center = (288, 666);
+		height = 13;
+		};
+	};
+
+node Schnitt {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s2o5, s1o5, s1o0, s3o5, s2o0, s3o0);
+	statetitles = ("2.5", "1.5", "1.0", "3.5", "2.0", "3.0");
+	parents = (Staatsbuergerschaft);
+	probs = 
+		// 2.5          1.5          1.0          3.5          2.0          3.0           // Staatsbuergerschaft 
+		  (0.2747252,   0.2857142,   0.1758242,   0.06593414,  0.1318682,   0.06593414,   // deutsch             
+		   0.1999996,   0.3999972,   1.999976e-6, 0.1999996,   1.999976e-6, 0.1999996,    // NonEuropean         
+		   2.499962e-6, 2.499962e-6, 2.499962e-6, 2.499962e-6, 0.9999875,   2.499962e-6); // EUBuerger           ;
+	numcases = 
+		                 // Staatsbuergerschaft 
+		  (91.00006,     // deutsch             
+		   5.00006,      // NonEuropean         
+		   4.00006);     // EUBuerger           ;
+	whenchanged = 1420928006;
+	belief = (0.26, 0.28, 0.16, 0.07000015, 0.16, 0.07000015);
+	visual V2 {
+		center = (180, 396);
+		height = 11;
+		link 1 {
+			path = ((398, 261), (247, 355));
+			};
+		};
+	};
+ElimOrder = (Alter, Abschluss, Schnitt, Studierfaehigkeitstest, Qualifikation, OltMathe, Mathe, Geschlecht, Studiengang, Staatsbuergerschaft, Jahreseinkommen, Schultyp, Deutsch, OltDeutsch, Bundesland);
+};

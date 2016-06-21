@@ -1,0 +1,14 @@
+[0] Config.pm:387> INFO - This is Biber 1.6
+[1] Config.pm:390> INFO - Logfile is 'Programmentwurf.blg'
+[150] biber-darwin:218> INFO - === Sun Jan 11, 2015, 17:33:21
+[151] Biber.pm:325> INFO - Reading 'Programmentwurf.bcf'
+[292] Biber.pm:623> INFO - Found 2 citekeys in bib section 0
+[309] Biber.pm:2995> INFO - Processing section 0
+[334] Biber.pm:3129> INFO - Looking for bibtex format file 'literature.bib' for section 0
+[338] bibtex.pm:898> INFO - Decoding LaTeX character macros into UTF-8
+[342] bibtex.pm:775> INFO - Found BibTeX data source 'literature.bib'
+[408] Biber.pm:2881> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[409] Biber.pm:2887> INFO - Sorting 'entry' list 'apa' keys
+[409] Biber.pm:2891> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[442] bbl.pm:472> INFO - Writing 'Programmentwurf.bbl' with encoding 'UTF-8'
+[444] bbl.pm:545> INFO - Output to Programmentwurf.bbl

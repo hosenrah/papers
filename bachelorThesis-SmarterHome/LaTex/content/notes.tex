@@ -1,0 +1,108 @@
+\section{Swift}
+
+	\subsection{API}
+
+		\subsubsection{Introduction}
+
+			\textbf{Variables}
+				\begin{lstlisting}
+					[caption={Variables in Swift}]
+
+				\end{lstlisting}
+
+			\textbf{String Interpolation}
+
+			\textbf{If}
+
+			\textbf{Switch}
+
+			\textbf{Functions}
+
+		\subsubsection{Complex Datatypes}
+
+			\textbf{Arrays}
+
+			\textbf{Dictionaries}
+
+			\textbf{Tuple}
+
+			\textbf{Groups of Variables}
+
+			\textbf{Optionals}
+
+			\textbf{Save Functions in Variables}
+
+		\subsubsection{Objectoriented Porgramming}
+
+			\textbf{Classes}
+
+			\textbf{Inheritence}
+
+			\textbf{Calculating Properties}
+
+			\textbf{Class Vars and Functions}
+
+			\textbf{Lazy Variables}
+
+			\textbf{React on changing Variables}
+
+			\textbf{Access Protection}
+				Access Level Modifier:
+				\begin{itemize} 
+					\item private 	- access only possible in declared class
+					\item internal 	- access possible in module
+					\item public 	- access possible out of module
+				\end{itemize}
+
+				default modifier: internal
+
+				\begin{lstlisting}
+					[caption={Access protection}]
+					class kunde {
+						var name:String
+
+						init(name:String) {
+							self.name = name
+						}
+					}
+
+					var einKunde = Kunde(name:"Willi Testkunde")
+				\end{lstlisting}
+		\subsubsection{Structures and Operators}
+
+			\textbf{Objects without Inheritence}
+				struct vs class:
+				\begin{itemize}
+					\item structs are passed as value - like a copy					(call by value)
+					\item objects are passed as reference - like inout parameter	(call by reference)
+				\end{itemize}
+
+				structs can contain functions and have a memberwise initializer.
+				\begin{lstlisting}
+					struct Kunde {
+						var vorname:String = "N/N"
+						var nachname:String = "N/N"
+
+						func ausgabe(){
+							println("Ich bin der Kunde \(vorname) \(nachname)")
+						} 
+					}
+
+				\end{lstlisting}
+
+			\textbf{Simple Operators}
+				Arithmetic contains addition and multiplication
+
+				\begin{lstlisting}
+					[caption={}]
+					result = 5 + 7
+
+					// println(result++) 	prints out 12
+					result++				// postfix operator: 	value is accessed before computation
+					//println(++result)		prints out 13
+					++resutl				// prefix operator: 	value is accessed after computation
+				\end{lstlisting}
+
+			\textbf{Comparing Vars and Objects}
+
+			\textbf{}

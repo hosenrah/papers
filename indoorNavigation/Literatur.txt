@@ -1,0 +1,53 @@
+Literaturliste
+
+1. Smart City
+	A Smart City is a settlement area where sustainable products, services, technologies,
+	processes and infrastructures are developed with ecologic, social and economic aspects using highly integrated information and communication technologies.
+	
+2. Indoor Navigation
+	Wiki: "An indoor positioning system (IPS) is a solution based on magnetic, other sensor data or a network of devices used to wirelessly locate objects or people inside a building."
+	
+3. Forschungfelder Smart City;
+	Forschungsfelder																				~Smart City;		~Indoor Positioning System;		Smart City Buzwords;																						 IPS Buzwords;
+	Natural Sciences (Naturwissenschaften);															middle;				middle;							;																											;
+		Mathematics (Mathematik);																	low;				high;							;																											;
+		Computer and information sciences (Informatik);												sehr high;			high;							Smart City, Smarter Cities, Urbanisation;																	;
+		Physical sciences (Physik);																	low;				middle;							;																											;
+		Chemical sciences (Chemie);																	low;				low;							;																											;
+		Earth and related environmental sciences (Geowissenschaften);								middle;				low;							Kartographie, Stadtplanung, Hydrologie, Fracking															;
+		Biological sciences (Biologie);																low;				low;							;																											;
+	Engineering and Technology (Technische Wissenschaften);											middle;				middle;							;																											;
+		Civil engineering (Bauingenieurwesen);														high;				high;							Gebäudebau, Tunnelbau, Bauinformatik, Verkehrswegebau, Wasser- energieinfrastruktur, Umwelt, Baustatik; 	 ;
+		Electrical-, electronic-, information engineering (Elektrotechnik und Informationstechnik);	high;				high;							WLAN, NFC, ISL, Blotooth;																					iBeakons, Phillips light;
+		Mechanical engineering (Maschinenbau);														low;				low;							;
+		Chemical engineering (Chemische Verfahrenstechnik);											low;				low;							;
+		Materials engineering (Werkstofftechnik);													low;				middle;							;
+		Medical engineering (Medizintechnik);														middle;				low;							Lösungen Healthcare;
+		Environmental engineering (Umweltingenieurwesen);											high;				middle;							Abschirmung, Umwelteinflüsse auf Gebäude
+		Environmental biotechnology (Umweltbiotechnologie);											low;				low;							;
+		Industrial Biotechnology (Industrielle Biotechnologie);										low;				low;							;							
+		Nano-technology (Nanotechnologie);															low;				low;							;
+	Medical and Health Sciences (Humanmedizin und Gesundheitswissenschaften);						high; 				low;							;
+		Basic medicine (Medizinisch-theoretische Wissenschaften und Pharmazie);						low;				low;							;
+		Clinical medicine (Klinische Medizin);														low;				low;							;		
+		Health sciences (Gesundheitswissenschaften);												high;				low;							Strahlungen, Healthcare; 							
+		Health biotechnology (Medizinische Biotechnologie);											low;				low;							;
+	Agricultural Sciences (Agrarwissenschaften und Veterinärmedizin); 								low;				low;							;
+		Agriculture, forestry, and fisheries (Land- und Forstwirtschaft, Fischerei);				low;				low;							;
+		Animal and dairy science (Tierzucht, Tierproduktion);										low;				low;							;
+		Veterinary science (Veterinärmedizin);														low;				low;							;
+		Agricultural biotechnology (Agrarbiotechnologie und Lebensmittelbiotechnologie);			low;				low;							;
+	Social Sciences (Sozialwissenschaften);															high;				middle;							;
+		Psychology (Psychologie);																	high;				high;							suchen;
+		Economics and business (Wirtschaftswissenschaften);											middle;				middle;							anwendungsfälle verknüpfungen suchen;
+		Educational sciences (Erziehungswissenschaften);											high;				middle;							Museen, Schulen, Bildungseinrichtungen; 
+		Sociology (Soziologie);																		high;				high;							suchen;
+		Law (Rechtswissenschaften);																	high;				middle;							Datenschutz, Datenrecht, Datensicherheit;
+		Political Science (Politikwissenschaften);													high;				middle;							Urbanisierung, suchen;
+		Social and economic geography (Humangeographie und Raumplanung);							high;				high;							Stadtplanung, Informationsfluss;
+		Media and communications (Medienwissenschaften und Kommunikationswissenschaften);			high;				middle;							Kommunikationswege, Kommunikationsart;
+	Humanities (Geisteswissenschaften);																middle;				middle;							;
+		History and archaeology (Geschichte und Archäologie);										high;				low;							Stadentwicklung, Stadtentstehung;
+		Languages and literature (Sprachwissenschaften und Literaturwissenschaften);				middle;				low;							;
+		Philosophy, ethics and religion (Philosophie, Ethik und Religionswissenschaft);				middle;				middle;							Smart City Akzeptanz
+		Art (arts, history of arts, performing arts, music); (Kunstwissenschaften);					middle;				low;							Smart City Art

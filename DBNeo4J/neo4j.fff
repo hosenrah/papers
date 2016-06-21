@@ -1,0 +1,90 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics[width=\linewidth]{images/Neo4j_Graph.png}
+\caption{Example Graph}
+\label{example-graph}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/theGraph.eps}
+\caption{Simple sample Graph}
+\label{fig1}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/nextProperty.eps}
+\caption{Property Records}
+\label{fig2}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/nextRelationship.eps}
+\caption{First Relationship}
+\label{fig3}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/startEnd.eps}
+\caption{Start Node - End Node}
+\label{fig4}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/StartNodePrevRel.eps}
+\caption{Start Node Previous Relationship}
+\label{fig5}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/EndNodePrevRel.eps}
+\caption{End Node Previous Relationship}
+\label{fig6}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=0.9\textwidth]{images/complete.eps}
+\caption{All Pointers Displyed}
+\label{fig7}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[hb]
+\centering
+    \includegraphics[width=1.2\textwidth, angle=90]{images/NeoBytes.eps}
+\caption{NeoBytes}
+\label{fig8}
+\end{figure*}
+\efloatseparator
+ 

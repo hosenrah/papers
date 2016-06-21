@@ -1,0 +1,32 @@
+ \newpage
+\section{Introduction}  % 8 - 12 Seiten
+
+\subsection{Topic and Motivation} %includes current situation, trend and statement of the problem
+	The term iot is around for more than two decades. The concept of a smart device being connected to the internet was realized by four students of the Carnegie Mellon University by modifying a coke vending machine to be able to report it's inventory and temperature in 1982 \parencite{cokeVendingMachineIoT}. Several companies have started their iot approaches among them Microsoft's "At work" and Novell's "Nest". The concept of iot became popular in 2002 when Paolo Magrassi introduced MIT's RFID and internet of things technology to the industrial and business world \parencite{E-Tagging}. The idea of identifying and connecting every device possible to control and manage them over a centralized computer has driven iot to todays understanding of smart devices \parencite{SmartObjects}. Smart Home is one application of iot. Being able to monitor and control the mechanical, electrical and electronic systems independent of your location offers new opportunities in terms of security and economization. As of 2014 smart home arrived at the average user by using the possibilities of smart phones to control your smart devices at home \parencite{IntroToHomeKit}. A lot of movement in the IoT and Smart Home sector is going on right now. Smart Home is a great opportunity for startups to develop innovating products that "push the boundaries of smart" \parencite{SmartHome-Techcrunch}. Established companies like Samsung and Google seek their dominance by acquiring these startups and integrate them into their own product line \parencite{SmartHome-Techcrunch}.
+
+	%leitfrage: wie sieht ein smart home system aus, welches cross compatible und minimalistisch aufgebaut ist? Concept auf basis von apple homekit cross compatibility erweiterung mittels eines homebridges.
+
+	%bekanntes bewertungssystem definieren und festlegen 
+	\textbf{presentation of the problem}
+		Current systems may have problems with connectivity or setup time and frequency \parencite{WhyIsMySmartHome}. However another big issue is cross compatibility when it comes to connect \textbf{all} of your home. It seems that hardly any company or vendor makes the approach to be able to connect or control devices of the competitors in a suitable way. This is the part where this thesis turns up the heat. The content of this thesis deals with smart home solutions and their cross compatibility. First of all basic definitions are clarified then theory is build up to emerge in a middleware solution which connects multiple vendors smart home solutions.
+
+\subsection{Limitations}
+	In the course of this bachelor thesis the middleware solution is limited to the guidelines of given systems. In other words the systems that have to be connected by a middleware are economically chosen by IBM. On one hand there is IBM SDPvNext which suits more or less a user management role for devices that are registered in the IoT Foundation which stores devices and their configurations in a database \parencite{FrankLeo}. At the time this paper is published SDPvNext will be integrated in the IoT Foundation Platform and be extended by an authentication layer \parencite{PatriziaGufler} but the two products are treated separately. \\
+
+	On the other hand there is Apple HomeKit, a relatively new approach on smart home. Where Apple is relying on local databases for device information storage as well as waterproof communication encryption with multiple security layers \textcite{IntroToHomeKit} evaluated amongst other systems on the market in clause \textit{Measurements}. IBM SDPvNext is a more basic approach \textcite{FrankLeo}. This thesis will not cover explicit code explanations on the given solution nor specific programming language explanations, more describing the idea and the technique used to solve the given problem. However the code can be easily reproduced with the given explanations of what is done and some basic programming skills.\\
+
+	Further the psychological significance of a home is not considered in this paper. Nevertheless the state as well as changes of a home has a strong influence on behavior, emotions and overall mental health \textcite{youngRefugees}.
+
+\subsection{Goals}
+	The goal of this thesis is to define measurements for a suitable smart home environment in the eyes of the user. Cross compatibility of vendors and devices as well as minimalism in the amount of extra hardware is valued. Further current systems are rated and two concepts of a middleware connecting multiple natively non connectable systems are developed and rated for further realization. The better solution is implemented and also rated.
+
+
+	%which is connecting non HomeKit devices over IBM's IOT Foundation to the HomeKit database in order to manage them with iDevices and corresponding apps is developped. 
+	%Due to the given constraints an implementation of the scheme is not needfull to call this thesis successfull.
+
+\subsection{Tasks}
+	The following tasks are written down in an artistic way which suits the creator of TEX Donald E. Knuth and its favor of describing programming as an art-form \parencite{Knuth}.
+	At first terminology is declared to provide a consistent base for further argumentation. By specifying Smart Home measurements the solution gets its outlines. Thirdly a weighted overview of the functionality of every involved system and technology is given to provide the colors that will fill in the outlines. Last a solution is drawn with the technologies discussed earlier.
+
+\pagebreak
+

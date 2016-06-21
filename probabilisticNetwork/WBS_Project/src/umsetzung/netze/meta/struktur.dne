@@ -1,0 +1,230 @@
+// ~->[DNET-1]->~
+
+// File created by an unlicensed user using Netica 5.15 on Jan 06, 2015 at 11:02:37.
+
+bnet entwurf {
+autoupdate = TRUE;
+whenchanged = 1420538549;
+
+visual V2 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 9;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	windowposn = (-91, 21, 1386, 843);
+	resolution = 72;
+	drawingbounds = (1453, 779);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0x00E1E1E1;};
+	NodeSet Nature {BuiltIn = 1; Color = 0x00F8EED2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0x00D3CAA6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0x00C8C8C8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0x00FFFFFF;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0x00FFFFB4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0x00FFBDBD;};
+	NodeSet Decision {BuiltIn = 1; Color = 0x00DEE8FF;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0x00F0FAFA;};
+	NodeSet Title {BuiltIn = 1; Color = 0x00FFFFFF;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		};
+	};
+
+node Qualifikation {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	numstates = 1;
+	parents = ();
+	whenchanged = 1420538393;
+	visual V2 {
+		center = (606, 102);
+		height = 7;
+		};
+	};
+
+node Studierfaehigkeitstest {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Qualifikation);
+	whenchanged = 1420538427;
+	visual V2 {
+		center = (252, 228);
+		height = 1;
+		};
+	};
+
+node Schultyp {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Qualifikation);
+	whenchanged = 1420538446;
+	visual V2 {
+		center = (822, 228);
+		height = 2;
+		};
+	};
+
+node Alter {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Qualifikation);
+	whenchanged = 1420538451;
+	visual V2 {
+		center = (1038, 228);
+		height = 3;
+		};
+	};
+
+node Mathe {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Schultyp);
+	whenchanged = 1420538466;
+	visual V2 {
+		center = (1200, 360);
+		height = 4;
+		};
+	};
+
+node Deutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Schultyp);
+	whenchanged = 1420538457;
+	visual V2 {
+		center = (774, 366);
+		height = 12;
+		};
+	};
+
+node Staatsbuergerschaft {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	numstates = 1;
+	parents = ();
+	whenchanged = 1420538439;
+	visual V2 {
+		center = (450, 228);
+		height = 15;
+		};
+	};
+
+node Bundesland {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Staatsbuergerschaft);
+	whenchanged = 1420538475;
+	visual V2 {
+		center = (546, 360);
+		height = 14;
+		};
+	};
+
+node Jahreseinkommen {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Deutsch, Schultyp, Bundesland);
+	whenchanged = 1420538534;
+	visual V2 {
+		center = (540, 486);
+		height = 9;
+		link 3 {
+			path = ((545, 379), (540, 467));
+			};
+		};
+	};
+
+node OltMathe {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Mathe, Schultyp);
+	whenchanged = 1420538514;
+	visual V2 {
+		center = (930, 492);
+		height = 5;
+		link 1 {
+			path = ((1161, 379), (968, 473));
+			};
+		};
+	};
+
+node Abschluss {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Mathe);
+	whenchanged = 1420538488;
+	visual V2 {
+		center = (1110, 492);
+		height = 6;
+		link 1 {
+			path = ((1187, 379), (1122, 473));
+			};
+		};
+	};
+
+node OltDeutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Deutsch);
+	whenchanged = 1420538523;
+	visual V2 {
+		center = (744, 492);
+		height = 8;
+		};
+	};
+
+node Geschlecht {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	numstates = 1;
+	parents = ();
+	whenchanged = 1420538541;
+	visual V2 {
+		center = (216, 486);
+		height = 11;
+		};
+	};
+
+node Studiengang {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Geschlecht, OltDeutsch, Staatsbuergerschaft);
+	whenchanged = 1420538549;
+	visual V2 {
+		center = (378, 612);
+		height = 10;
+		link 2 {
+			path = ((686, 511), (435, 593));
+			};
+		};
+	};
+
+node Schnitt {
+	kind = NATURE;
+	discrete = TRUE;
+	numstates = 1;
+	parents = (Staatsbuergerschaft);
+	whenchanged = 1420538407;
+	visual V2 {
+		center = (252, 372);
+		height = 13;
+		};
+	};
+};

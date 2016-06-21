@@ -1,0 +1,16 @@
+%!TEX root = ../neo4j.tex
+
+\section{Neo4j in BI}
+
+\subsection{Business Intelligence}
+
+"Business intelligence (BI) is a term that refers to ideas, practices and technologies for turning raw data into information that businesses can use to make better organizational decisions. Businesses that employ Bi effectively can transform information into growth by gaining a clear understanding of their strength and weaknesses, cutting costs and losses, streamlining internal processes and increasing revenue." \cite{neo4jBIDef:2014}. \nocite{BiSlides:2013}
+
+\subsection{Why are graph databases good for BI?}
+
+Graphs can easily visualize data based on how it exists in reality. This is shown in our book example. There are no complexe transformations needed in order to store information.
+The more data a company gathers the more complex it gets to model the information in order to use it. This is the cause of the fact that data usually is inherently hierarchical and/or connected. BI relates on the useage of large amounts of data but still misses performance when it comes to "transform information into growth" \cite{neo4jBIDef:2014}. Business demands are increasing with the amount of customers and therefore the amount of data and because of the usual deep diving hierarchical structures of regular SQL databases the results are long searching times as well as complexe search queries. As we all know IT is a real time business. No bank transfer can wait minutes or seconds for its closure. User expectations are growing and there have to be new alternatives to store data. Graph databases are an entrenched solution to this problem, Neo4j is the market standard and a few steps ahead of others because it stores data in a real graph.
+
+\subsection{BI and graph databases}
+
+Graph databases can, like any other type of database be used in many applications of interest. One of them is Business Intelligence. With the help of analytical queries data can be "naturally expressed via an OLAP-like aggregation framework" \cite{BI:2013}. By using simple graph theory like weighted edges, productions lines as well as the shipment of products from the producer to the customer can easily be mapped into a graph database. From there on factors like location, storing, capacity etc. can be analyzed for instance to minimize waiting times of the product at different stages of the delivery or to spot the fastest and slowest routes from one location to another. Because of the size of data grouping and aggregation is required in order to pre-computate information within the database in form of materialized views containing frequently asked aggregates. This pre-processing enables the use of datawarehouses and more analytical processing on the data, also with the regard on more dimension \cite{views}.

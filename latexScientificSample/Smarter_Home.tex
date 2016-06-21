@@ -1,0 +1,119 @@
+
+
+\newcommand{\pdftitel}{Smarter Home}
+\newcommand{\autor}{Andreas Rau}
+\newcommand{\arbeit}{T-3300}
+
+\input{setting/header}
+
+
+% Ab jetzt können auch Umlaute verwendet werden
+\newcommand{\titel}{Smarter Home middleware for SDPVnext and Apple Homekit}
+\newcommand{\matrikelnr}{4186494}
+\newcommand{\kurs}{TINF12A}
+\newcommand{\datumAbgabe}{June 2015}
+\newcommand{\firma}{IBM}
+\newcommand{\firmenort}{Böblingen}
+\newcommand{\abgabeort}{Stuttgart}
+\newcommand{\studiengang}{Applied Computer Science}
+\newcommand{\dhbw}{Baden Württemberg in Stuttgart}
+\newcommand{\betreuer}{Jochen Burkhardt}
+\newcommand{\zeitraum}{12 Weeks}
+
+\makeglossaries
+\input{setting/glossary}
+
+\begin{document}
+	%Todo
+	\input{content/00todo}
+	\clearpage
+	
+	% Deckblatt
+	\begin{spacing}{1}
+		\input{setting/deckblatt}
+	\end{spacing}
+	\clearpage
+	
+	% Erklärung
+	\input{setting/erklaerung}
+	\clearpage
+
+	% Abstract
+	\input{setting/abstract}
+	\clearpage
+		
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}
+	\pagestyle{plain}
+
+	% Inhaltsverzeichnis
+	\begin{spacing}{1.1}
+		\setcounter{tocdepth}{3}
+		\tableofcontents
+	\end{spacing}
+	\clearpage
+	
+	% Abbildungsverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listoffig}
+	\addcontentsline{toc}{section}{List of figures}
+	\listoffigures
+	\clearpage
+	
+	% Abkürzungsverzeichnis
+	% vorher in Konsole folgendes aufrufen: 
+	%	makeglossaries makeglossaries dokumentation.acn && makeglossaries dokumentation.glo
+	\printglossary[type=\acronymtype]
+  	\cleardoublepage	
+	
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+	
+	\pagestyle{fancy} 
+		
+	\rhead{} \chead{\textcolor{grey}{\thepage}} \lhead{} 
+	\lfoot{\textcolor{grey}{\datumAbgabe}} \cfoot{} \rfoot{\textcolor{grey}{Andreas Rau}} 
+		
+	\renewcommand{\headrulewidth}{0.2mm} 
+	\renewcommand{\footrulewidth}{0.2mm} 
+	\setlength{\headheight}{0mm}
+	
+	
+	% Inhalt
+	\input{content/01introduction}
+	\input{content/02theory}
+	\input{content/03praxis}
+	\input{content/04conclusion}
+
+
+	
+	% Anhang
+	\clearpage
+	\pagestyle{plain}
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+
+	%Tabellenverzeichnis
+	%\cleardoublepage
+	%\phantomsection \label{listoftab}
+	%\addcontentsline{toc}{section}{List of tables}
+	%\listoftables
+
+	% Quellcodeverzeichnis
+	%\cleardoublepage
+	%\phantomsection \label{listoflist}
+	%\addcontentsline{toc}{section}{Listings}
+	%\lstlistoflistings
+
+	% Literaturverzeichnis
+	\addcontentsline{toc}{section}{Bibliography}
+	\printbibliography
+	
+	% Glossar
+	\setcounter{subsection}{0}
+	\addcontentsline{toc}{section}{Appendix}
+	\printglossary[style=altlist,title=Glossary]
+	
+	\cleardoublepage
+	\input{content/appendix}
+\end{document}

@@ -1,0 +1,389 @@
+\section{Concept of discrete and reliable Indoor Positioning System}\label{concept} %28-32 Seiten
+
+In the following sections we want to develop a trustworthy accurate and cost efficient indoor positioning system working in independent mode. To be able to do so the idea is to compare existing technologies on our three preconditions and learn from them. Therefore in the next section the measurements are defined followed by the comparison of the solutions worth considering. Then our concept is presented and discussed.   
+ 
+\subsection{Measurements}
+The three measurements we have chosen are directly concluded by the goals for our indoor positioning system. Trustworthiness is the only measurement which is not measurable directly but it is possible to derive measurements by more accurate defining trustworthiness.
+
+\subsubsection{Trustworthiness}
+Trustworthy means that data privacy is guaranteed. To ensure this in general systems which collect, use and handle personal data underlay restrictions by law. However, many companies as well as cities are interested in Data Mining. (Data Mining is of high importance for many decision making processes and getting even more important in times of Big Data.) Since we are talking about personal data like who was when where it is of high importance that this information cannot be tracked back to one specific person. Therefor only anonymized data is stored and analyzed. In the german Bundesdatenschutzgesetz § 3 Abs. 6 Data anonymization is defined as:
+"Anonymisieren ist das Verändern personenbezogener Daten derart, dass die Einzelangaben über persönliche oder sachliche Verhältnisse nicht mehr oder nur mit einem unverhältnismäßig großen Aufwand an Zeit, Kosten und Arbeitskraft einer bestimmten oder bestimmbaren natürlichen Person zugeordnet werden können." \parencite{BDSG}
+
+(translated from German)
+
+"Anonymizing is manipulating personal Data in such a way that it is not, or only with a excessive effort in time, cost and manpower possible to match the single information - containing personal or factual coherences -  to one determined or determinable individual." \parencite{BDSG}
+
+For the later measurement on trustworthyness we won't focus on the amount of data collected, but on the way it is, or could be collected. 
+Thus a solution that collects only sparse data, but is able to determine the individuals is ranked less than one which collects a huge amount of data but is unable to determine the individual. 
+For later comparison trustworthiness is roughly estimated in percent. 
+
+\subsubsection{Accuracy}
+Accuracy can be measured by exact values in three or two dimensional space. Given a variable $S$ containing the real positions and a variable $Z$ containing the assumed positions accuracy is defined as $\Delta = |S-Z|$. 
+
+\subsubsection{Expected Cost}
+ We define expected costs as cost for 10.000 square meters for one year including the implementation and additional fixed cost for services like a server providing constraint information.  Cost per square meter is only possible to determine for solutions requiring a special infrastructure like WiFi or iBeacons.  Solutions relying on infrastructure independent sensors (i.e. gyroscope and accelerator) are currently all assisted by constraint services.
+ 
+Cost efficiency can be calculated by setting the measurements in relation to each other. Therefore we define that efficiency is an index without any bounds. Since trustworthiness is an estimated value in percent it could be used to influence the result directly by multiplication. For the accuracy smaller values are better. Thus the expected cost need to be divided by the accuracy. This leads to the function \\ $efficiency=(cost/accuracy)*trustworthiness$.
+
+\subsection{Compared Existing Systems}
+Under consideration of the Smart City context and the fact that we are focusing on systems working in independent mode  (i.a. because the infrastructure mode collects data without knowledge of the user) the following use cases of the previous collection are still covered.
+
+\begin{enumerate}\itemsep0px
+	\item General Indoor Navigation (with all its sub use cases)
+	\item Personalized and Augmented Experiences
+	\item People and Object tracking by active clients only
+	\item Robotics
+	\item Real Life Social Networks
+	\item Geofences
+\end{enumerate}
+
+Not covered are: 
+\begin{enumerate}\itemsep0px
+	\item Proximity marketing, because our system is not about determining proximity, it is about determining a location.
+	\item Location analytics, because every of the compared solutions could be extended by an analytic tool if the user agrees to forward his positions by various solutions - thus our later described solution. 
+	\item People and Object tracking by active sensors which we expect to be the more favored by customers.
+\end{enumerate}
+	
+To cover these use cases solutions currently on the marked and able to work in Smart Cities are compared. The list of solutions is provided in the next section.
+
+\subsubsection{Systems Worth Considering}
+As systems worth considering different solutions covering subsets of the covered use cases are taken into account. Since not every solution on the market can be considered, we tried to cover all use cases and all presented technologies on hardware site. Which algorithms are used in the background is often not published thus we wouldn't have been able to find enough solutions to compare the algorithms with at least a little bit of objectivity. The compared solutions are given in the next table:
+\\
+
+%http://www.directionsmag.com/entry/10-things-you-need-to-know-about-indoor-positioning/324602
+\begin{singlespace}
+\begin{tabularx}{14.65cm}{|p{2.5cm}|p{4cm}|p{6cm}|}\hline
+	\textbf{Solution} & \textbf{Technologies} & \textbf{Use Cases}  \\ \hline
+	Indoo.rs & Bluetooth 4.0  & Routing, Analytics and Proximity marketing \\ \hline
+	Estimote & iBeacons & SDK for Distance, Proximity and Notification \\ \hline
+	MazeMap & Flexible, but WiFi divided by Cisco is default & Interactive Indoor Map supporting indoor paths and positioning\\ \hline 
+	infsoft & WiFi, Bluetooth 4.0 and internal sensors & Locating, Routing, Augmented Reality and Analytics \\ \hline
+	Sailstech & WiFi, Bluetooth 4.0 and internal sensors & Locating, Routing \\ \hline
+	Navizon & WiFi Fingerprinting (\& Active Beacons) & Locating, Routing \\ \hline
+	Locata & Locata-GPS like & Locating, Routing \\ \hline
+	ByteLight & LED light patters, Bluetooth, internal sensors & Routing, Proximity Marketing \\ \hline
+	IndoorAtlas & Magnetic Flux & Locating, Routing \\ \hline
+\end{tabularx}
+\end{singlespace}
+
+\subsubsection{The Comparison}
+The following information was collected and estimated for the named solutions:
+
+\paragraph{Indoo.rs} installed a Indoor navigation system at San Francisco International Airport (SFO) mentioned in the introduction \parencite{flySfo1}. The complete solution is built on Bluetooth 4.0 beacons. They do both proximity measurements and fingerprinting. If the corresponding app is installed in the navigation device it can work offline. If enabled real-time data collection is also provided. 
+According to the Beacon calculator provided by indoo.rs for $10.000m^2$ around 150 Beacons would be needed \parencite{flySfo5}. (The following prices have been found on 7th May 2015: StickNFind: \$24 per beacon, shop.beaconinside.com: \$18 per iBeacon, shop.kontakt.io: \$20 per Beacon, bluesensenetworks.com: around \$20 per beacon. For our rough calculations 20\$ per beacon is assumed. And the small but full featured package is given with \$95 per month.
+For one year minimal cost would be $150*\$20+12*\$95=\$4140$. An additional amount of development or adaption cost for an app and install the beacons at the customer site is not included.nOn their website the accuracy is given with up to 2 meters \parencite{flySfo5}.
+
+The trustworthiness is hard to estimate since the solution is able to work offline but if enabled can provide real-time data collection and analytics. The last feature is optional and analyzing could be done with anonymized data. For the comparisson we assigned 90\% to tis value.
+
+
+\paragraph{Estimote} installed a solution using iBeacons at London’s Heathrow airport and Britain’s Odeon Cinemas also mentioned in the introduction. Estimote itself is focusing on SDK development for routing, analytics \& proximity marketing. Since the SDK provides Distance measurements with trilateration localization can be implemented. Pricing is given with \$198 for 6 iBeacons on the website and an unknown volume discount is offered for larger quantity \parencite{estimote}. Assuming that the discount is around \$5 and still 150 beacons are needed the price would be $150*\$25=\$3750$ for the hardware plus additional individual cost on application development and installation. The accuracy is assumed with 2 meters the same as is for indoo.rs. 
+
+Since the application programming would be done customized the trustworthiness can be taken as 100\%.
+
+
+\paragraph{MazeMap} originaly a Campus Guide, from the NTNU Gloshaugen Campus in Norway and now available for enterprises \parencite{campusGuide1}, \parencite{mazemap}. MazeMap now is focusing on IndoorMaps that "are searchable, linkable, user-friendly and always up-to-date" \parencite{mazemap}.
+For positioning they are writing "MazeMap can integrate with your Wi-Fi network or with other indoor location sources" \parencite{mazemap}. Since they are partnering with Cisco for Wifi positioning. Cisco itself uses a location aware WLAN Design with angle and distance based measurements and WiFi Fingerprinting for location determination \parencite{cisco}. 
+To implement this service not necessarily new hardware is needed. For the pricing they are writing: "The basic bundle has an establishement cost of $\$0.15/m^2$. For feature add-ons, such as integration API and floorplan updates, pricing is giving upon request." \parencite{mazemap}. While the basic bundle does not include indoor positioning and indoor path. However assuming a doubled price for $10000m^2$ $\$3000$ and again plus additional individual cost on application development and installation.
+
+Since the positioning itself is not part of this solution and the map is able to work with both independent and infrastructure mode a statement on trustworthiness is not possible. 
+
+This solution is still in the list because MazeMap delivers a key element of every positioning systems and the map could be used for precise Map Matching. However it is not listed below because it could be linked to every solution, has no fixed accuracy, cost or trustworthiness. (Deep Map SDK and Visioglobe (European leader) are alternatives to MazeMap. Even Open Streetmap now offers Indoor Mapping.) 
+
+\paragraph{infsoft} offers a solution in infrastructure mode and one in independent mode. The one in independent mode uses WiFi and internal sensors (gyroscope etc.) which can optionally be enhanced by Bluetooth Beacons. The accuracy is advertised wit 1m only, and there is no word on pricing on their website. 
+In independent mode trustworthiness is guarantied accorting to their statement "The application periodically transmits the current position to the server, so that all smartphones using the application can be tracked. No personal data is captured, so that infsoft Indoor Location Analytics can be used in compliance with data protection regulations." \textcite{infsoft}. In infrastructure mode the devices can be tracked without any knowledge of the customer. In both cases the tracked person does not have any choice or does not even know that he is tracked. This fact reduces the trustworthiness for us to 70\%.
+
+\paragraph{Sailstech} is a public project. The provider of a solution using Sailstech is completely free in the effort it invests. The softwaretools to use however are fixed: JOSM, SAILS MRE, BuildNGO and the SAILS SDK. The development costs, accuracy and trustworthiness for a project with Sailstech will highly depend on the goals of the project. Thats why we decided to not include the solution in the table below. 
+
+\paragraph{Navizon} can be seen as direct competitor of infsoft. They are also providing positioning in infrastructure as well as independent mode. In independent mode accuracy is given with below 1m for iOS and Android and about 3m for other OS \parencite{navizon}. The solution uses WiFi fingerprinting as main technology for positioning \parencite{navizon}. The decision if the determined location is transmitted to an analyzing server or not can be made during application development. Therefore trustworthiness is high and the costs are again depending on the use case specifications. In Infrastructure Mode Active Navizon Beacons can determine the location of every WiFi enabled device - but this is not of importance for the comparison. 
+
+\paragraph{Locata} invented its own GPS like technology "that creates terrestrial networks that function as a 'local ground-based replica' of GPS-style positionin" \parencite{locata}. Locata is suitable for wide area positioning system, but still does work inside due to a received signal strength of $-84 dBm$ at $10 km$ and $-64 dBm$ at $1 km$ from the LocataLite compared to the strongest GPS satellite signal of $-125 dBm$ \parencite{locata}.
+This technology thus would be suitable to be installed at a whole urban area, but special receivers are needed. The potential of this technology are high if the major smartphone and GPS manufacturers consider to implement Locata receivers. The trustworthiness of this solutions is as high as it is for GPS - which is $100\%$ - because only receivers are able to locate themselves. 
+
+Locata is a big opportunity for cities and even states to improve existing positioning systems and making indoor positioning in all buildings available at once. However such a project does not add any value to a cities infrastructure until receivers are not implemented into the commonly used devices.  
+
+\paragraph{ByteLight} is combining light patterns with bluetooth 4.0 and internal sensors. The light patterns increase the accuracy reached by bluetooth only solutions to less than one meter. In addition to all the other solutions the front camera needs to be enabled during positioning \parencite{bytelight}. Trustworthiness is again could be a problem. The ByteLight platform is designed for personalized proximity marketing in the focus. Therefore the sharing of personalized data is one goal and trustworthiness would depend on how the data is stored. We decided to assign only 50\% of trustworthiness to this solution. 
+
+\paragraph{IndoorAtlas} is focusing on magnetic flux and providing a cloud based solution. The SDK they provide enables the development of an indoor navigation app with three steps: At first the maps are uploaded to the IndoorAtlas Cloud, the IndoorAtlas app is used to record a magnetic flux map and afterwards the own app can be developed \parencite{indooratlas}.
+Since the use case is not given or limited by the SDK the trustworthiness won't be causing any problems and pricing starts at \$99 per month for use of the cloud of IndoorAtlas.
+\\
+\\
+Finally a comment to the \textbf{In-Location Alliance}, a cooperation between more than 20 members with the goal to accelerate indoor position solutions. 
+This alliance announced three winners of a best use case contest 2014. The winners are indoo.rs with the San Francisco International Airport project, infsoft and vodafone for a solution at vodafones campus in Düsseldorf and iMap as well as Sailstech with a solution at the largest station in Taiwan - Taipei Railway Station \parencite{inLocation}. 
+
+\begin{singlespace}
+\begin{tabular}{|p{2.0cm}|p{2cm}|p{2.0cm}|p{2.0cm}|p{3.5cm}|} \hline
+	\textbf{Solution} & \textbf{Accuracy} & \textbf{Costs $10000m^2$} & \textbf{Trustw.} & \textbf{Efficiency} \\ \hline
+	Indoo.rs & 2m & \$4140 + \$x & 90\% & $e=((4140 + x)/2)*0.9$ \\ \hline
+	Estimote & 2m & \$3750 + x \$& 100\% & $e=((3750 + x)/2)*0.9$ \\ \hline
+	infsoft & 1m  &	\$x & 70\% & $e=x*0.7$ \\ \hline
+	Navizon & 1m & \$x & 100\% & $e=x*1$ \\ \hline
+	Locata & 0.1m & \$y & 100\% & $e=10*y$ \\ \hline
+	ByteLight & <1m & \$x & 70\% &  $e>x/2$ \\ \hline
+	IndoorAtlas & 2m &  \$1200 + z & 100\% & $e=z/2$ \\ \hline
+\end{tabular}
+\end{singlespace}
+
+\subsubsection{The Winner}
+Assuming $x$ to be high the range of costs for a solution is not as much influenced by the technologies as it is by the use case. We expect the overall costs for a Locata solution ($y$) much more expensive than for every other solution. However the average cost per square meter can be much less than for a single building or campus solution. So far this is only speculation and we will focus on solutions suitable for implementation not to far in the future. Assuming that the implementing team would always be the same ($x$) - the highest efficiency is reached by Navizon.
+Only IndoorAtlas is expected to be cheaper since the setup using the SDK is done by using only three simple steps without any special hardware needed and the software is provided for free. 
+
+Summarizing it is remarkable that most of the solutions are hybrids and use different sensors to calculate the position. WiFi and Bluetooth based positioning is used by the most solutions. The fact that fingerprinting can be achieved using manual fingerprinting, additional infrastructure or crowdsourcing - relying on users willing to share sensitive sensor and location information - is one big disadvantage of all these solutions \parencite{sail}. (A new technology in development using round trip signal propagation (Time-of-Flight) could possibly be a solution to this problem for WiFi \parencite{sail}.) The alternative to use light patters is only applicable in special use cases where the navigation device can be assumed to have a camera with a clear view to the ceiling.
+
+
+But before we start designing our own system we decided to run some experiments to test some hypothesis regarding single positioning technologies.
+
+\subsection{Preliminary Consideration of Experiments}
+The two big competitors indoo.rs and estimote are both using iBeacons. While indoo.rs is using both fingerprinting and proximity measurements estimote is focusing on proximity measurements. Due to this we decided to make some experiments to decide which method to use. 
+
+Then there is IndoorAtlas mainly relying on Magnetic Flux measurements. The question which popped up in our minds was: Is it possible to locate a device inside a environment with a little amount of metal? 
+
+In the following section three experiments to answer the design questions are described.
+
+\subsubsection{Proximity measurements with iBeacons}
+
+\paragraph{Hypothesis: }
+It is better to focus on Bluetooth proximity measurements then fingerprinting. 
+
+\paragraph{Experiment design: } 
+In our test environment we set up two Bluetooth beacons as shown in figure \ref{fig:positionsBea}. The proximity will be measured based on signal strength in all the 20 marked points. The shown walls and landmarks are barriers for the signals. 
+
+If the results will show that the measured distances are highly influenced by these barriers we could assume that proximity measurements are not the way of choice. (Proof by contradiction.)
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.4\textwidth]{images/floorplan2ndf+positions.png}
+	\caption{20 positions for measurements in our test environment ($9.5m\times 9.5m$).}
+	\label{fig:positionsBea}
+\end{figure}
+
+\paragraph{Evaluation: } 
+In figure \ref{fig:distaceBea1} the measured values of \textit{Beacon 1} are shown for the 20 points. In figure \ref{fig:distaceBea2} the measured values of \textit{Beacon 2} are shown for the 20 points. 
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.5\textwidth]{images/distaceBea1.png}
+	\caption{Measured distances from Beacon 1 for the 20 locations}
+	\label{fig:distaceBea1}
+\end{figure}
+
+
+As we can observe the measured values are up to $30m$ in an $9.5mx9.5m$ environment. This already shows that direct distance measurements are not very accurate. In more detail we can observe for \textit{Beacon 1} that the measured distance at position 9 is higher than on position 12 while the bee-line is shorter for position 9. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.5\textwidth]{images/distaceBea2.png}
+	\caption{Measured distances from Beacon 2 for the 20 locations}
+	\label{fig:distaceBea2}
+\end{figure}
+
+However we are able to observe that the values are highly depending on the barriers and that there are individual combinations of the values from the two beacons. Due to this fact a fingerprinting map is possible with only two beacons. This leads to the next experiment where we try to proof that the fingerprinting map is the method of choice. 
+
+\paragraph{Hypothesis: } 
+It is better to focus on Bluetooth fingerprinting then on proximity measurements. 
+
+\paragraph{Experiment design: } 
+For a proof by contradiction - to show that fingerprinting is not better than direct proximity measurements we use the weak point of the fingerprinting map. The fingerprinting map assumes a static environment. Only if in every point in time at a specified location the measurements will have nearly the same values as stored in the map they could be matched.
+
+Thus we need to show that a simple dynamic change will adulterating the results to much for a fingerprinting map. The simplest dynamic change we can assume is the body of the person navigating through the environment. 
+
+For this experiment we used only one Beacon placed in a way that a direct path for measurement is possible and made measurements on distances $1m$, $5m$ and $8m$. For every distance we collect 10 measurements for the direct path and 10 with a body between Beacon and the receiving device. 
+
+In figure \ref{fig:proxWithB1} the three points of measurement are marked. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.4\textwidth]{images/floorplan2ndf+normung.png}
+	\caption{3 Distance measurements with a direct path.}
+	\label{fig:proxWithB1}
+\end{figure}
+
+\paragraph{Evaluation: }
+ 
+ In figure \ref{fig:proxWithB1} the boxplots for the measurements at the different positions are shown. Always at first the measurement without a barrier and the second one with a body as barrier. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.5\textwidth]{images/insideProx.png}
+	\caption{Boxplots of proximity measurements with and without a body in between (Inside).}
+	\label{fig:proxWithB1}
+\end{figure}
+
+ If we combine the measurements with and without barrier we have a maximum difference above 10m (for mean values still 4m). This already shows that even fingerprinting maps could not be used to determine a accurate position. 
+
+ Surprisingly the diffusion rate of the measurements grows with the distance except for the last measurement (at 8m distance with barrier). Our assumption was that the reflection of the signal results in multi-path measurements for the higher distances, which would explain the higher diffusion rate. For position 3 the body maybe screening-off  a lot of possible path which results in a lower diffusion rate (with outliers) again. 
+ However we decided to explain the effect by a third experiment.  
+
+\paragraph{Experiment design: }
+To avoid refections and therefor multi path measurements we decided to repeat our measurements outside on wide grassland. 
+Again we measured at a distance of $1m$, $5m$ and $8m$ one time with and the second time without a body as barrier.
+
+\paragraph{Evaluation: }
+
+The results in figure \ref{fig:proxOutside} show that the variance does not grow as much as in the experiment before. Even more the variance grows with the barrier more than with the distance. The theory that the multipath effect caused the big variance fits to these results. This leads to the assumption that the most of the measurements are direct path signals which have been evaluated. Then the measured distance for 5m with barrier is higher than for 8m without body, and the measurement for 8m with barrier is far above 20m while it was below 15m indoors. Which fits to our theory again.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.5\textwidth]{images/outsideProx.png}
+	\caption{Boxplots of proximity measurements with and without a body in between (Outside).}
+	\label{fig:proxOutside}
+\end{figure}
+
+\paragraph{Conclusion of Beacon Experiments: }
+Neither proximity measurements nor fingerprinting map are providing results beyond doubt. The reflection rate and possible multipath measurement can highly influence measurements if no direct path is given. Even the position of the person navigating through an environment can adulterate the measure signals. 
+
+These results show that a positioning system cannot trust absolute values. Only the deltas between signal strengths should be taken into account. To assure measurement deltas resulting of dynamic changes like a person passing the signal path wont affect the positioning evaluation of internal sensors will help out. 
+
+However a combination of proximity and fingerprinting will be the best choice for our system.
+
+\subsubsection{Magnetic flux in a house without steel}
+At the beginning of this chapter we already denoted the Question: "Is it possible to locate a device inside a environment with a little amount of metal using magnetic flux?". We assume that the system IndoorAtlas sells is working in the most of the offices and public buildings having a lot of metal in it. However in a smart city there may be places with less steel. 
+
+\paragraph{Hypothesis: } It is possible to locate a device inside a environment with a little amount of metal using magnetic flux.
+
+\paragraph{Experiment design: } 
+For this experiment we use the same test environment (inside of a wooden building). Since IndoorAtlas is providing a free iOS app for Development we just used this app. After downloading the app we needed to upload our indoor map into the IndoorAtlas Cloud. Then for calibration we needed to place a path on the map and then walk along this path in an constant speed. After doing so for half an hour we assumed to have a reliable map. We tested the map using again predefined test path. 
+For out own tests we then tried to locate ourself while walking through the mapped area.
+
+\paragraph{Evaluation: }
+In figure \ref{fig:magneticX} the real position versus the measured position is shown for four situations.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/experiments/magnetic.jpg}
+	\caption{The real position (star) versus the measured position (dot).}
+	\label{fig:magneticX}
+\end{figure}
+
+The test results partly contradict our hypothesis. In this small area the possible paths should have been a small set. However the positioning failed. Therefore we cannot assume that magnetic flux is a feasible solution in all environments.
+
+\paragraph{Conclusion: }
+This experiment shows that the positioning does not work very well in our test environment. We conclude that the magnetic flux measurement should only influence the result in an metal full environment. The later described filter combining different sensor data should take this into account. Even more the magnetic flux map shows that there are no individual magnetic flux values allowing us to find a concrete position on a map. It is more a magnetic flux path - the measurements taken during some steps give magnetic flux changes characteristic for an specific area. 
+In case of large buildings there will be steel graders influencing the magnetic flux much more. However it could happen that these steel graders are placed all in fixed distances resulting in self-repeating magnetic flux patterns. 
+Altogether we can say that we are able to use Bluetooth to determine a rough absolute position and magnetic flux measurements to find the most likely path of movement (and thus position) inside this area. Since the results of the Bluetooth experiments show that the absolute position will be a very rough one. 
+
+Now we take a short look at Wifi fingerprinting and internal sensor data in praxis. 
+
+\subsubsection{WiFi Fingerprint}
+Only a short look at for different WiFi signals in the test environment in figure \ref{fig:wifiTest} shows that determining absolute positions using WiFi won't be a big problem if there are enough access points in the area. 
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/wifi.png}
+	\caption{Four fingerprint maps of WiFi signals in the test environment.}
+	\label{fig:wifiTest}
+\end{figure}
+
+Since not all WiFi signals have the same source the combination of at least three Access Points will enable a rough absolute positioning comparable to Bluetooth. 
+
+\subsubsection{Internal Sensors}
+None of the above methods could enable a accurate and stable service of positioning. However a rough absolute positioning is possible using beacons and WiFi. In these rough determined areas which can be assumed being reliable magnetic flux measurements can be used to state more precisely which area is the most likely one.
+
+However to enable accurate positioning the evaluation of internal sensors is the best chance. To just show that a accurate positioning is possible we present the sensor data for different movements. 
+
+At first a simple rotation. The rotation can be observed very accurate using the magnetometer, since it can be used to determine the absolute alignment to the magnetic field of the earth. In figure  \ref{fig:rotation} a horizontal rotation is shown. The rotation is represented in sinus curves. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/experiments/rotation.png}
+	\caption{Measurements of the magnetometer for two different rotations.}
+	\label{fig:rotation}
+\end{figure}
+
+Simple steps are shown in figure \ref{fig:steps}. They can easily count by finding all local maximum and minimum values. 
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/experiments/steps.png}
+	\caption{Measurements of the accelerometer for steps on a straight line.}
+	\label{fig:steps}
+\end{figure}
+
+In figure \ref{fig:edge} both movements are combined by going around an edge. We can observe the steps in the measurements of the accelerometer and are able to see the rotation in the measurements of the gyroscope and the accelerometer. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/experiments/edge.png}
+	\caption{Measurements of the accelerometer (1), gyroscope (2) and magnetometer in y-axis (3) are shown for going around an edge.}
+	\label{fig:edge}
+\end{figure}
+
+Even if these measurements can be interpreted easily there are situations where they can by misleading. For example measurements of the accelerometer, gyroscope and magnetometer measurements for going around an edge are very similar to rotating the phone while walking (visible in figure \ref{fig:rotateWhileWalking}).
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/experiments/stairs.png}
+	\caption{Measurements of the accelerometer going stairs up.}
+	\label{fig:stairs}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=.6\textwidth]{images/experiments/rotateWhileWalking.png}
+	\caption{Measurements of the accelerometer (1), gyroscope (2) and magnetometer in y-axis (3) are shown for rotating the phone while walking a strait line.}
+	\label{fig:rotateWhileWalking}
+\end{figure}
+
+Another example are stairs (see figure \ref{fig:stairs}) which are very similar to regular steps. Therefore the barometer will hopefully clarify the situation. Unfortunately we have not been able to make an experiment with an barometer. 
+
+
+
+However this background knowledge is now applied to our own system design.
+
+
+\pagebreak
+\subsection{The Concept} 
+The concept of the system architecture we are designing had the goal for a high overall efficiency. We decided to use a modular approach for the solution to make sure that different Smart City needs can be fulfilled. To guaranty trustworthiness and reach social acceptance we suggest to stick to the concept of the MIT and give the user ability to choose which and how much information he want to share. 
+
+In the next steps we explain our decision for different technologies presenting the model and discuss the advantages and disadvantages of this model.
+
+The model contains three main elements: Sensors, Constraints and Filters. Clients could just load the constraints from one application server or they are already included into the app before they are applied through filters to the sensor data. 
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.6\textwidth]{images/Final_Positioning_system.pdf}
+	\caption{Concept of a new Indoor Positioning System}
+	\label{fig:ips}
+\end{figure}
+
+In figure \ref{fig:ips} the model is shown. The infrastructure contains WiFi Access Points and Bluetooth. In the most buildings Wifi is already provided and no additional infrastructure has to be deployed. By just monitoring signal strength and access points no direct communication between AP and Client needs to be established. Signal strength and access points in reachable range enable us to use fingerprinting. It is not possible to use energy of the direct path and the Time of Flight of direct path calculations without communication between client and AP. 
+The measured signals strengths from different access points are filtered by a modified mask filter - like the one for GPS explained in section \ref{sec:error} - and flagged if they can be identified as unreliable.
+
+After enough measurements to ($>30$) for each AP have been collected a Dempster Schafer is applied to combine the measurements with the WiFi Fingerprint map and the previous position - as output an absolute position in form of an expected value $\mu$ and the associated variance $\sigma^2$ for every dimension is given.
+
+Unlike for WiFi, Bluetooth beacons need to be installed in the infrastructure. However Bluetooth beacons are working with Buetooth Low Energy and are able to work with batteries for longer time. There are two major advantages of using both Bluetooth and Wifi. First the technologies complement each other and improve overall positioning, second they backup each other. Thus devices with disabled Bluetooth or WiFi are still able to calculate acceptable positioning information. Additional devices not supporting Bluetooth 4.0 are able to locate themselves.
+The received Bluetooth signals are marked by a mask filter and afterwards interpreted using a Kalman filter and a corresponding Bluetooth fingerprint map. (Kalman filter is used here to take advantages of Kalman and Demster Shafer if both Bluetooth and WiFi is available) Again the output would be an absolute position. 
+
+We decided to not use GPS, ZigBee or Locata in first place since GPS is to unreliable indoors and the average moblie device does not support ZigBee or Locata. 
+Even if the LED solution could enhance the systems performance especially to differentiate between different floors in the same design we decided us against it because of an big overhead on development of non reusable components for the initial solution.
+
+The magnetometer could improve the performance and would not increase development effort too much. The principle applied is the same as it is for WiFi and Bluetooth. Therefore all fingerprint maps can be generated at once. For the first filtering to smooth the sensor data we want do use error analysis and throw out outliers. The matching of the measured information to the magnetic flux map again is done using a Kalman filter.
+
+All of the described above strategies are ranging between 1 and 2m accuracy. The output of each sensor interpretation is already a position on a map. The internal sensors Gyroscope, Accelerometer Barometer and Compass need to be interpreted to derive a movement vector which then can be applied to the previous position to calculate an absolute position.
+
+As a first step to get an relative movement vector the signals of Accelerometer, Gyroscope and Barometer are taken. The Gyroscope gives the orientation in 3D space. Combined with the information of the accelerometer - which gives the direction of accelerate it is possible to calculate the direction of accelerate relative to a horizontal plane. Using the air pressure change the direction of the vector can be refined by means of angel to the plane. The relative movement vector (relative to the phones alignment orthographic projected onto the plane) can then be transformed into an absolute vector using the compass. This sensor fusion should be done using the principle of error propagation. 
+
+At this point there are four absolute positions derived using the different technologies which need to be combined. For this combination we decided to develop an own algorithm. The thoughts behind this decision are that all four positions will have different reliabilities which will be visible after testing. An implementation of the Kalman filter is not able to learn - or react to some at this moment unknown coherences but a modified version using a Kalman filter combine with a Bayesian network or even OneR-Algorithem known from Data Mining could fit our purpose. However the decision how to fuse these four given positions the best way could only be made after some field experiments and will be part of future work.
+
+For Map Matching we decided to include different constraints. At first there are the Floor-plan and maybe highlighted and maybe dynamic landmarks. These two maps are combined just by putting one on top of the other. Then there are the movement models. All three movement models can be seen as heat-maps with hot areas with a lot of human traffic and cold areas where humans are less often. The long term movement model is generated using all tracked movement data of a long run (like a bulb exposure in photography). The dynamic movement model can be subject of different rules; Thus if there are patterns detected referencing different times of days in a week (e.g. every saturday at 10.00 till 18.00 o Clock high density of people) this patterns can be modeled in heat-maps again loaded at the expected time. The Live movement Model includes the accumulated data of a short time period. All three movement models are combined building the sum for each position with weights ($p_{ij}=x*long_{ij}+y*dyn_{ij}+z*live_{ij}$ where $i$ and $j$ are the coordinates defining a position and $x$, $y$ and $z$ are the weights). 
+The weights cannot be define at this stage of the work. They will be subject of futur work again.
+
+After the Pedestian Movement model and the Map are generated they both are combined in one step using Dempster-Schafer. To do so, for all positions considerable the plausibility is calculated using the Map and the Movement Model to find doubt for specific position. 
+
+To underline the decisions made in the concept we shortly summarize advantages and disadvantages of the design.
+
+\subsubsection{Advantages and Disadvantages}
+At this point we will discuss the concept again and measure ourself on the earlier defined measurements. 
+
+Trustworthiness at this point is easy to answer. Our solution will enable every device to locate itself after initially loading the available constraints from a central service. After this has been done no further communication - including forwarding location information - to the system provider is necessary. Thus the whole system is able to run without any feedback data from the user except the pedestrian movement model. This movement model however could be generated with highly accumulated and anonymized data colleced from users willing to share information. In summary we won't expect any trustworthiness issues since "privacy by design" is part of the concept.
+
+Accuracy is at this point unknown but we expect to be able to allow positioning with accuracy below $1.5m$. This looking at the accuracy of the compareable solutions of infsoft and Navizon of $1m$ this is our pessimistic guesstimate. An optimistic value is $<1m$ and our goal for further developments. One advantage of the described concept regarding accuracy is that in all stages measurement errors are propagated and thus no measurement will be lost. All this information is then included into the Map matching process and our unique concept of movement models. Another advantage is that all filters are replaceable and field tests of different realization of the same structure are possible. The corresponding disadvantage is that the development of an optimal solution will need a huge amount of tests and development effort. However the modular structure allows a step by step development with continuous improvements.
+
+Cost efficiency is tried to realize by this stated step by step development and a small working sub-solution. Due to this, the localization will later on work even if WiFi or Bluetooth is turned of.  Additional Hardware will only be needed for the Bluetooth beacons and no infrastructure changes are necessary. In fast moving environments however the effort of generating Fingerprints could be enormous if there are not enough users willing to share their measurements.
+
+At a last step we check which of the chosen use cases are covered.
+
+\subsubsection{Use Cases covered}
+With this solution positioning is guarantied and therefor all the focused use cases can be realized. General Indoor Navigation with all its sub use cases, Personalized and Augmented Experience, People and Object tracking by active clients only real life social networks, robotics and more are possible. For proximity marketing the effort would not be in proportion with the return. Location analytics would be possible partly being aware that all very private users are missing in the statistic. 

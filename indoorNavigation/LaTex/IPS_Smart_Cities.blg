@@ -1,0 +1,18 @@
+[0] Config.pm:387> INFO - This is Biber 1.6
+[1] Config.pm:390> INFO - Logfile is 'IPS_Smart_Cities.blg'
+[122] biber-darwin:218> INFO - === Tue Jun  2, 2015, 11:50:40
+[122] Biber.pm:325> INFO - Reading 'IPS_Smart_Cities.bcf'
+[272] Biber.pm:623> INFO - Found 64 citekeys in bib section 0
+[292] Biber.pm:2995> INFO - Processing section 0
+[313] Biber.pm:3129> INFO - Looking for bibtex format file 'literature.bib' for section 0
+[317] bibtex.pm:898> INFO - Decoding LaTeX character macros into UTF-8
+[328] bibtex.pm:775> INFO - Found BibTeX data source 'literature.bib'
+[436] Utils.pm:169> WARN - BibTeX subsystem: /var/folders/1y/pns809gs04s2zlg72m02_3j40000gn/T/wdMaAWGOyT/literature.bib_26536.utf8, line 466, warning: 1 characters of junk seen at toplevel
+[437] Utils.pm:169> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[437] Utils.pm:169> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[1172] Biber.pm:2881> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[1172] Biber.pm:2887> INFO - Sorting 'entry' list 'apa' keys
+[1172] Biber.pm:2891> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[2047] bbl.pm:472> INFO - Writing 'IPS_Smart_Cities.bbl' with encoding 'UTF-8'
+[2062] bbl.pm:545> INFO - Output to IPS_Smart_Cities.bbl
+[2062] Biber.pm:105> INFO - WARNINGS: 3

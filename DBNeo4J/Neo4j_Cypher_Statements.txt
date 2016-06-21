@@ -1,0 +1,98 @@
+CREATE (derGrosseGatsby:Book { title : 'Der große Gatby'})
+CREATE (zaertlichIstDieNacht:Book { title : 'Zärtlich ist die Nacht'})
+CREATE (schoeneNeueWelt:Book { title : 'Schöne neue Welt'})
+CREATE (homoFaber:Book { title : 'Homo Faber'})
+CREATE (montauk:Book { title : 'Montauk'})
+CREATE (derAlteMannUndDasMeer:Book { title : 'Der alte Mann und das Meer'})
+CREATE (ueberDenFlussUndInDieWaelder:Book { title : 'Über den Fluss und in die Wälder'})
+CREATE (perAnhalterDurchDieGalaxis:Book { title : 'Per Anhalter durch die Galaxis'})
+CREATE (dasRestaurantAmEndeDesUniversums:Book { title : 'Das Restaurant am Ende des Universums'})
+CREATE (dasLebenDasUniversumUndDerGanzeRest:Book { title : 'Das Leben, das Universum und der ganze Rest'})
+CREATE (derSteppenwolf:Book { title : 'Der Steppenwolf'})
+CREATE (siddhartha:Book { title : 'Siddhartha'})
+CREATE (taumelbunteWelt:Book { title : 'Taumelbunte Welt'})
+CREATE (farmDerTiere:Book { title : 'Farm der Tiere'})
+
+
+
+CREATE (fScottFitzgerald:Author { name : 'Fitzgerald', firstname : 'Francis Scott Key', stagename : 'F. Scott Fitzgerald'})
+CREATE (aldousHuxley:Author { name : 'Huxley', firstname : 'Aldous Leonard', stagename : 'Aldous Huxley'})
+CREATE (maxFrisch:Author { name : 'Frisch', firstname : 'Max Rudolf', stagename : 'Max Frisch'})
+CREATE (ernestHemingway:Author { name : 'Hemingway', firstname : 'Ernest Miller', stagename : 'Ernest Hemingway'})
+CREATE (douglasAdams:Author { name : 'Adams', firstname : 'Douglas Noël', stagename : 'Douglas Adams'})
+CREATE (hermannHesse:Author { name : 'Hesse', firstname : 'Hermann Karl', stagename : 'Hermann Hesse'})
+CREATE (georgeOrwell:Author { name : 'Orwell', firstname : 'George', stagename : 'George Orwell'})
+
+
+
+CREATE (suhrkamp:Publisher { name : 'Suhrkamp'})
+CREATE (fischer:Publisher { name : 'Fischer Verlag'})
+CREATE (reclam:Publisher { name : 'Reclam'})
+CREATE (diogenes:Publisher { name : 'Diogenes'})
+CREATE (dtv:Publisher { name : 'dtv'})
+CREATE (rowohlt:Publisher { name : 'Rowohlt'})
+CREATE (heyne:Publisher { name : 'Heyne'})
+
+
+
+CREATE 
+	(diogenes)-[:HAS_PUBLISHED]->(derGrosseGatsby),
+	(reclam)-[:HAS_PUBLISHED]->(derGrosseGatsby),
+	(diogenes)-[:HAS_PUBLISHED]->(zaertlichIstDieNacht),
+	(dtv)-[:HAS_PUBLISHED]->(zaertlichIstDieNacht),
+	(fischer)-[:HAS_PUBLISHED]->(schoeneNeueWelt),
+	(suhrkamp)-[:HAS_PUBLISHED]->(homoFaber),
+	(suhrkamp)-[:HAS_PUBLISHED]->(montauk),
+	(rowohlt)-[:HAS_PUBLISHED]->(derAlteMannUndDasMeer),
+	(rowohlt)-[:HAS_PUBLISHED]->(ueberDenFlussUndInDieWaelder),
+	(heyne)-[:HAS_PUBLISHED]->(perAnhalterDurchDieGalaxis),
+	(heyne)-[:HAS_PUBLISHED]->(dasRestaurantAmEndeDesUniversums),
+	(heyne)-[:HAS_PUBLISHED]->(dasLebenDasUniversumUndDerGanzeRest),
+	(suhrkamp)-[:HAS_PUBLISHED]->(derSteppenwolf),
+	(suhrkamp)-[:HAS_PUBLISHED]->(siddhartha),
+	(rowohlt)-[:HAS_PUBLISHED]->(siddhartha),
+	(fischer)-[:HAS_PUBLISHED]->(siddhartha),
+	(dtv)-[:HAS_PUBLISHED]->(taumelbunteWelt),
+	(diogenes)-[:HAS_PUBLISHED]->(farmDerTiere)
+	
+	
+	
+CREATE
+	(fScottFitzgerald)-[:HAS_WRITTEN { year : '1925'}]->(derGrosseGatsby),
+	(fScottFitzgerald)-[:HAS_WRITTEN { year : '1934'}]->(zaertlichIstDieNacht),
+	(aldousHuxley)-[:HAS_WRITTEN { year : '1931'}]->(schoeneNeueWelt),
+	(maxFrisch)-[:HAS_WRITTEN { year : '1957'}]->(homoFaber),
+	(maxFrisch)-[:HAS_WRITTEN { year : '1975'}]->(montauk),
+	(ernestHemingway)-[:HAS_WRITTEN { year : '1951'}]->(derAlteMannUndDasMeer),
+	(ernestHemingway)-[:HAS_WRITTEN { year : '1950'}]->(ueberDenFlussUndInDieWaelder),
+	(douglasAdams)-[:HAS_WRITTEN { year : '1979'}]->(perAnhalterDurchDieGalaxis),
+	(douglasAdams)-[:HAS_WRITTEN { year : '1980'}]->(dasRestaurantAmEndeDesUniversums),
+	(douglasAdams)-[:HAS_WRITTEN { year : '1982'}]->(dasLebenDasUniversumUndDerGanzeRest),
+	(hermannHesse)-[:HAS_WRITTEN { year : '1922'}]->(siddhartha),
+	(hermannHesse)-[:HAS_WRITTEN { year : '1927'}]->(derSteppenwolf),
+	(hermannHesse)-[:HAS_WRITTEN { year : '2008'}]->(taumelbunteWelt),
+	(georgeOrwell)-[:HAS_WRITTEN { year : '1945'}]->(farmDerTiere)
+	
+	
+	
+MATCH (bb:Book), (vv:Publisher) WHERE bb.title = "Homo Faber" AND vv.name = "Heyne" CREATE (vv)-[r:HAS_PUBLISHED]->(bb) RETURN r
+
+CREATE (pattiSmith:Author { name : 'Smith', firstname : 'Patti Lee', stagename : 'Patti Smith'})-[r:HAS_WRITTEN]->(justKids:Book { title : 'Just Kids'}) RETURN r
+
+MATCH (aa:Author { name : 'Smith'}) SET aa.firstname = 'Lee Patti' RETURN aa
+
+MATCH (aa:Author)-[:HAS_WRITTEN]-(books) WHERE aa.name = "Fitzgerald" RETURN aa, books
+
+MATCH (vv:Publisher)-[:HAS_PUBLISHED]->()<-[:HAS_WRITTEN]-(authors) WHERE vv.name = "Suhrkamp" RETURN authors.name
+
+MATCH (vv:Publisher { name : 'Suhrkamp'})-[:HAS_PUBLISHED]->()<-[:HAS_WRITTEN]-(authors) RETURN DISTINCT authors.name
+
+MATCH (vv:Publisher)-[*1..4]-(ee) WHERE vv.name = "Suhrkamp" RETURN DISTINCT ee
+
+MATCH (vv:Publisher { name : 'Rohwohlt'}), (bb:Book { title : 'Der alte Mann und das Meer'}), p=shortestPath((vv)-[*1..15]-(aa)) RETURN p
+
+MATCH p=shortestPath(
+	(vv:Publisher { name: "Rohwohlt"})-[*1..15]-(aa:Author { name: "Hesse"})
+) RETURN p
+
+MATCH (vv:Publisher), (aa:Author), (bb:Book) OPTIONAL MATCH (vv)-[hp]-(), (aa)-[hw]-() DELETE aa, vv, bb, hp, hw

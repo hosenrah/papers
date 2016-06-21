@@ -1,0 +1,753 @@
+// ~->[DNET-1]->~
+
+// File created by an unlicensed user using Netica 5.15 on Jan 06, 2015 at 18:15:04.
+
+bnet fulllearnes_stars_agebrochen_a {
+AutoCompile = TRUE;
+autoupdate = TRUE;
+whenchanged = 1420564351;
+
+visual V2 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 9;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	windowposn = (22, 22, 1458, 773);
+	scrollposn = (0, 71);
+	resolution = 72;
+	drawingbounds = (1453, 779);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0x00E1E1E1;};
+	NodeSet Nature {BuiltIn = 1; Color = 0x00F8EED2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0x00D3CAA6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0x00C8C8C8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0x00FFFFFF;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0x00FFFFB4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0x00FFBDBD;};
+	NodeSet Decision {BuiltIn = 1; Color = 0x00DEE8FF;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0x00F0FAFA;};
+	NodeSet Title {BuiltIn = 1; Color = 0x00FFFFFF;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		};
+	};
+
+node Qualifikation {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (Abitur, Meister, FHReife, Techniker);
+	parents = ();
+	probs = 
+		// Abitur       Meister      FHReife      Techniker    
+		  (0.79,        0.03000009,  0.16,        0.02000009);
+	numcases = 100;
+	whenchanged = 1420564312;
+	belief = (0.79, 0.03000009, 0.16, 0.02000009);
+	visual V2 {
+		center = (606, 126);
+		height = 13;
+		};
+	};
+
+node Studierfaehigkeitstest {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s7o0, s9o0, s8o0, s6o0);
+	statetitles = ("7.0", "9.0", "8.0", "6.0");
+	parents = (Qualifikation);
+	probs = 
+		// 7.0          9.0          8.0          6.0           // Qualifikation 
+		  (0.3333322,   0.3333322,   0.3333322,   3.333289e-6,  // Abitur        
+		   9.9996e-6,   9.9996e-6,   0.99997,     9.9996e-6,    // Meister       
+		   0.375,       0.3125,      0.125,       0.1875,       // FHReife       
+		   0.99997,     9.9996e-6,   9.9996e-6,   9.9996e-6);   // Techniker     ;
+	numcases = 
+		                 // Qualifikation 
+		  (3.00004,      // Abitur        
+		   1.00004,      // Meister       
+		   16.00004,     // FHReife       
+		   1.00004);     // Techniker     ;
+	whenchanged = 1420564312;
+	belief = (0.3433321, 0.3133329, 0.3133318, 0.03000316);
+	visual V2 {
+		center = (150, 228);
+		height = 11;
+		};
+	};
+
+node Schultyp {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (AllgemeinbildendesGymnasium, Wirtschaftsgymnasium, TechnischesGymnasium);
+	parents = (Qualifikation);
+	probs = 
+		// Allgemeinbildend Wirtschaftsgymna TechnischesGymna  // Qualifikation 
+		  (0.7721518,   0.1265824,   0.1012659,    // Abitur        
+		   3.3333e-6,   0.3333323,   0.6666644,    // Meister       
+		   6.249988e-7, 0.312502,    0.6874974,    // FHReife       
+		   4.999925e-6, 4.999925e-6, 0.99999);     // Techniker     ;
+	numcases = 
+		                 // Qualifikation 
+		  (79,           // Abitur        
+		   3.00003,      // Meister       
+		   16,           // FHReife       
+		   2.00003);     // Techniker     ;
+	whenchanged = 1420564312;
+	belief = (0.61, 0.1600005, 0.2299995);
+	visual V2 {
+		center = (822, 228);
+		height = 1;
+		};
+	};
+
+node Alter {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (jung, teen, teeth);
+	parents = (Qualifikation);
+	probs = 
+		// jung         teen         teeth         // Qualifikation 
+		  (0.1898735,   0.6455695,   0.164557,     // Abitur        
+		   3.3333e-6,   3.3333e-6,   0.9999933,    // Meister       
+		   0.06250051,  0.25,        0.6874993,    // FHReife       
+		   4.999925e-6, 4.999925e-6, 0.99999);     // Techniker     ;
+	numcases = 
+		                 // Qualifikation 
+		  (79,           // Abitur        
+		   3.00003,      // Meister       
+		   16,           // FHReife       
+		   2.00003);     // Techniker     ;
+	whenchanged = 1420564312;
+	belief = (0.16, 0.55, 0.29);
+	visual V2 {
+		center = (1134, 216);
+		height = 5;
+		};
+	};
+
+node Mathe {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s2o5, keine, s1o0, s2o0, s1o5, s3o0, s3o5);
+	statetitles = ("2.5", , "1.0", "2.0", "1.5", "3.0", "3.5");
+	parents = (Schultyp);
+	probs = 
+		// 2.5          keine        1.0          2.0          1.5          3.0          3.5           // Schultyp         
+		  (0.2459015,   1.639342e-7, 0.1311475,   0.2786884,   0.2295081,   0.01639359,  0.09836071,   // Allgemeinbildend 
+		   0.06250025,  0.375,       0.3124987,   0.1874995,   0.06250025,  6.249962e-7, 6.249962e-7,  // Wirtschaftsgymna 
+		   0.130435,    0.6521719,   0.04347862,  0.0869568,   0.0869568,   4.347818e-7, 4.347818e-7); // TechnischesGymna ;
+	numcases = 
+		                 // Schultyp         
+		  (61.00007,     // Allgemeinbildend 
+		   16.0001,      // Wirtschaftsgymna 
+		   23.00004);    // TechnischesGymna ;
+	whenchanged = 1420564312;
+	belief = (0.19, 0.2099995, 0.14, 0.22, 0.17, 0.01000029, 0.06000023);
+	visual V2 {
+		center = (1254, 390);
+		height = 4;
+		link 1 {
+			path = ((909, 261), (1181, 363));
+			};
+		};
+	};
+
+node Deutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s2o0, keine, s1o0, s1o5, s2o5, s3o5);
+	statetitles = ("2.0", , "1.0", "1.5", "2.5", "3.5");
+	parents = (Schultyp);
+	probs = 
+		// 2.0          keine        1.0          1.5          2.5          3.5           // Schultyp         
+		  (0.2459016,   1.639343e-7, 0.1967213,   0.3278687,   0.2131147,   0.01639359,   // Allgemeinbildend 
+		   0.06250028,  0.375,       0.1874996,   0.125,       0.2499993,   6.249965e-7,  // Wirtschaftsgymna 
+		   0.08695684,  0.6521722,   0.08695684,  0.1739132,   4.34782e-7,  4.34782e-7);  // TechnischesGymna ;
+	numcases = 
+		                 // Schultyp         
+		  (61.00006,     // Allgemeinbildend 
+		   16.00009,     // Wirtschaftsgymna 
+		   23);          // TechnischesGymna ;
+	whenchanged = 1420564312;
+	belief = (0.18, 0.2099996, 0.17, 0.26, 0.17, 0.01000029);
+	visual V2 {
+		center = (798, 426);
+		height = 8;
+		};
+	};
+
+node Staatsbuergerschaft {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (deutsch, NonEuropean, EUBuerger);
+	parents = ();
+	probs = 
+		// deutsch      NonEuropean  EUBuerger    
+		  (0.91,        0.05000009,  0.04000009);
+	numcases = 100;
+	whenchanged = 1420564312;
+	belief = (0.91, 0.05000009, 0.04000008);
+	visual V2 {
+		center = (450, 228);
+		height = 2;
+		};
+	};
+
+node Bundesland {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (Baden_Wuerttemberg, Nordrhein_Westfalen, Bayern, Sachsen, Thueringen, Bremen);
+	statetitles = ("Baden-Wuerttemberg", "Nordrhein-Westfalen", , , , );
+	parents = (Staatsbuergerschaft);
+	probs = 
+		// Baden-Wuerttembe Nordrhein-Westfa Bayern Sachsen    Thueringen   Bremen        // Staatsbuergerschaft 
+		  (0.7912084,   0.06593414,  0.06593414,  0.05494513,  0.01098911,  0.01098911,   // deutsch             
+		   0.3999972,   1.999976e-6, 1.999976e-6, 0.3999972,   1.999976e-6, 0.1999996,    // NonEuropean         
+		   0.2499987,   0.499995,    2.499962e-6, 2.499962e-6, 0.2499987,   2.499962e-6); // EUBuerger           ;
+	numcases = 
+		                 // Staatsbuergerschaft 
+		  (91.00006,     // deutsch             
+		   5.00006,      // NonEuropean         
+		   4.00006);     // EUBuerger           ;
+	whenchanged = 1420564312;
+	belief = (0.7499993, 0.08, 0.06000025, 0.07000005, 0.02000016, 0.02000019);
+	visual V2 {
+		center = (540, 360);
+		height = 15;
+		};
+	};
+
+node Jahreseinkommen {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s0o0, s4o0, s7o0, s5o0, s9o0, s8o0, s1o0, s2o0, s3o0, s6o0);
+	statetitles = ("0.0", "4.0", "7.0", "5.0", "9.0", "8.0", "1.0", "2.0", "3.0", "6.0");
+	parents = (Deutsch, Schultyp, Bundesland);
+	probs = 
+		// 0.0          4.0          7.0          5.0          9.0          8.0          1.0          2.0          3.0          6.0           // Deutsch Schultyp         Bundesland       
+		  (0.3076907,   7.692248e-7, 0.07692326,  7.692248e-7, 0.07692326,  0.2307682,   7.692248e-7, 0.07692326,  0.1538457,   0.07692326,   // 2.0     Allgemeinbildend Baden-Wuerttembe 
+		   9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.0     Allgemeinbildend Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.0     Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Allgemeinbildend Bremen           
+		   9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     Wirtschaftsgymna Bremen           
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.999955,    4.99975e-6,  4.99975e-6,  4.99975e-6,   // 2.0     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.0     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Allgemeinbildend Bremen           
+		   1.999952e-6, 0.1999969,   1.999949e-6, 1.999949e-6, 1.999949e-6, 1.999949e-6, 1.99997e-6,  0.1999922,   0.5999969,   1.999949e-6,  // keine   Wirtschaftsgymna Baden-Wuerttembe 
+		   9.999e-6,    9.999101e-6, 9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,     // keine   Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   Wirtschaftsgymna Bayern           
+		   0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.1005331,   0.09994076,  0.09994076,  0.09994076,   // keine   Wirtschaftsgymna Sachsen          
+		   0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.09994076,  0.1005331,   0.09994076,  0.09994076,   // keine   Wirtschaftsgymna Thueringen       
+		   0.09987184,  0.09987184,  0.09987184,  0.09987184,  0.09987184,  0.09987184,  0.1011534,   0.09987184,  0.09987184,  0.09987184,   // keine   Wirtschaftsgymna Bremen           
+		   0.3636349,   9.090944e-7, 9.090849e-7, 0.09090941,  9.090849e-7, 9.090849e-7, 0.1818179,   0.2727285,   0.09090476,  9.090849e-7,  // keine   TechnischesGymna Baden-Wuerttembe 
+		   9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999227e-6, 9.999e-6,     // keine   TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // keine   TechnischesGymna Bayern           
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // keine   TechnischesGymna Sachsen          
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,     // keine   TechnischesGymna Thueringen       
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // keine   TechnischesGymna Bremen           
+		   1.249984e-6, 0.2499981,   0.125,       1.249984e-6, 1.249984e-6, 1.249984e-6, 0.125,       0.499995,    1.249984e-6, 1.249984e-6,  // 1.0     Allgemeinbildend Baden-Wuerttembe 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Allgemeinbildend Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Allgemeinbildend Bayern           
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,      // 1.0     Allgemeinbildend Sachsen          
+		   9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Allgemeinbildend Bremen           
+		   4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,      // 1.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.0     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     Wirtschaftsgymna Bremen           
+		   0.49998,     0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,   // 1.0     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.0     TechnischesGymna Bremen           
+		   7.142806e-7, 0.2142849,   0.07142878,  7.142806e-7, 0.07142878,  0.07142878,  0.07142878,  0.4285691,   7.142806e-7, 0.07142878,   // 1.5     Allgemeinbildend Baden-Wuerttembe 
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  0.49998,     4.99975e-6,   // 1.5     Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Bayern           
+		   3.333222e-6, 3.333222e-6, 0.3333256,   3.333222e-6, 0.3333256,   3.333222e-6, 3.333222e-6, 3.333222e-6, 0.3333256,   3.333222e-6,  // 1.5     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Allgemeinbildend Thueringen       
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 1.5     Allgemeinbildend Bremen           
+		   4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,   // 1.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     Wirtschaftsgymna Bremen           
+		   2.499937e-6, 2.499937e-6, 0.49999,     2.499937e-6, 0.2499962,   2.499937e-6, 2.499937e-6, 2.499937e-6, 2.499937e-6, 0.2499962,    // 1.5     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 1.5     TechnischesGymna Bremen           
+		   1.111099e-6, 0.4444406,   1.111099e-6, 1.111099e-6, 1.111099e-6, 0.111111,    0.111111,    1.111099e-6, 0.2222209,   0.111111,     // 2.5     Allgemeinbildend Baden-Wuerttembe 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.5     Allgemeinbildend Nordrhein-Westfa 
+		   9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 2.5     Allgemeinbildend Bayern           
+		   4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,   // 2.5     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Allgemeinbildend Bremen           
+		   4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,      // 2.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,     4.99975e-6,  4.99975e-6,  4.99975e-6,  0.49998,      // 2.5     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 2.5     TechnischesGymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Baden-Wuerttembe 
+		   0.99991,     9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,    9.999e-6,     // 3.5     Allgemeinbildend Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Allgemeinbildend Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     Wirtschaftsgymna Bremen           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Baden-Wuerttembe 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Nordrhein-Westfa 
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Bayern           
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Sachsen          
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,          // 3.5     TechnischesGymna Thueringen       
+		   0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1,         0.1);         // 3.5     TechnischesGymna Bremen           ;
+	numcases = 
+		                 // Deutsch Schultyp         Bundesland       
+		  (13.0001,      // 2.0     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 2.0     Allgemeinbildend Nordrhein-Westfa 
+		   1.0001,       // 2.0     Allgemeinbildend Bayern           
+		   1e-4,         // 2.0     Allgemeinbildend Sachsen          
+		   1e-4,         // 2.0     Allgemeinbildend Thueringen       
+		   1e-4,         // 2.0     Allgemeinbildend Bremen           
+		   1.0001,       // 2.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 2.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 2.0     Wirtschaftsgymna Bayern           
+		   1e-4,         // 2.0     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 2.0     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 2.0     Wirtschaftsgymna Bremen           
+		   2.0001,       // 2.0     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 2.0     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 2.0     TechnischesGymna Bayern           
+		   1e-4,         // 2.0     TechnischesGymna Sachsen          
+		   1e-4,         // 2.0     TechnischesGymna Thueringen       
+		   1e-4,         // 2.0     TechnischesGymna Bremen           
+		   1e-4,         // keine   Allgemeinbildend Baden-Wuerttembe 
+		   1e-4,         // keine   Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // keine   Allgemeinbildend Bayern           
+		   1e-4,         // keine   Allgemeinbildend Sachsen          
+		   1e-4,         // keine   Allgemeinbildend Thueringen       
+		   1e-4,         // keine   Allgemeinbildend Bremen           
+		   5.000128,     // keine   Wirtschaftsgymna Baden-Wuerttembe 
+		   1.0001,       // keine   Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // keine   Wirtschaftsgymna Bayern           
+		   1.000593e-4,  // keine   Wirtschaftsgymna Sachsen          
+		   1.000593e-4,  // keine   Wirtschaftsgymna Thueringen       
+		   1.001283e-4,  // keine   Wirtschaftsgymna Bremen           
+		   11.00007,     // keine   TechnischesGymna Baden-Wuerttembe 
+		   1.0001,       // keine   TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // keine   TechnischesGymna Bayern           
+		   1.0001,       // keine   TechnischesGymna Sachsen          
+		   1.0001,       // keine   TechnischesGymna Thueringen       
+		   1.0001,       // keine   TechnischesGymna Bremen           
+		   8.0001,       // 1.0     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 1.0     Allgemeinbildend Nordrhein-Westfa 
+		   1.0001,       // 1.0     Allgemeinbildend Bayern           
+		   1.0001,       // 1.0     Allgemeinbildend Sachsen          
+		   1.0001,       // 1.0     Allgemeinbildend Thueringen       
+		   1e-4,         // 1.0     Allgemeinbildend Bremen           
+		   2.0001,       // 1.0     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 1.0     Wirtschaftsgymna Nordrhein-Westfa 
+		   1.0001,       // 1.0     Wirtschaftsgymna Bayern           
+		   1e-4,         // 1.0     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 1.0     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 1.0     Wirtschaftsgymna Bremen           
+		   2.0001,       // 1.0     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 1.0     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 1.0     TechnischesGymna Bayern           
+		   1e-4,         // 1.0     TechnischesGymna Sachsen          
+		   1e-4,         // 1.0     TechnischesGymna Thueringen       
+		   1e-4,         // 1.0     TechnischesGymna Bremen           
+		   14.0001,      // 1.5     Allgemeinbildend Baden-Wuerttembe 
+		   2.0001,       // 1.5     Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // 1.5     Allgemeinbildend Bayern           
+		   3.0001,       // 1.5     Allgemeinbildend Sachsen          
+		   1e-4,         // 1.5     Allgemeinbildend Thueringen       
+		   1.0001,       // 1.5     Allgemeinbildend Bremen           
+		   2.0001,       // 1.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 1.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 1.5     Wirtschaftsgymna Bayern           
+		   1e-4,         // 1.5     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 1.5     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 1.5     Wirtschaftsgymna Bremen           
+		   4.0001,       // 1.5     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 1.5     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 1.5     TechnischesGymna Bayern           
+		   1e-4,         // 1.5     TechnischesGymna Sachsen          
+		   1e-4,         // 1.5     TechnischesGymna Thueringen       
+		   1e-4,         // 1.5     TechnischesGymna Bremen           
+		   9.0001,       // 2.5     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 2.5     Allgemeinbildend Nordrhein-Westfa 
+		   1.0001,       // 2.5     Allgemeinbildend Bayern           
+		   2.0001,       // 2.5     Allgemeinbildend Sachsen          
+		   1e-4,         // 2.5     Allgemeinbildend Thueringen       
+		   1e-4,         // 2.5     Allgemeinbildend Bremen           
+		   2.0001,       // 2.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 2.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   2.0001,       // 2.5     Wirtschaftsgymna Bayern           
+		   1e-4,         // 2.5     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 2.5     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 2.5     Wirtschaftsgymna Bremen           
+		   1e-4,         // 2.5     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 2.5     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 2.5     TechnischesGymna Bayern           
+		   1e-4,         // 2.5     TechnischesGymna Sachsen          
+		   1e-4,         // 2.5     TechnischesGymna Thueringen       
+		   1e-4,         // 2.5     TechnischesGymna Bremen           
+		   1e-4,         // 3.5     Allgemeinbildend Baden-Wuerttembe 
+		   1.0001,       // 3.5     Allgemeinbildend Nordrhein-Westfa 
+		   1e-4,         // 3.5     Allgemeinbildend Bayern           
+		   1e-4,         // 3.5     Allgemeinbildend Sachsen          
+		   1e-4,         // 3.5     Allgemeinbildend Thueringen       
+		   1e-4,         // 3.5     Allgemeinbildend Bremen           
+		   1e-4,         // 3.5     Wirtschaftsgymna Baden-Wuerttembe 
+		   1e-4,         // 3.5     Wirtschaftsgymna Nordrhein-Westfa 
+		   1e-4,         // 3.5     Wirtschaftsgymna Bayern           
+		   1e-4,         // 3.5     Wirtschaftsgymna Sachsen          
+		   1e-4,         // 3.5     Wirtschaftsgymna Thueringen       
+		   1e-4,         // 3.5     Wirtschaftsgymna Bremen           
+		   1e-4,         // 3.5     TechnischesGymna Baden-Wuerttembe 
+		   1e-4,         // 3.5     TechnischesGymna Nordrhein-Westfa 
+		   1e-4,         // 3.5     TechnischesGymna Bayern           
+		   1e-4,         // 3.5     TechnischesGymna Sachsen          
+		   1e-4,         // 3.5     TechnischesGymna Thueringen       
+		   1e-4);        // 3.5     TechnischesGymna Bremen           ;
+	whenchanged = 1420564312;
+	belief = (0.09475534, 0.1443549, 0.1111628, 0.04245719, 0.05286535, 0.07143965, 0.1102842, 0.1790518, 0.109148, 0.08448086);
+	visual V2 {
+		center = (558, 534);
+		height = 12;
+		};
+	};
+
+node OltMathe {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s4o0, s3o0, s9o0, s7o0, s6o0, s1o0, s5o0, s8o0, s2o0);
+	statetitles = ("4.0", "3.0", "9.0", "7.0", "6.0", "1.0", "5.0", "8.0", "2.0");
+	parents = (Mathe, Schultyp);
+	probs = 
+		// 4.0          3.0          9.0          7.0          6.0          1.0          5.0          8.0          2.0           // Mathe Schultyp         
+		  (0.4666645,   0.06666693,  6.666626e-7, 6.666626e-7, 6.666626e-7, 6.666626e-7, 0.4666645,   6.666626e-7, 6.666626e-7,  // 2.5   Allgemeinbildend 
+		   9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 0.99992,     9.999099e-6, 9.999099e-6,  // 2.5   Wirtschaftsgymna 
+		   3.333233e-6, 3.333233e-6, 3.333233e-6, 0.9999734,   3.333233e-6, 3.333233e-6, 3.333233e-6, 3.333233e-6, 3.333233e-6,  // 2.5   TechnischesGymna 
+		   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,    // keine Allgemeinbildend 
+		   1.830483e-6, 1.299421e-5, 1.666634e-6, 1.666634e-6, 1.666634e-6, 1.688022e-6, 1.666634e-6, 1.666634e-6, 0.9999751,    // keine Wirtschaftsgymna 
+		   0.4666654,   0.3333281,   6.666639e-7, 6.666639e-7, 6.666639e-7, 0.2,         6.666639e-7, 6.666639e-7, 3.403045e-6,  // keine TechnischesGymna 
+		   1.249986e-6, 1.249986e-6, 1.249986e-6, 0.2499984,   0.2499984,   1.249986e-6, 1.249986e-6, 0.4999956,   1.249986e-6,  // 1.0   Allgemeinbildend 
+		   1.999964e-6, 1.999964e-6, 0.5999912,   0.1999984,   1.999964e-6, 1.999964e-6, 1.999964e-6, 0.1999984,   1.999964e-6,  // 1.0   Wirtschaftsgymna 
+		   9.999099e-6, 9.999099e-6, 0.99992,     9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6,  // 1.0   TechnischesGymna 
+		   0.117647,    5.882322e-7, 5.882322e-7, 0.117647,    0.5882328,   5.882322e-7, 0.1764702,   5.882322e-7, 5.882322e-7,  // 2.0   Allgemeinbildend 
+		   3.333233e-6, 3.333233e-6, 3.333233e-6, 3.333233e-6, 0.66665,     3.333233e-6, 0.3333267,   3.333233e-6, 3.333233e-6,  // 2.0   Wirtschaftsgymna 
+		   4.999775e-6, 4.999775e-6, 4.999775e-6, 0.4999825,   4.999775e-6, 4.999775e-6, 4.999775e-6, 0.4999825,   4.999775e-6,  // 2.0   TechnischesGymna 
+		   7.142811e-7, 7.142811e-7, 7.142811e-7, 0.4285694,   0.1428569,   7.142811e-7, 7.142811e-7, 0.4285694,   7.142811e-7,  // 1.5   Allgemeinbildend 
+		   9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 0.99992,     9.999099e-6,  // 1.5   Wirtschaftsgymna 
+		   4.999775e-6, 4.999775e-6, 0.99996,     4.999775e-6, 4.999775e-6, 4.999775e-6, 4.999775e-6, 4.999775e-6, 4.999775e-6,  // 1.5   TechnischesGymna 
+		   0.99992,     9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6, 9.999099e-6,  // 3.0   Allgemeinbildend 
+		   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,    // 3.0   Wirtschaftsgymna 
+		   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,    // 3.0   TechnischesGymna 
+		   1.666642e-6, 0.8333225,   1.666642e-6, 1.666642e-6, 1.666642e-6, 1.666642e-6, 1.666642e-6, 1.666642e-6, 0.1666658,    // 3.5   Allgemeinbildend 
+		   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,    // 3.5   Wirtschaftsgymna 
+		   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111,   0.1111111);   // 3.5   TechnischesGymna ;
+	numcases = 
+		                 // Mathe Schultyp         
+		  (15.00009,     // 2.5   Allgemeinbildend 
+		   1.00009,      // 2.5   Wirtschaftsgymna 
+		   3.00009,      // 2.5   TechnischesGymna 
+		   9e-5,         // keine Allgemeinbildend 
+		   6.000118,     // keine Wirtschaftsgymna 
+		   15.00006,     // keine TechnischesGymna 
+		   8.00009,      // 1.0   Allgemeinbildend 
+		   5.00009,      // 1.0   Wirtschaftsgymna 
+		   1.00009,      // 1.0   TechnischesGymna 
+		   17.00009,     // 2.0   Allgemeinbildend 
+		   3.00009,      // 2.0   Wirtschaftsgymna 
+		   2.00009,      // 2.0   TechnischesGymna 
+		   14.00009,     // 1.5   Allgemeinbildend 
+		   1.00009,      // 1.5   Wirtschaftsgymna 
+		   2.00009,      // 1.5   TechnischesGymna 
+		   1.00009,      // 3.0   Allgemeinbildend 
+		   9e-5,         // 3.0   Wirtschaftsgymna 
+		   9e-5,         // 3.0   TechnischesGymna 
+		   6.00009,      // 3.5   Allgemeinbildend 
+		   9e-5,         // 3.5   Wirtschaftsgymna 
+		   9e-5);        // 3.5   TechnischesGymna ;
+	whenchanged = 1420564312;
+	belief = (0.1699996, 0.1100004, 0.05999936, 0.1499994, 0.16, 0.03000138, 0.12, 0.1299993, 0.07000051);
+	visual V2 {
+		center = (1008, 570);
+		height = 6;
+		link 2 {
+			path = ((840, 261), (968, 495));
+			};
+		};
+	};
+
+node Abschluss {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (nichtAbgebrochen, abgebrochen);
+	parents = (Mathe);
+	probs = 
+		// nichtAbgebrochen abgebrochen  // Mathe 
+		  (0.9999995,   5.263153e-7,  // 2.5   
+		   0.2857145,   0.7142855,    // keine 
+		   0.9999993,   7.142847e-7,  // 1.0   
+		   0.9999995,   4.54545e-7,   // 2.0   
+		   0.9999994,   5.882346e-7,  // 1.5   
+		   0.99999,     9.9998e-6,    // 3.0   
+		   0.6666661,   0.3333339);   // 3.5   ;
+	numcases = 
+		                 // Mathe 
+		  (19,           // 2.5   
+		   21,           // keine 
+		   14,           // 1.0   
+		   22,           // 2.0   
+		   17,           // 1.5   
+		   1.00002,      // 3.0   
+		   6.00002);     // 3.5   ;
+	whenchanged = 1420564312;
+	belief = (0.83, 0.17);
+	visual V2 {
+		center = (1242, 588);
+		height = 3;
+		};
+	};
+
+node OltDeutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s5o0, s9o0, s7o0, s8o0, s2o0, s6o0, s4o0, s3o0);
+	statetitles = ("5.0", "9.0", "7.0", "8.0", "2.0", "6.0", "4.0", "3.0");
+	parents = (Deutsch);
+	probs = 
+		// 5.0          9.0          7.0          8.0          2.0          6.0          4.0          3.0           // Deutsch 
+		  (0.3333324,   5.555531e-7, 0.1666665,   5.555531e-7, 5.555531e-7, 0.4999983,   5.555531e-7, 5.555531e-7,  // 2.0     
+		   0.2380948,   4.761887e-7, 0.04761934,  4.761887e-7, 0.2857137,   0.1904759,   0.1904759,   0.04761934,   // keine   
+		   5.882325e-7, 0.2352936,   0.3529401,   0.4117634,   5.882325e-7, 5.882325e-7, 5.882325e-7, 5.882325e-7,  // 1.0     
+		   0.07692323,  3.846142e-7, 0.3461532,   0.2307689,   3.846142e-7, 0.3461532,   3.846142e-7, 3.846142e-7,  // 1.5     
+		   0.5294098,   5.882325e-7, 5.882325e-7, 5.882325e-7, 5.882325e-7, 0.2941169,   0.1764704,   5.882325e-7,  // 2.5     
+		   9.999199e-6, 9.999199e-6, 9.999199e-6, 9.999199e-6, 0.99993,     9.999199e-6, 9.999199e-6, 9.999199e-6); // 3.5     ;
+	numcases = 
+		                 // Deutsch 
+		  (18.00008,     // 2.0     
+		   21.00008,     // keine   
+		   17.00008,     // 1.0     
+		   26.00008,     // 1.5     
+		   17.00008,     // 2.5     
+		   1.00008);     // 3.5     ;
+	whenchanged = 1420564312;
+	belief = (0.2199996, 0.04000042, 0.19, 0.13, 0.06999976, 0.2699995, 0.07000025, 0.01000055);
+	visual V2 {
+		center = (810, 606);
+		height = 7;
+		};
+	};
+
+node Geschlecht {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (m, w);
+	parents = ();
+	probs = 
+		// m            w            
+		  (0.67,        0.33);
+	numcases = 100;
+	whenchanged = 1420564312;
+	belief = (0.67, 0.33);
+	visual V2 {
+		center = (114, 528);
+		height = 9;
+		};
+	};
+
+node Studiengang {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (Maschinenbau, SozialeArbeit, Elektrotechnik, Wirtschaftswissenschaften, Informatik);
+	parents = (Geschlecht, OltDeutsch, Staatsbuergerschaft);
+	probs = 
+		// Maschinenbau SozialeArbeit Elektrotechnik Wirtschaftswisse Informatik  // Geschlecht OltDeutsch Staatsbuergerschaft 
+		  (0.6923058,   7.692278e-7, 0.1538463,   7.692278e-7, 0.1538463,    // m          5.0        deutsch             
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // m          5.0        NonEuropean         
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,      // m          5.0        EUBuerger           
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // m          9.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          9.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          9.0        EUBuerger           
+		   0.2307691,   7.692278e-7, 0.3846147,   0.07692355,  0.3076919,    // m          7.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          7.0        NonEuropean         
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // m          7.0        EUBuerger           
+		   0.4999985,   0.1000005,   0.399999,    9.99995e-7,  9.99995e-7,   // m          8.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          8.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          8.0        EUBuerger           
+		   0.6666589,   3.333278e-6, 3.333278e-6, 0.3333311,   3.333278e-6,  // m          2.0        deutsch             
+		   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,   9.9995e-6,    // m          2.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          2.0        EUBuerger           
+		   0.3888884,   0.05555596,  0.3888884,   0.05555596,  0.1111114,    // m          6.0        deutsch             
+		   4.999875e-6, 4.999875e-6, 4.999875e-6, 0.99998,     4.999875e-6,  // m          6.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          6.0        EUBuerger           
+		   0.3333311,   0.3333311,   3.333278e-6, 3.333278e-6, 0.3333311,    // m          4.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          4.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          4.0        EUBuerger           
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          3.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          3.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // m          3.0        EUBuerger           
+		   0.2857137,   1.428561e-6, 0.2857137,   0.4285698,   1.428561e-6,  // w          5.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          5.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          5.0        EUBuerger           
+		   3.333278e-6, 0.6666589,   3.333278e-6, 0.3333311,   3.333278e-6,  // w          9.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          9.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          9.0        EUBuerger           
+		   0.399998,    0.2,         0.2,         0.2,         1.99998e-6,   // w          7.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          7.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          7.0        EUBuerger           
+		   3.333278e-6, 0.9999866,   3.333278e-6, 3.333278e-6, 3.333278e-6,  // w          8.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          8.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          8.0        EUBuerger           
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // w          2.0        deutsch             
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // w          2.0        NonEuropean         
+		   0.99996,     9.9995e-6,   9.9995e-6,   9.9995e-6,   9.9995e-6,    // w          2.0        EUBuerger           
+		   0.1428576,   1.428561e-6, 0.1428576,   0.714282,    1.428561e-6,  // w          6.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          6.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          6.0        EUBuerger           
+		   3.333278e-6, 0.9999866,   3.333278e-6, 3.333278e-6, 3.333278e-6,  // w          4.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          4.0        NonEuropean         
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // w          4.0        EUBuerger           
+		   9.9995e-6,   9.9995e-6,   9.9995e-6,   0.99996,     9.9995e-6,    // w          3.0        deutsch             
+		   0.2,         0.2,         0.2,         0.2,         0.2,          // w          3.0        NonEuropean         
+		   0.2,         0.2,         0.2,         0.2,         0.2);         // w          3.0        EUBuerger           ;
+	numcases = 
+		                 // Geschlecht OltDeutsch Staatsbuergerschaft 
+		  (13.00005,     // m          5.0        deutsch             
+		   1.00005,      // m          5.0        NonEuropean         
+		   1.00005,      // m          5.0        EUBuerger           
+		   1.00005,      // m          9.0        deutsch             
+		   5e-5,         // m          9.0        NonEuropean         
+		   5e-5,         // m          9.0        EUBuerger           
+		   13.00005,     // m          7.0        deutsch             
+		   5e-5,         // m          7.0        NonEuropean         
+		   1.00005,      // m          7.0        EUBuerger           
+		   10.00005,     // m          8.0        deutsch             
+		   5e-5,         // m          8.0        NonEuropean         
+		   5e-5,         // m          8.0        EUBuerger           
+		   3.00005,      // m          2.0        deutsch             
+		   1.00005,      // m          2.0        NonEuropean         
+		   5e-5,         // m          2.0        EUBuerger           
+		   18.00005,     // m          6.0        deutsch             
+		   2.00005,      // m          6.0        NonEuropean         
+		   5e-5,         // m          6.0        EUBuerger           
+		   3.00005,      // m          4.0        deutsch             
+		   5e-5,         // m          4.0        NonEuropean         
+		   5e-5,         // m          4.0        EUBuerger           
+		   5e-5,         // m          3.0        deutsch             
+		   5e-5,         // m          3.0        NonEuropean         
+		   5e-5,         // m          3.0        EUBuerger           
+		   7.00005,      // w          5.0        deutsch             
+		   5e-5,         // w          5.0        NonEuropean         
+		   5e-5,         // w          5.0        EUBuerger           
+		   3.00005,      // w          9.0        deutsch             
+		   5e-5,         // w          9.0        NonEuropean         
+		   5e-5,         // w          9.0        EUBuerger           
+		   5.00005,      // w          7.0        deutsch             
+		   5e-5,         // w          7.0        NonEuropean         
+		   5e-5,         // w          7.0        EUBuerger           
+		   3.00005,      // w          8.0        deutsch             
+		   5e-5,         // w          8.0        NonEuropean         
+		   5e-5,         // w          8.0        EUBuerger           
+		   1.00005,      // w          2.0        deutsch             
+		   1.00005,      // w          2.0        NonEuropean         
+		   1.00005,      // w          2.0        EUBuerger           
+		   7.00005,      // w          6.0        deutsch             
+		   5e-5,         // w          6.0        NonEuropean         
+		   5e-5,         // w          6.0        EUBuerger           
+		   3.00005,      // w          4.0        deutsch             
+		   5e-5,         // w          4.0        NonEuropean         
+		   1.00005,      // w          4.0        EUBuerger           
+		   1.00005,      // w          3.0        deutsch             
+		   5e-5,         // w          3.0        NonEuropean         
+		   5e-5);        // w          3.0        EUBuerger           ;
+	whenchanged = 1420564312;
+	belief = (0.362342, 0.1234473, 0.2177993, 0.1890477, 0.1073637);
+	visual V2 {
+		center = (234, 660);
+		height = 14;
+		};
+	};
+
+node Schnitt {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (s2o5, s1o5, s1o0, s3o5, s2o0, s3o0);
+	statetitles = ("2.5", "1.5", "1.0", "3.5", "2.0", "3.0");
+	parents = (Staatsbuergerschaft);
+	probs = 
+		// 2.5          1.5          1.0          3.5          2.0          3.0           // Staatsbuergerschaft 
+		  (0.2747252,   0.2857142,   0.1758242,   0.06593414,  0.1318682,   0.06593414,   // deutsch             
+		   0.1999996,   0.3999972,   1.999976e-6, 0.1999996,   1.999976e-6, 0.1999996,    // NonEuropean         
+		   2.499962e-6, 2.499962e-6, 2.499962e-6, 2.499962e-6, 0.9999875,   2.499962e-6); // EUBuerger           ;
+	numcases = 
+		                 // Staatsbuergerschaft 
+		  (91.00006,     // deutsch             
+		   5.00006,      // NonEuropean         
+		   4.00006);     // EUBuerger           ;
+	whenchanged = 1420564312;
+	belief = (0.26, 0.28, 0.16, 0.07000015, 0.16, 0.07000015);
+	visual V2 {
+		center = (180, 396);
+		height = 10;
+		link 1 {
+			path = ((398, 261), (247, 355));
+			};
+		};
+	};
+ElimOrder = (Alter, Abschluss, Studierfaehigkeitstest, Schnitt, Qualifikation, OltMathe, Mathe, Geschlecht, Studiengang, Staatsbuergerschaft, Jahreseinkommen, Schultyp, Deutsch, Bundesland, OltDeutsch);
+};

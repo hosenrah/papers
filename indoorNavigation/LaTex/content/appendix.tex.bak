@@ -1,0 +1,139 @@
+
+
+
+\renewcommand{\thesubsection}{ \Alph{subsection}}
+
+\section*{Appendix}
+
+\subsection{Further Smart City definitions}
+
+\begin{quote}[\textcite{smart1}]
+“A Smart City is a city well performing built on the ‘smart’ combination of endowments and activities of self-decisive, independent and aware citizens.”
+\end{quote}
+
+\begin{quote}[\textcite{smart5}]
+“Smart City is the product of Digital City combined with the Internet of Things.”
+\end{quote} 
+
+To understand this quote one definition for Digital City follows: 
+
+\begin{quote}[\textcite{digital1}]
+“A Digital City has at least two plausible meanings: (1) a city that is being transformed or re-oriented through digital technology and (2) a digital representation or reflection of some aspects of an actual or imagined city.” 
+\end{quote}
+
+\begin{quote}[\textcite{smart6}]
+“Concept of a Smart City where citizens, objects, utilities, etc., connect in a seamless manner using ubiquitous technologies, so as to significantly enhance the living experience in 21st century urban environments.” 
+\end{quote}
+
+
+\subsection{Additional}
+\subsubsection*{Social Sciences}
+\begin{itemize}
+	\itemsep0pt
+	\item Psychology
+	\begin{itemize}
+		\item As first step into the subject of psychology we looked for the psychological aspects of innovation processes. The first result on that topic was the master Thesis \textcite{MSMueller}.
+		\item As one of the main Sources from this Thesis we found the standard work \textcite{rogers2003diffusion} explaining i.a. the process off diffusion for innovations.
+		\item This leads to \textcite{DiffusionsprozesseFRA} where references back to \textcite{MSMueller} are found. 
+	\end{itemize}
+	\item Sociology
+	\begin{itemize}
+		\item Sociological aspects in Smart Cities
+		\item Sociological impacts of position tracking on the example of GPS are explained in \textcite{holmes2005impact}.
+		\item To get an impression on how human beings make decisions on known facts in contrary to their gut instinct we found the work \textcite{gigerenzer2007bauchentscheidungen}.
+		\item This leads to the work \textcite {singer2003neues} where brain researcher Wolf Singer explaines how social and cultural factores influence mental development.
+		\item Sociological aspects of Positioning systems
+		\item As first result for Sociological aspects of innovations enlightened on education, economy and business we found \textcite{kehrbaum2009innovation}. 
+	\end{itemize}
+	\item Educational sciences
+	\begin{itemize}
+		\item Consideration of use cases for Indoor Positioning Systems in Educational fields.
+	\end{itemize}
+	\item Law 
+	\begin{itemize}
+		\item Datenschutz, Datenrecht, Datensicherheit	
+	\end{itemize}
+	\item Media and communications
+	\begin{itemize}
+		\item How to communicate with the enduser?	Kommunikationswege, Kommunikationsart;	
+	\end{itemize}
+	\item Economics and business 
+	\begin{itemize}
+		\item Consideration of Use Cases of indoor navigations - special requirements of IPS in the Business compared to Consumer positioning systems
+	\end{itemize}
+	\item Political Science 	
+	\begin{itemize}
+		\item Urbanization 
+		\item Political aspects of positioning in Infrastructure and Independent mode
+	\end{itemize}
+	\item Social and economic geography
+	\begin{itemize}
+		\item Smart city aspects of Indoor Positioning 
+		\item Urban planning - information chanals		
+	\end{itemize}		
+\end{itemize}
+
+\subsubsection*{Medical and Health Sciences}
+\begin{itemize}
+	\itemsep0pt
+	\item Additional contamination through radiation
+	\item Healthcare Use Cases of an Indoor Positioning System
+	\item Requirements of an IPS in hospitals
+\end{itemize}
+
+\subsubsection*{Humanities}
+\begin{itemize}
+	\itemsep0pt
+	\item Philosophy, ethics and religion 
+	\begin{itemize}
+		\item Philosophical thoughts about urbanization and smart city and the acceptance of smart city (maybe case Study) 
+		\item Ethic aspects of Positioning Systems - Outlining the difference between the Infrastructure and the Independent mode
+	\end{itemize}
+	\item History and archaeology	
+	\begin{itemize}
+		\item Outlining the history of cities - goals of cities and their productivity - Is being a smart city just the consequent next step?
+	\end{itemize}												
+\end{itemize}
+
+\subsubsection*{Natural Sciences}
+\begin{itemize}
+	\itemsep0pt
+	\item Computer and information sciences
+	\begin{itemize}
+		\item research relating to the theoretical basics of positioning systems (algorithms etc)
+		\item Smart City and Informatics
+	\end{itemize}
+	\item Mathematics
+	\begin{itemize}
+		\item esearch related to the mathematical priciples behind triangulation and other positioning algorithms	
+	\end{itemize}
+	\item Earth and related environmental sciences 
+	\begin{itemize}
+		\item The Process of Urbanization is described in \textcite{berUrban} 
+		\item In \textcite{networkedCities}???? 
+		\item Kartographie, Stadtplanung, Hydrologie, Fracking
+	\end{itemize}												
+\end{itemize}
+
+\subsubsection*{Engineering and Technology}
+\begin{itemize}
+	\itemsep0pt
+	\item Electrical-, electronic-, information engineering
+	\begin{itemize}
+		\item After contacting the HP CTO about Indoor navigation we received a link to a Microsoft competition \textcite{microsoftIPSN}.
+		\item This lead to 20 papers describing different approaches for Indoor Navigation: \textcite{platz1}, \textcite{platz2}, \textcite{platz3}, \textcite{platz4}, \textcite{platz5}, \textcite{platz6}, \textcite{platz7}, \textcite{platz8}, \textcite{platz9}, \textcite{platz10}, \textcite{platz11}, \textcite{platz14}, \textcite{platz15}, \textcite{platz16}, \textcite{platz17}, \textcite{platz18}, \textcite{platz19}, \textcite{platz20}, \textcite{platz21}, \textcite{platz22}. These papers are giving an overview but are not containing technical details. For the technologie we will focus on later additional research must be done.
+		\item A new Startup for Indoornavigation is described \textcite{startupIDN}.
+		\item Global indoor self-localization based on the ambient magnetic field. \textcite{Haverinen:2009:GIS:1618617.1618731}
+		\item We found several Smart City Use Cases for indoor navigation in \textcite{extremetech2014thinkgpsiscool}.
+	\end{itemize}
+	\item Civil engineering 
+	\begin{itemize}
+		\item Research related to wave reflecting materials - reflection problems while indoor navigation
+		\item Smart City architecture
+	\end{itemize}	
+	\item Environmental engineering
+	\begin{itemize}
+		\item Smart City relation to environmental engeneering
+	\end{itemize}
+\end{itemize}
+

@@ -1,0 +1,161 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{apa}{apa}
+    \entry{storage2}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=60499f4723f0cd2fd713213d31724412}{{Chris\bibnamedelimb Gioran}}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=60499f4723f0cd2fd713213d31724412}{{Chris\bibnamedelimb Gioran}}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Chris Gioran}%
+      }
+      \strng{namehash}{60499f4723f0cd2fd713213d31724412}
+      \strng{fullhash}{60499f4723f0cd2fd713213d31724412}
+      \field{sortinit}{C}
+      \field{sortinithash}{dd0e4ddd17488a6ebf12cd6de2f2c237}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Neo4j Internals: File Storage}
+      \field{note}{[Online; accessed 14 March 2015]}
+      \field{title}{Neo4j Internals: File Storage}
+      \field{year}{2010}
+      \verb{url}
+      \verb http://digitalstain.blogspot.de/2010/10/neo4j-internals-file-storage.html
+      \endverb
+    \endentry
+    \entry{BI:2013}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=1453db1cb5983469bc7cd411f08cfc55}{{Dritan\bibnamedelimb Belco\bibnamedelimb and\bibnamedelimb Yannis\bibnamedelimb Kotidis}}{D\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1453db1cb5983469bc7cd411f08cfc55}{{Dritan\bibnamedelimb Belco\bibnamedelimb and\bibnamedelimb Yannis\bibnamedelimb Kotidis}}{D\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{2}{%
+        {University of Economics}%
+        {Business}%
+      }
+      \strng{namehash}{1453db1cb5983469bc7cd411f08cfc55}
+      \strng{fullhash}{1453db1cb5983469bc7cd411f08cfc55}
+      \field{sortinit}{D}
+      \field{sortinithash}{a01c54d1737685bc6dbf0ea0673fa44c}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Business Intelligence on Complex Graph Data}
+      \field{note}{[Online; accessed 08 March 2015]}
+      \field{title}{Business Intelligence on Complex Graph Data}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.edbt.org/Proceedings/2012-Berlin/papers/workshops/beweb2012/a3-bleco.pdf
+      \endverb
+    \endentry
+    \entry{BiSlides:2013}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=5feb59a8fa847da190857cc26e98d226}{{Huston\bibnamedelimb Hedinger}}{H\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=5feb59a8fa847da190857cc26e98d226}{{Huston\bibnamedelimb Hedinger}}{H\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {slideshare}%
+      }
+      \strng{namehash}{5feb59a8fa847da190857cc26e98d226}
+      \strng{fullhash}{5feb59a8fa847da190857cc26e98d226}
+      \field{sortinit}{H}
+      \field{sortinithash}{95b2cb08933fe649b7e9f8beee2132b4}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{Business Intelligence and Analytics with the Graph}
+      \field{note}{[Online; accessed 07 March 2015]}
+      \field{title}{Business Intelligence and Analytics with the Graph}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://de.slideshare.net/neo4j/0905-25970888
+      \endverb
+    \endentry
+    \entry{neo4jman:2011}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=bdbed435a416a918aa494017fda4c7fb}{{OECD}}{O\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=bdbed435a416a918aa494017fda4c7fb}{{OECD}}{O\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {OECD Publishing}%
+      }
+      \strng{namehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \field{sortinit}{O}
+      \field{sortinithash}{59512cfd31be1dcef4def024230bdc1d}
+      \field{labelyear}{2011}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{The Neo4j Manual v2.1.7}
+      \field{note}{[Online; accessed 15 March 2015]}
+      \field{title}{The Neo4j Manual v2.1.7}
+      \field{year}{2011}
+      \verb{url}
+      \verb http://neo4j.com/docs/stable/query-transactions.html
+      \endverb
+    \endentry
+    \entry{views}{online}{}
+      \list{publisher}{1}{%
+        {The Comparision Wiki}%
+      }
+      \field{sortinit}{o}
+      \field{sortinithash}{59512cfd31be1dcef4def024230bdc1d}
+      \field{labelyear}{nodate}
+      \field{labeltitle}{Neo4J Enterprise vs. VoltDB}
+      \field{note}{[Online; accessed 07 March 2015]}
+      \field{title}{Neo4J Enterprise vs. VoltDB}
+      \verb{url}
+      \verb http://vschart.com/compare/neo4j/vs/voltdb
+      \endverb
+    \endentry
+    \entry{storage1}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=c67ab4439a30158095943a99c6fee901}{{Tobias\bibnamedelimb Lindaaker}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c67ab4439a30158095943a99c6fee901}{{Tobias\bibnamedelimb Lindaaker}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {http://www.neo4j.org/develop/internals}%
+      }
+      \strng{namehash}{c67ab4439a30158095943a99c6fee901}
+      \strng{fullhash}{c67ab4439a30158095943a99c6fee901}
+      \field{sortinit}{T}
+      \field{sortinithash}{9378dd666f3c24d81538df53aa99e23d}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{year}
+      \field{labeltitle}{An overview of Neo4j Internals}
+      \field{note}{[Online; accessed 14 March 2015]}
+      \field{title}{An overview of Neo4j Internals}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://slideshare.net/thobe/an-overview-of-neo4j-internals
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{neo4jBIDef:2014}
+\endrefsection
+\endinput
+

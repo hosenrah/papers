@@ -1,0 +1,65 @@
+\clearpage
+% 8 - 12 Seiten
+\section{Conclusion}
+This paper covers an approach for indoor navigation systems for Smart Cities by first defining the buzzwords. Indoor navigation systems are based on technologies separated into two divisions  Non-radio technologies rely on sensors like magnetometer, compass, gyroscope, accelerometer and barometer and Radio technologies using access points in form of iBeacons, WiFi hotspots, NFC tags, GPS based sensors and some more. Considerations concerning trustworthiness and security issues are done to actually develop a solution which will most likely be adopted by the mass. The so called social acceptance is crucial to gain traction in the current floods of new technologies. 
+
+Further, algorithms like Central-Limit-Theorem, Dempster- Schafer and Bayesian Networks are taken into account to purify the information taken out of the sensors. To combine the gathered information sensor fusion is done by choosing the best fitting solution - a form of map matching - to actually get a real world location. Later criterias for measurements are defined which then are taken into account to work out a concept for an indoor positioning solution. This solution is based on independent technologies without bidirectional communication to its infrastructure. Further on no extra infrastructure has to be installed in case of WiFi, nor do mobile phone developers have to implement new technologies to later be shipped with their smart phones, this solution is based on exisiting technologies currently implemented into all common mobile devices. Approaches for data protection are hard to realize because every solution can push its location to servers which can be used to exploit personal information. To enable a secure environment focus lies on the security of steps taken until the user gets an absoulte position.
+
+
+\subsection{Reflection}
+Developing an Indoor Navigation System for the purposes of Smart City's emerged more complex as expected. The most people like us may have heard of the iBeacon solution for indoor navigation as a big innovative step in this area. The hype around iBeacons was enormous regarding proximity marketing and navigation. However looking deeper into the needs of a Smart City, supporting different kinds of locations and client devices as well as trustworthiness, it was foreseeable that iBeacons alone won't fit for everything.
+
+That was the point where we started to research for alternative solutions covering different use cases and found the huge difference between solutions working in infrastructure and independent mode. Deriving from the smart city definitions that a city's first goal won't be surveillance (this may be different for the police) we decided to focus on services for the citizens - thus independent mode solutions.
+
+Once we have found a suitable solution to convince citizens to adopt the new technology - by applying the step by step guide of the MIT including trustworthy explanations, honesty and patience - we were able to understand the properties a suitable indoor positioning system would have. 
+
+So we gathered informations about all suitable technologies allowing independent mode and compared them step by step. The differentiation between the technologies itself and the corresponding constraints mirrors our goal to reach transparency regarding data transfers. One of the most time consuming parts was understanding the found strategies and derive their conditions, advantages and disadvantages. Surprisingly different methods covered in Math and Knowledge based systems  lectures came up as Sensor Fusion, Error correction or Filtering technique; This includes the Central-Limit-Theorem, Dempster-Schafer and Bayesian Networks.
+
+At this point the original goal to implement a solution was dropped and we decided to compare the most common with some alternative indoor positioning vendors to be able to design a suitable solutions for smart cities and not just repeat mistakes people have done before us. 
+
+During this comparison we realized that there are only two types of possible solutions for the future. Either a system like the one Locata is developing: a wide area GPS like solution working indoors due to stronger signals. Or a hybrid solution combining all possible measurement and prediction methods to provide strongly reliable positioning. The one huge problem with Locata is that no common smartphone is able to receive the signals yet. We considered us unable to influence the big smartphone vendors in that matter, thus we decided to focus on an hybrid solution.
+
+The development of the concept was strait forward regarding the rough structure. One goal of design - beside data privacy and accuracy - was to not lose any information on the way to the final assumed position. Another one was to be modular, using fixed data objects like absolute or relative positions to enable quick exchange of algorithms for dynamic and fast testing and later improvements. Decisions about the used filters have been more complicated. In some cases we are confident that only field tests can help finding the optimal filters.
+
+Map Matching is the one thing being in early stages of development for pedestrians and on movement models we couldn't find suitable existing approaches. Thats why we transfered the swarm behavior of ants - using pheromones to help other finding optimal paths - to indoor positioning systems. This resulted in different types of movement heat-maps. Especially this improves current indoor positioning systems.
+
+To sum up trustworthiness of our indoor positioning solution in a nutshell: "The Chosen One, the boy [solution] may be. Nevertheless, grave danger, I fear in his [its] training." (Yoda 1985).
+
+All in all we found critical information recommendable to read before just installing any indoor positioning system, and are hoping that some approaches will prove their correctness in a working solution.
+
+
+%----------------------------------------------------------------------------
+% THE RESULT
+%----------------------------------------------------------------------------
+\subsection{The Result}
+The key cognitions of this paper are:
+\begin{enumerate}
+	\item In smart cities a high demand of indoor navigation systems is given.
+	\item Satisfying data privacy is possible using independent mode for localization and therefore applying sociological psychological educational and political concepts to communication will enable a success of this technology
+	\item All non-radio solutions must be assisted by radio solutions except the magnetometer and the 3Dsensor
+	\begin{itemize}
+		\item the magnetometer needs the magnetic flux map to work properly and
+		\item the 3D sensor generates relative positions within its own imaged world.
+	\end{itemize}
+	\item Indoor positioning and location analytics are the most common and basic applications followed by proximity marketing and people and object tracking
+	\item Our experiments shows that there is no one method better than others, regarding Bluetooth fingerprinting and proximity measurements. Further more a combination of sensors, provided by the method of sensor fusion is the way to go.
+	\item Solutions using sensor fusion are the most accurate once. Using adequate Sensor Fusion and Filtering techniques is the key for a good accuracy. Furthermore technologies working with WiFi and Bluetooth are the majority just because all smartphone or wearable like devices can support them.
+	\item Map Matching as an extension to sensor fusion and filtering can improve the accuracy again and guaranties that users are not irritated by the position shown on the map.
+	\item The range of costs for a solution is not as much influenced by the technologies as expected. It depends more on the specific use case.
+	\item Locata would be a real city or state project and would enable indoor positioning in all buildings. This solution should be observed during the next years.
+\end{enumerate}
+
+Based on these cognitions our own system architecture was built and is the main achievement. The modular structure enables continues development and improvement. Using statistical methods and error propagation the final result is based on all measurements combined in a strategic way.
+
+
+
+\subsection{Future Work}
+The next fundamental step would be to start an implementation and make a proof of concept. To do so at first data model and then input and output interfaces should be defined for the test environment. After that all the algorithms need to be implemented and tested. Then open questions on how to fuse the four given absolute positions before map matching and defining weights for the movement models need to be answered by field experiments. 
+
+Open questions besides accurate positioning are for example regarding the energy consumption. Especially in case of WiFi as positioning System. We do not expect Bluetooth 4.0 low energy and internal sensors to have a huge impact on battery live. 
+
+Besides the implementation a concrete business model and the realizations of the communication strategy are missing. We suggest a Canvas Business Model would fit our purposes. 
+
+Projects like FlySfo have to be observed for complications and user feedback to make further improvements. To actually measure social acceptance, long term studies have to be done. 
+
+

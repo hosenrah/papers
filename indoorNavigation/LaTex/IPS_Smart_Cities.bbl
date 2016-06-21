@@ -1,0 +1,1397 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{apa}
+    \entry{accelerometer}{book}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=e6c3aaa30748d555299bd75fcfbc27ce}{Adam\bibnamedelimb J.\bibnamedelimi Aviv}{A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}{Matt\bibnamedelima Blaze}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{Benjamin\bibnamedelima Sapp}{B\bibinitperiod\bibinitdelim S\bibinitperiod}}%
+        {{uniquename=0,hash=4475a7a8bd3ef1c049e3ddf38a6682fa}{Smith}{S\bibinitperiod}{Jonathan\bibnamedelima M.}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=e6c3aaa30748d555299bd75fcfbc27ce}{Adam\bibnamedelimb J.\bibnamedelimi Aviv}{A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}{Matt\bibnamedelima Blaze}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{Benjamin\bibnamedelima Sapp}{B\bibinitperiod\bibinitdelim S\bibinitperiod}}%
+        {{uniquename=0,hash=4475a7a8bd3ef1c049e3ddf38a6682fa}{Smith}{S\bibinitperiod}{Jonathan\bibnamedelima M.}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{5c28027782e99d01f406bf980920db02}
+      \strng{fullhash}{5c28027782e99d01f406bf980920db02}
+      \field{sortinit}{A}
+      \field{labelyear}{nodate}
+      \field{labeltitle}{Practicality of Accelerometer Side Channels on Smartphones}
+      \field{journaltitle}{University of Pennsylvania}
+      \field{title}{Practicality of Accelerometer Side Channels on Smartphones}
+    \endentry
+    \entry{asc:2014}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=b65dc23abaeea1a7d749d67598a076ac}{{Amsterdam-Smart-City}}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b65dc23abaeea1a7d749d67598a076ac}{{Amsterdam-Smart-City}}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {AmsterdamSmartCity}%
+      }
+      \strng{namehash}{b65dc23abaeea1a7d749d67598a076ac}
+      \strng{fullhash}{b65dc23abaeea1a7d749d67598a076ac}
+      \field{sortinit}{A}
+      \field{labelyear}{2014}
+      \field{labeltitle}{About ASC}
+      \field{note}{[Online; accessed 19 Nov 2014]}
+      \field{title}{About ASC}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://amsterdamsmartcity.com
+      \endverb
+    \endentry
+    \entry{extremetech2014thinkgpsiscool}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=f4eba2e3392a493422701d678dbea915}{Anthony}{A\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f4eba2e3392a493422701d678dbea915}{Anthony}{A\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f4eba2e3392a493422701d678dbea915}
+      \strng{fullhash}{f4eba2e3392a493422701d678dbea915}
+      \field{sortinit}{A}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Think GPS is cool? IPS will blow your mind}
+      \field{title}{Think GPS is cool? IPS will blow your mind}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.extremetech.com/extreme/126843-think-gps-is-cool-ips-will-blow-your-mind
+      \endverb
+    \endentry
+    \entry{berUrban}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=bc37d3d5ebe695f09e29c6dfa41a5b30}{Bähr}{B\bibinitperiod}{Jürgen}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=bc37d3d5ebe695f09e29c6dfa41a5b30}{Bähr}{B\bibinitperiod}{Jürgen}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Berlin-Institut für Befölkerung und Entwicklung}%
+      }
+      \strng{namehash}{bc37d3d5ebe695f09e29c6dfa41a5b30}
+      \strng{fullhash}{bc37d3d5ebe695f09e29c6dfa41a5b30}
+      \field{sortinit}{B}
+      \field{labelyear}{2007}
+      \field{labeltitle}{Entwicklung von Urbanisierung}
+      \field{booktitle}{Online-Handbuch Demografie}
+      \field{title}{Entwicklung von Urbanisierung}
+      \field{year}{2007}
+    \endentry
+    \entry{mazeMap1}{book}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=4d77d5625ddb1078d2ba1c1c1f0f6a59}{Biczok}{B\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9287aaeba47c9c5ebbf697c861c33c38}{Martinez}{M\bibinitperiod}{S.\bibnamedelimi D.}{S\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e763f5522e5db547cba2a1d1b79224aa}{Jelle}{J\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=28009f4721bb302a2806c4c498700cff}{Krogstie}{K\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=4d77d5625ddb1078d2ba1c1c1f0f6a59}{Biczok}{B\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9287aaeba47c9c5ebbf697c861c33c38}{Martinez}{M\bibinitperiod}{S.\bibnamedelimi D.}{S\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e763f5522e5db547cba2a1d1b79224aa}{Jelle}{J\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=28009f4721bb302a2806c4c498700cff}{Krogstie}{K\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c00d974fc7352284eedf23630450e30f}
+      \strng{fullhash}{2ef8582ec8976b4642e9cb269c4b7a98}
+      \field{sortinit}{B}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Navigating MazeMap: indoor human mobility, spatio-logical ties and future potential}
+      \field{title}{Navigating MazeMap: indoor human mobility, spatio-logical ties and future potential}
+      \field{year}{2014}
+    \endentry
+    \entry{barometer}{book}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=1,hash=b8ab4d88b514491767f458dac4f13cb4}{Burch}{B\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=b3bbbc2a7c7c058fc995a45aa60c1b2c}{Burch}{B\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=1,hash=b8ab4d88b514491767f458dac4f13cb4}{Burch}{B\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=1,hash=b3bbbc2a7c7c058fc995a45aa60c1b2c}{Burch}{B\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Starpath Publications}%
+      }
+      \strng{namehash}{3893911ddbba17c012a6eb8799837105}
+      \strng{fullhash}{3893911ddbba17c012a6eb8799837105}
+      \field{sortinit}{B}
+      \field{labelyear}{2009}
+      \field{labeltitle}{The Barometer Handbook: A Modern Look at Barometers and Applications of Barometric Pressure}
+      \field{isbn}{9780914025122}
+      \field{title}{The Barometer Handbook: A Modern Look at Barometers and Applications of Barometric Pressure}
+      \field{year}{2009}
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=7VxtPgAACAAJ
+      \endverb
+    \endentry
+    \entry{bytelight}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=c5929a1149130bbbc6e03f935bf24953}{ByteLight}{B\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c5929a1149130bbbc6e03f935bf24953}{ByteLight}{B\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {ByteLight}%
+      }
+      \strng{namehash}{c5929a1149130bbbc6e03f935bf24953}
+      \strng{fullhash}{c5929a1149130bbbc6e03f935bf24953}
+      \field{sortinit}{B}
+      \field{labelyear}{2015}
+      \field{labeltitle}{Scalable Indoor Location}
+      \field{note}{[Online; accessed 11 May 2015]}
+      \field{title}{Scalable Indoor Location}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.bytelight.com
+      \endverb
+    \endentry
+    \entry{smart3}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=713e0ce1b0465ff27a4300c49c687d42}{Caragliu}{C\bibinitperiod}{Andrea}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f5d60b7949e5806e55ca13686f8f0362}{Bo}{B\bibinitperiod}{Chiara\bibnamedelima Del}{C\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=332293a58402e75553b69f4d8de5dbf6}{Nijkamp}{N\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=713e0ce1b0465ff27a4300c49c687d42}{Caragliu}{C\bibinitperiod}{Andrea}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f5d60b7949e5806e55ca13686f8f0362}{Bo}{B\bibinitperiod}{Chiara\bibnamedelima Del}{C\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=332293a58402e75553b69f4d8de5dbf6}{Nijkamp}{N\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{fc31b86e7d756f9d20bc9a7f87842646}
+      \strng{fullhash}{7d1faf10abb7901ed1185b65f3c6b0ee}
+      \field{sortinit}{C}
+      \field{labelyear}{2011}
+      \field{labeltitle}{Smart Cities in Europe}
+      \field{journaltitle}{Journal of urban technology}
+      \field{number}{2}
+      \field{title}{Smart Cities in Europe}
+      \field{volume}{18}
+      \field{year}{2011}
+      \field{pages}{65\bibrangedash 82}
+    \endentry
+    \entry{inLocation}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=6e159c1ca7f2bd03a6a9a53cfb05fbd4}{Celusak}{C\bibinitperiod}{Jane}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=6e159c1ca7f2bd03a6a9a53cfb05fbd4}{Celusak}{C\bibinitperiod}{Jane}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {InLocation Alliance}%
+      }
+      \strng{namehash}{6e159c1ca7f2bd03a6a9a53cfb05fbd4}
+      \strng{fullhash}{6e159c1ca7f2bd03a6a9a53cfb05fbd4}
+      \field{sortinit}{C}
+      \field{labelyear}{2015}
+      \field{labeltitle}{Best Use Case Winners 2014}
+      \field{note}{[Online; accessed 08 May 2015]}
+      \field{title}{Best Use Case Winners 2014}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://inlocationalliance.org/2015/04/best-use-case-winners-2014/
+      \endverb
+    \endentry
+    \entry{indoorGeolocation}{book}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=f889019fc61464b084bbe69847cbc904}{Chen}{C\bibinitperiod}{Y.}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8d7005f5d8bdf17fb23b054d01fdedf7}{Kobayashi}{K\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=f889019fc61464b084bbe69847cbc904}{Chen}{C\bibinitperiod}{Y.}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8d7005f5d8bdf17fb23b054d01fdedf7}{Kobayashi}{K\bibinitperiod}{H.}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6b3f08180aef9a2695a0ea0867608dac}
+      \strng{fullhash}{6b3f08180aef9a2695a0ea0867608dac}
+      \field{sortinit}{C}
+      \field{labelyear}{2002}
+      \field{labeltitle}{Signal strength based indoor geolocation,}
+      \field{title}{Signal strength based indoor geolocation,}
+      \field{year}{2002}
+    \endentry
+    \entry{urbanTrends}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=bba0eed7d4bd31905dd74a73e718b70a}{{Christopher\bibnamedelimb Watson}}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=bba0eed7d4bd31905dd74a73e718b70a}{{Christopher\bibnamedelimb Watson}}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{2}{%
+        {Centre for Urban}%
+        {Regional Studies, The University of Birmingham, UK}%
+      }
+      \strng{namehash}{bba0eed7d4bd31905dd74a73e718b70a}
+      \strng{fullhash}{bba0eed7d4bd31905dd74a73e718b70a}
+      \field{sortinit}{C}
+      \field{labelyear}{1993}
+      \field{labeltitle}{Trends in World Urbanization}
+      \field{note}{[Online; accessed 22 Nov 2014]}
+      \field{title}{Trends in World Urbanization}
+      \field{year}{1993}
+      \verb{url}
+      \verb http://www.icup.org.uk
+      \endverb
+    \endentry
+    \entry{cisco}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=7b1d1185b835814de783483f686e9825}{Cisco}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=7b1d1185b835814de783483f686e9825}{Cisco}{C\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Cisco}%
+      }
+      \strng{namehash}{7b1d1185b835814de783483f686e9825}
+      \strng{fullhash}{7b1d1185b835814de783483f686e9825}
+      \field{sortinit}{C}
+      \field{labelyear}{2008}
+      \field{labeltitle}{Wi-Fi Location-Based Services 4.1 Design Guide}
+      \field{note}{[Online; accessed 08 May 2015]}
+      \field{title}{Wi-Fi Location-Based Services 4.1 Design Guide}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Mobility/WiFiLBS-DG/wifich1.html
+      \endverb
+    \endentry
+    \entry{smartCity}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=4f3a19daeab914d16a52bd281249ac5f}{Cocchia}{C\bibinitperiod}{Annalisa}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4f3a19daeab914d16a52bd281249ac5f}{Cocchia}{C\bibinitperiod}{Annalisa}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=3922924c3b2bb47368578547c6511587}{Dameri}{D\bibinitperiod}{Renata\bibnamedelima Paola}{R\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{hash=256443bd5b955164f3d5bbcea6224f87}{Rosenthal-Sabroux}{R\bibinithyphendelim S\bibinitperiod}{Camille}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{4f3a19daeab914d16a52bd281249ac5f}
+      \strng{fullhash}{4f3a19daeab914d16a52bd281249ac5f}
+      \field{sortinit}{C}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Smart and Digital City: A Systematic Literature Review}
+      \field{booktitle}{Smart City}
+      \field{isbn}{978-3-319-06159-7}
+      \field{series}{Progress in IS}
+      \field{title}{Smart and Digital City: A Systematic Literature Review}
+      \field{year}{2014}
+      \field{pages}{13\bibrangedash 43}
+      \verb{doi}
+      \verb 10.1007/978-3-319-06160-3_2
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/978-3-319-06160-3_2
+      \endverb
+      \keyw{Smart city; Digital city; Literature review; ICT; Urban strategies}
+    \endentry
+    \entry{geoSpital}{book}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=0398aa345ef49a459e61d8d072104daf}{Conti}{C\bibinitperiod}{Giuseppe}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=92d8bf6011636a52de9c2acd6e750184}{Piffer}{P\bibinitperiod}{Stefano}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=24c93f6a6e964b775970bf5d42877e41}{Barozzi}{B\bibinitperiod}{Massimo}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4d4c99a205d5cc871b6a7182d90a1903}{Li}{L\bibinitperiod}{Ki-Joune}{K\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=0398aa345ef49a459e61d8d072104daf}{Conti}{C\bibinitperiod}{Giuseppe}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=92d8bf6011636a52de9c2acd6e750184}{Piffer}{P\bibinitperiod}{Stefano}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=24c93f6a6e964b775970bf5d42877e41}{Barozzi}{B\bibinitperiod}{Massimo}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4d4c99a205d5cc871b6a7182d90a1903}{Li}{L\bibinitperiod}{Ki-Joune}{K\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{dd63d56d02f7bf1fad5322425aace745}
+      \strng{fullhash}{b6658335fb13fec68a674f3eb7a36ce1}
+      \field{sortinit}{C}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Your Geospatial industry Magazine GEOSPATIAL WORLD - so shall we reap}
+      \field{title}{Your Geospatial industry Magazine GEOSPATIAL WORLD - so shall we reap}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://geospatialworld.net/magazine/viewEdition.aspx?magid=449#sthash.BpuGtlnM.dpuf
+      \endverb
+    \endentry
+    \entry{flySfo3}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=eb41867a73a1aa5666e0eb12e4338ac4}{Cutler}{C\bibinitperiod}{K.-M.}{K\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=eb41867a73a1aa5666e0eb12e4338ac4}{Cutler}{C\bibinitperiod}{K.-M.}{K\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{eb41867a73a1aa5666e0eb12e4338ac4}
+      \strng{fullhash}{eb41867a73a1aa5666e0eb12e4338ac4}
+      \field{sortinit}{C}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Entrepreneurs Tackle Earthquake Safety, Urban Planning Tech In SF’s EIR Program}
+      \field{title}{Entrepreneurs Tackle Earthquake Safety, Urban Planning Tech In SF’s EIR Program}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://techcrunch.com/2014/07/30/entrepreneurs-tackle-earthquake-safety-urban-planning-tech-in-sfs-eir-program/?ncid=rss
+      \endverb
+    \endentry
+    \entry{BDSG}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=5b14384d154975978df5ab20491aa284}{Deutscher-Bundestag}{D\bibinithyphendelim B\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=5b14384d154975978df5ab20491aa284}{Deutscher-Bundestag}{D\bibinithyphendelim B\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Die Bundesschutzbeauftragte für den Datenschutz und die Informationssicherheit}%
+      }
+      \strng{namehash}{5b14384d154975978df5ab20491aa284}
+      \strng{fullhash}{5b14384d154975978df5ab20491aa284}
+      \field{sortinit}{D}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Bundesdatenschutzgesetz: Text und Erläuterungen}
+      \field{title}{Bundesdatenschutzgesetz: Text und Erläuterungen}
+      \field{year}{2014}
+    \endentry
+    \entry{snowdenEffect}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=fda0cb85bcc06b0c1b47aff9fac308cc}{Dwoskin}{D\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=fda0cb85bcc06b0c1b47aff9fac308cc}{Dwoskin}{D\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{fda0cb85bcc06b0c1b47aff9fac308cc}
+      \strng{fullhash}{fda0cb85bcc06b0c1b47aff9fac308cc}
+      \field{sortinit}{D}
+      \field{labelyear}{2014}
+      \field{labeltitle}{New Report: Snowden Revelations Hurt U.S. Companies}
+      \field{note}{Wall Street Journal}
+      \field{title}{New Report: Snowden Revelations Hurt U.S. Companies}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://blogs.wsj.com/digits/2014/07/30/new-report-snowden-revelations-hurt-u-s-companies/
+      \endverb
+    \endentry
+    \entry{estimote}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=ba03ce16c8ea962d2c5646bacc1f4c82}{Estimote}{E\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=ba03ce16c8ea962d2c5646bacc1f4c82}{Estimote}{E\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Estimote}%
+      }
+      \strng{namehash}{ba03ce16c8ea962d2c5646bacc1f4c82}
+      \strng{fullhash}{ba03ce16c8ea962d2c5646bacc1f4c82}
+      \field{sortinit}{E}
+      \field{labelyear}{2015}
+      \field{labeltitle}{Estimote - Real-world context for your apps}
+      \field{note}{[Online; accessed 08 May 2015]}
+      \field{title}{Estimote - Real-world context for your apps}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://estimote.com/
+      \endverb
+    \endentry
+    \entry{projectTango}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Introducing Project Tango}
+      \field{title}{Introducing Project Tango}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://www.google.com/atap/projecttango/#project
+      \endverb
+    \endentry
+    \entry{googleMaps}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Google}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{labelyear}{2015}
+      \field{labeltitle}{INDOOR-KARTEN FÜR INNENRÄUME}
+      \field{note}{[Online; accessed 15 Apr 2015]}
+      \field{title}{INDOOR-KARTEN FÜR INNENRÄUME}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.google.com/maps/about/partners/indoormaps/
+      \endverb
+    \endentry
+    \entry{smart7}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=f16a12039f3f5853fa29622054cce443}{Hall}{H\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f16a12039f3f5853fa29622054cce443}{Hall}{H\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f16a12039f3f5853fa29622054cce443}
+      \strng{fullhash}{f16a12039f3f5853fa29622054cce443}
+      \field{sortinit}{H}
+      \field{labelyear}{2000}
+      \field{labeltitle}{Creative cities and economic development.}
+      \field{booktitle}{Urban Studies}
+      \field{title}{Creative cities and economic development.}
+      \field{year}{2000}
+      \field{pages}{633–649}
+    \endentry
+    \entry{zigbee1}{misc}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=bbd31846d2e0adca6e2a57f091ed3a49}{Hernandez}{H\bibinitperiod}{Oziel}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f2bab47b79eba068658d50d0a881e3e3}{Jain}{J\bibinitperiod}{Varun}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=892a69f1b388f1b75dc7a463667a3543}{Chakravarty}{C\bibinitperiod}{Suhas}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fc4e78ee125c5b4c6881018a093d0124}{Bhargava}{B\bibinitperiod}{Prashant}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=bbd31846d2e0adca6e2a57f091ed3a49}{Hernandez}{H\bibinitperiod}{Oziel}{O\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f2bab47b79eba068658d50d0a881e3e3}{Jain}{J\bibinitperiod}{Varun}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=892a69f1b388f1b75dc7a463667a3543}{Chakravarty}{C\bibinitperiod}{Suhas}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fc4e78ee125c5b4c6881018a093d0124}{Bhargava}{B\bibinitperiod}{Prashant}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {freescale.com}%
+      }
+      \strng{namehash}{f46f275a81aa31d5da70008b1fda420b}
+      \strng{fullhash}{fa6d3a4494422063b3997b2a7b4302d2}
+      \field{sortinit}{H}
+      \field{labelyear}{2009}
+      \field{labeltitle}{Position Location Monitoring Using IEEE® 802.15.4/ZigBee® technology}
+      \field{note}{[Online; accessed 15 Apr 2015]}
+      \field{title}{Position Location Monitoring Using IEEE® 802.15.4/ZigBee® technology}
+      \field{year}{2009}
+      \verb{url}
+      \verb http://www.freescale.com/files/microcontrollers/doc/brochure/PositionLocationMonitoring.pdf
+      \endverb
+    \endentry
+    \entry{smart4}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=cbf44511d041dc6d1dd73cc0c033122c}{IBM}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cbf44511d041dc6d1dd73cc0c033122c}{IBM}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {IBM}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{labelyear}{2010}
+      \field{labeltitle}{Smarter thinking for a smarter planet.}
+      \field{note}{[Online; accessed 24 Nov 2014]}
+      \field{title}{Smarter thinking for a smarter planet.}
+      \field{year}{2010}
+      \verb{url}
+      \verb http://www.ibm.com/smarterplanet
+      \endverb
+    \endentry
+    \entry{indooratlas}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=23d975c512c640e4e562e9316439eb09}{IndoorAtlas}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=23d975c512c640e4e562e9316439eb09}{IndoorAtlas}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {IndoorAtlas}%
+      }
+      \strng{namehash}{23d975c512c640e4e562e9316439eb09}
+      \strng{fullhash}{23d975c512c640e4e562e9316439eb09}
+      \field{sortinit}{I}
+      \field{labelyear}{2015}
+      \field{labeltitle}{Indoor positioning made ubiquitous.}
+      \field{note}{[Online; accessed 11 May 2015]}
+      \field{title}{Indoor positioning made ubiquitous.}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://indooratlas.com/
+      \endverb
+    \endentry
+    \entry{flySfo5}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=946f5303b32b59c059ede9635ad9cefe}{indoo.rs}{i\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=946f5303b32b59c059ede9635ad9cefe}{indoo.rs}{i\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{946f5303b32b59c059ede9635ad9cefe}
+      \strng{fullhash}{946f5303b32b59c059ede9635ad9cefe}
+      \field{sortinit}{i}
+      \field{labelyear}{2015}
+      \field{labeltitle}{indoo.rs features}
+      \field{title}{indoo.rs features}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://indoo.rs/features/
+      \endverb
+    \endentry
+    \entry{infsoft}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=f08310314259b1dbd242f6ee2a737235}{infsoft}{i\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f08310314259b1dbd242f6ee2a737235}{infsoft}{i\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {infsoft}%
+      }
+      \strng{namehash}{f08310314259b1dbd242f6ee2a737235}
+      \strng{fullhash}{f08310314259b1dbd242f6ee2a737235}
+      \field{sortinit}{i}
+      \field{labelyear}{2015}
+      \field{labeltitle}{infsoft - we guide you inside}
+      \field{note}{[Online; accessed 08 May 2015]}
+      \field{title}{infsoft - we guide you inside}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.infsoft.co.uk
+      \endverb
+    \endentry
+    \entry{ISO37120}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=5b512ee8a59deb284ad0a6a035ba10b1}{{ISO}}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=5b512ee8a59deb284ad0a6a035ba10b1}{{ISO}}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {ISO}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{sortinit}{I}
+      \field{labelyear}{2014}
+      \field{labeltitle}{ISO 37120: Sustainable development of communities — Indicators for city services and quality of life}
+      \field{note}{[Online; accessed 18 Nov 2014]}
+      \field{title}{ISO 37120: Sustainable development of communities — Indicators for city services and quality of life}
+      \field{year}{2014}
+      \verb{url}
+      \verb www.iso.org
+      \endverb
+    \endentry
+    \entry{jaronLanier}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=d849609a2d63db80bc9c02db88dd3405}{{Jaron\bibnamedelimb Lanier}}{J\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=d849609a2d63db80bc9c02db88dd3405}{{Jaron\bibnamedelimb Lanier}}{J\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {http://www.friedenspreis-des-deutschen-buchhandels.de}%
+      }
+      \strng{namehash}{d849609a2d63db80bc9c02db88dd3405}
+      \strng{fullhash}{d849609a2d63db80bc9c02db88dd3405}
+      \field{sortinit}{J}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Der High-Tech-Frieden braucht eine neue Art von Humanismus}
+      \field{note}{[Online; accessed 19 Nov 2014]}
+      \field{title}{Der High-Tech-Frieden braucht eine neue Art von Humanismus}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.friedenspreis-des-deutschen-buchhandels.de
+      \endverb
+    \endentry
+    \entry{campusGuide1}{book}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=e763f5522e5db547cba2a1d1b79224aa}{Jelle}{J\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d20b165f47cdc5406d98e107f4a70257}{Kaaro}{K\bibinitperiod}{J.\bibnamedelimi K.}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=e763f5522e5db547cba2a1d1b79224aa}{Jelle}{J\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d20b165f47cdc5406d98e107f4a70257}{Kaaro}{K\bibinitperiod}{J.\bibnamedelimi K.}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0716037d67079a5485bc7f17f0899f29}
+      \strng{fullhash}{0716037d67079a5485bc7f17f0899f29}
+      \field{sortinit}{J}
+      \field{labelyear}{2014}
+      \field{labeltitle}{The Campus Guide}
+      \field{title}{The Campus Guide}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://campusguiden.no/?lang=english
+      \endverb
+    \endentry
+    \entry{kloess}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=923e3cff139f43b7b542920475ed748a}{Klöss}{K\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=923e3cff139f43b7b542920475ed748a}{Klöss}{K\bibinitperiod}{Bernd}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Script of the lecture held at the Cooperative State University Stuttgart, Baden-Wuerttemberg}%
+      }
+      \strng{namehash}{923e3cff139f43b7b542920475ed748a}
+      \strng{fullhash}{923e3cff139f43b7b542920475ed748a}
+      \field{sortinit}{K}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Probability theory and statistics for computer scientists}
+      \field{title}{Probability theory and statistics for computer scientists}
+      \field{year}{2014}
+    \endentry
+    \entry{persSmart}{misc}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=4aa0ee9ee0dfa343e1d45e7834318568}{Kourtit}{K\bibinitperiod}{Karima}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=332293a58402e75553b69f4d8de5dbf6}{Nijkamp}{N\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9df62fa5dd36d6437e032a4a78b1311e}{Arribas}{A\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=4aa0ee9ee0dfa343e1d45e7834318568}{Kourtit}{K\bibinitperiod}{Karima}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=332293a58402e75553b69f4d8de5dbf6}{Nijkamp}{N\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9df62fa5dd36d6437e032a4a78b1311e}{Arribas}{A\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Department of Spatial Economics, VU University, Amsterdam, The Netherlands}%
+      }
+      \strng{namehash}{9d33f80773ca23d82d2e0b442437fb86}
+      \strng{fullhash}{29acb379189fefdc5fce0f39dd1cd5ce}
+      \field{sortinit}{K}
+      \field{labelyear}{2012}
+      \field{labeltitle}{Smart City in perspective}
+      \field{title}{Smart City in perspective}
+      \field{year}{2012}
+    \endentry
+    \entry{euDef}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=2a7d6b28dced021fbc3f1ce521fadac7}{{Lewis\bibnamedelimb Dijkstra\bibnamedelimb and\bibnamedelimb Hugo\bibnamedelimb Poelman}}{L\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2a7d6b28dced021fbc3f1ce521fadac7}{{Lewis\bibnamedelimb Dijkstra\bibnamedelimb and\bibnamedelimb Hugo\bibnamedelimb Poelman}}{L\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {European Comission}%
+      }
+      \strng{namehash}{2a7d6b28dced021fbc3f1ce521fadac7}
+      \strng{fullhash}{2a7d6b28dced021fbc3f1ce521fadac7}
+      \field{sortinit}{L}
+      \field{labelyear}{2012}
+      \field{labeltitle}{Cities in Europe: The new OECD-EC Definition}
+      \field{note}{[Online; accessed 18 Nov 2014]}
+      \field{title}{Cities in Europe: The new OECD-EC Definition}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://ec.europa.eu
+      \endverb
+    \endentry
+    \entry{locata}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=9806ec317d3779b01c93f13697f0f707}{Locata}{L\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9806ec317d3779b01c93f13697f0f707}{Locata}{L\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Locata}%
+      }
+      \strng{namehash}{9806ec317d3779b01c93f13697f0f707}
+      \strng{fullhash}{9806ec317d3779b01c93f13697f0f707}
+      \field{sortinit}{L}
+      \field{labelyear}{2014}
+      \field{labeltitle}{LocataTechExplained}
+      \field{note}{[Online; accessed 10 May 2015]}
+      \field{title}{LocataTechExplained}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.locata.com/technology/locata-tech-explained/
+      \endverb
+    \endentry
+    \entry{flySfo2}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=a8e6e611203b433e49ee2c3080507187}{Lowensohn}{L\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a8e6e611203b433e49ee2c3080507187}{Lowensohn}{L\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a8e6e611203b433e49ee2c3080507187}
+      \strng{fullhash}{a8e6e611203b433e49ee2c3080507187}
+      \field{sortinit}{L}
+      \field{labelyear}{2014}
+      \field{labeltitle}{San Francisco Airport testing beacon system for blind travelers}
+      \field{title}{San Francisco Airport testing beacon system for blind travelers}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.theverge.com/2014/7/31/5956265/san-francisco-airport-testing-beacon-system-for-blind-travelers
+      \endverb
+    \endentry
+    \entry{magnetometer}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=20e5e527f4e49d5723f134f0431bc3c1}{Macintyre}{M\bibinitperiod}{Steven\bibnamedelima A.}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=20e5e527f4e49d5723f134f0431bc3c1}{Macintyre}{M\bibinitperiod}{Steven\bibnamedelima A.}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{20e5e527f4e49d5723f134f0431bc3c1}
+      \strng{fullhash}{20e5e527f4e49d5723f134f0431bc3c1}
+      \field{sortinit}{M}
+      \field{labelyear}{2000}
+      \field{labeltitle}{Magnetic field measurements}
+      \field{journaltitle}{CRC Press LLC}
+      \field{title}{Magnetic field measurements}
+      \field{year}{2000}
+    \endentry
+    \entry{sail}{misc}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=819998400bf176b3b291f46f5d95a657}{Mariakakis}{M\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17d880782e039d61ffcca69081211d2d}{Sen}{S\bibinitperiod}{Souvik}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8085949b1baa40f53337ff4a74be599b}{Lee}{L\bibinitperiod}{Jeongkeun}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a982331ba2f39bc138874894d310514c}{Kim}{K\bibinitperiod}{Kyu-Han}{K\bibinithyphendelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=819998400bf176b3b291f46f5d95a657}{Mariakakis}{M\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17d880782e039d61ffcca69081211d2d}{Sen}{S\bibinitperiod}{Souvik}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8085949b1baa40f53337ff4a74be599b}{Lee}{L\bibinitperiod}{Jeongkeun}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a982331ba2f39bc138874894d310514c}{Kim}{K\bibinitperiod}{Kyu-Han}{K\bibinithyphendelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Bretton Woods, New Hampshire, USA}%
+      }
+      \strng{namehash}{f8bc18d3ecc909e2182c88f691f268ad}
+      \strng{fullhash}{e954648c787c4a41d692532cff581b5a}
+      \field{sortinit}{M}
+      \field{labelyear}{2015}
+      \field{labeltitle}{SAIL: Single Access Point-Based Indoor Localization}
+      \field{note}{[Online; accessed 11 May 2015]}
+      \field{title}{SAIL: Single Access Point-Based Indoor Localization}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://dx.doi.org/10.1145/2594368.2594393
+      \endverb
+    \endentry
+    \entry{mazemap}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=ffbc69c4d9797f43229834c042631117}{MazeMap}{M\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=ffbc69c4d9797f43229834c042631117}{MazeMap}{M\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {MazeMap}%
+      }
+      \strng{namehash}{ffbc69c4d9797f43229834c042631117}
+      \strng{fullhash}{ffbc69c4d9797f43229834c042631117}
+      \field{sortinit}{M}
+      \field{labelyear}{2015}
+      \field{labeltitle}{MazeMap}
+      \field{note}{[Online; accessed 08 May 2015]}
+      \field{title}{MazeMap}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://mazemap.com/
+      \endverb
+    \endentry
+    \entry{MSMueller}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=c55e93c8048b4cbf5fd25c1e79459a2c}{Müller}{M\bibinitperiod}{Ernest}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c55e93c8048b4cbf5fd25c1e79459a2c}{Müller}{M\bibinitperiod}{Ernest}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Byg- DTU}%
+      }
+      \strng{namehash}{c55e93c8048b4cbf5fd25c1e79459a2c}
+      \strng{fullhash}{c55e93c8048b4cbf5fd25c1e79459a2c}
+      \field{sortinit}{M}
+      \field{labelyear}{2008}
+      \field{labeltitle}{Psychological Aspects of Change (A contribution towards the understanding of the psychology behind the change process)}
+      \field{title}{Psychological Aspects of Change (A contribution towards the understanding of the psychology behind the change process)}
+      \field{type}{mathesis}
+      \field{year}{2008}
+    \endentry
+    \entry{nclimate}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=388f6472d7f05e446b1da74995dbcac9}{{Nature-Climate-Change}}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=388f6472d7f05e446b1da74995dbcac9}{{Nature-Climate-Change}}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Climate Change}%
+      }
+      \strng{namehash}{388f6472d7f05e446b1da74995dbcac9}
+      \strng{fullhash}{388f6472d7f05e446b1da74995dbcac9}
+      \field{sortinit}{N}
+      \field{labelyear}{2014}
+      \field{labeltitle}{About the journal}
+      \field{note}{[Online; accessed 19 Nov 2014]}
+      \field{title}{About the journal}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.nature.com/nclimate/
+      \endverb
+    \endentry
+    \entry{navizon}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=8cd7c2ec325372342747f4f374d35075}{Navizon}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8cd7c2ec325372342747f4f374d35075}{Navizon}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Navizon}%
+      }
+      \strng{namehash}{8cd7c2ec325372342747f4f374d35075}
+      \strng{fullhash}{8cd7c2ec325372342747f4f374d35075}
+      \field{sortinit}{N}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Navizon Indoors for Navigation}
+      \field{note}{[Online; accessed 08 May 2015]}
+      \field{title}{Navizon Indoors for Navigation}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://www.navizon.com/files/Navizon_Indoors_Navigation_Fact_Sheet.pdf
+      \endverb
+    \endentry
+    \entry{nfc1}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=f84812a0f8e0c9c502fdc9b44a7ac3dc}{NFC\_tag\_shop}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f84812a0f8e0c9c502fdc9b44a7ac3dc}{NFC\_tag\_shop}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {http://www.nfc-tag-shop.de}%
+      }
+      \strng{namehash}{f84812a0f8e0c9c502fdc9b44a7ac3dc}
+      \strng{fullhash}{f84812a0f8e0c9c502fdc9b44a7ac3dc}
+      \field{sortinit}{N}
+      \field{labelyear}{2015}
+      \field{labeltitle}{NFC TAG-TYPEN - CHIPTYPEN}
+      \field{note}{[Online; accessed 15 Apr 2015]}
+      \field{title}{NFC TAG-TYPEN - CHIPTYPEN}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.nfc-tag-shop.de/info/ueber-nfc-tags/nfc-tag-typen.html
+      \endverb
+    \endentry
+    \entry{smart6}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=fe9d95cb6a1bef22ffc2ba89d89b1a50}{{Northstream}}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=fe9d95cb6a1bef22ffc2ba89d89b1a50}{{Northstream}}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{fe9d95cb6a1bef22ffc2ba89d89b1a50}
+      \strng{fullhash}{fe9d95cb6a1bef22ffc2ba89d89b1a50}
+      \field{sortinit}{N}
+      \field{labelyear}{2010}
+      \field{labeltitle}{White paper on revenue opportunities, from http://northstream.se/white-paper/archive.}
+      \field{note}{[Online; accessed 24 Nov 2014]}
+      \field{title}{White paper on revenue opportunities, from http://northstream.se/white-paper/archive.}
+      \field{year}{2010}
+      \verb{url}
+      \verb http://northstream.se/
+      \endverb
+    \endentry
+    \entry{smart1}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=bdbed435a416a918aa494017fda4c7fb}{OECD}{O\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=bdbed435a416a918aa494017fda4c7fb}{OECD}{O\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {OECD Publishing}%
+      }
+      \strng{namehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \field{sortinit}{O}
+      \field{labelyear}{2011}
+      \field{labeltitle}{T-Mobile technologies for responsive government and con- nected societies.}
+      \field{note}{[Online; accessed 24 Nov 2014]}
+      \field{title}{T-Mobile technologies for responsive government and con- nected societies.}
+      \field{year}{2011}
+      \verb{url}
+      \verb http://unpan1.un.org
+      \endverb
+    \endentry
+    \entry{smartCharacter}{misc}{}
+      \field{sortinit}{o}
+      \field{labelyear}{2007}
+      \field{labeltitle}{Smart cities: Ranking of European medium-sized cities}
+      \field{note}{[Online; accessed 24 Nov 2014]}
+      \field{title}{Smart cities: Ranking of European medium-sized cities}
+      \field{year}{2007}
+      \verb{url}
+      \verb http://www.smart-cities.eu/download/smart_cities_final_report.pdf
+      \endverb
+    \endentry
+    \entry{smart9}{misc}{}
+      \list{publisher}{2}{%
+        {International Journal of Computers}%
+        {Technology}%
+      }
+      \field{sortinit}{o}
+      \field{labelyear}{2013}
+      \field{labeltitle}{Searching for smart city definition: a comprehensive proposal.}
+      \field{title}{Searching for smart city definition: a comprehensive proposal.}
+      \field{year}{2013}
+    \endentry
+    \entry{papula}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=e1a960583a3d7501bccdb258aeb929bd}{Papula}{P\bibinitperiod}{Lothar}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e1a960583a3d7501bccdb258aeb929bd}{Papula}{P\bibinitperiod}{Lothar}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e1a960583a3d7501bccdb258aeb929bd}
+      \strng{fullhash}{e1a960583a3d7501bccdb258aeb929bd}
+      \field{sortinit}{P}
+      \field{labelyear}{2011}
+      \field{labeltitle}{Mathematik für Ingenieure und Naturwissenschaftler Band 3}
+      \field{isbn}{978-3-8348-8133-5}
+      \field{journaltitle}{Vieweg+Teubner Verlag}
+      \field{title}{Mathematik für Ingenieure und Naturwissenschaftler Band 3}
+      \field{year}{2011}
+    \endentry
+    \entry{gyroscope}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=0e3b1c274ad15178c894cd0541f11cb9}{Poisson}{P\bibinitperiod}{Par\bibnamedelima M.}{P\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=0e3b1c274ad15178c894cd0541f11cb9}{Poisson}{P\bibinitperiod}{Par\bibnamedelima M.}{P\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0e3b1c274ad15178c894cd0541f11cb9}
+      \strng{fullhash}{0e3b1c274ad15178c894cd0541f11cb9}
+      \field{sortinit}{P}
+      \field{labelyear}{1813}
+      \field{labeltitle}{Sur un Cas paerticulier du Mouvement de rotation des Corps pesans}
+      \field{journaltitle}{Journal de l'Ecole Polytechnique 9, no16}
+      \field{title}{Sur un Cas paerticulier du Mouvement de rotation des Corps pesans}
+      \field{year}{1813}
+    \endentry
+    \entry{reichardt}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=34c283ce468073597201e9ff20028085}{Reichardt}{R\bibinitperiod}{Dirk}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=34c283ce468073597201e9ff20028085}{Reichardt}{R\bibinitperiod}{Dirk}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Script of the lecture held at the Cooperative State University Stuttgart, Baden-Wuerttemberg}%
+      }
+      \strng{namehash}{34c283ce468073597201e9ff20028085}
+      \strng{fullhash}{34c283ce468073597201e9ff20028085}
+      \field{sortinit}{R}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Evidenzen und Dempsters Regel}
+      \field{title}{Evidenzen und Dempsters Regel}
+      \field{year}{2014}
+    \endentry
+    \entry{rogers2003diffusion}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=e902537b29cc43ded3fbbd47c7a16db9}{Rogers}{R\bibinitperiod}{E.M.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e902537b29cc43ded3fbbd47c7a16db9}{Rogers}{R\bibinitperiod}{E.M.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Free Press}%
+      }
+      \strng{namehash}{e902537b29cc43ded3fbbd47c7a16db9}
+      \strng{fullhash}{e902537b29cc43ded3fbbd47c7a16db9}
+      \field{sortinit}{R}
+      \field{labelyear}{2003}
+      \field{labeltitle}{Diffusion of Innovations, 5th Edition}
+      \field{isbn}{9780743258234}
+      \field{title}{Diffusion of Innovations, 5th Edition}
+      \field{year}{2003}
+      \verb{url}
+      \verb http://books.google.de/books?id=9U1K5LjUOwEC
+      \endverb
+    \endentry
+    \entry{measurement}{book}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=f7ac1a5af82f9f410f87fcf6db144bfc}{Ruiz}{R\bibinitperiod}{A.R.J.}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89d1831da492ef78f3720cdb08ea73c6}{Granja}{G\bibinitperiod}{F.S.}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=10cb03bde7f7b1c90c342dc38a7882d3}{Honorato}{H\bibinitperiod}{J.C.\bibnamedelimi Prieto}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c5caad2bc1bde1d664ea89812fdea04f}{Rosas}{R\bibinitperiod}{J.I.G.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=f7ac1a5af82f9f410f87fcf6db144bfc}{Ruiz}{R\bibinitperiod}{A.R.J.}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89d1831da492ef78f3720cdb08ea73c6}{Granja}{G\bibinitperiod}{F.S.}{F\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=10cb03bde7f7b1c90c342dc38a7882d3}{Honorato}{H\bibinitperiod}{J.C.\bibnamedelimi Prieto}{J\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c5caad2bc1bde1d664ea89812fdea04f}{Rosas}{R\bibinitperiod}{J.I.G.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6de1131bee924d60da8484572963215d}
+      \strng{fullhash}{ad75bbcf8d924acbe77e66f5193635db}
+      \field{sortinit}{R}
+      \field{labelyear}{2012}
+      \field{labeltitle}{Accurate Pedestrian Indoor Navigation by Tightly Coupling Foot-Mounted IMU and RFID Measurements}
+      \field{issn}{0018-9456}
+      \field{journaltitle}{Instrumentation and Measurement, IEEE Transactions on}
+      \field{title}{Accurate Pedestrian Indoor Navigation by Tightly Coupling Foot-Mounted IMU and RFID Measurements}
+      \field{year}{2012}
+      \field{pages}{178\bibrangedash 189}
+    \endentry
+    \entry{digital1}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=8bda43197e6b5412459fcdf200002d26}{Schuler}{S\bibinitperiod}{Doug}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8bda43197e6b5412459fcdf200002d26}{Schuler}{S\bibinitperiod}{Doug}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=c78a2c19b15a50d761cb1c303d13a169}{Tanabe}{T\bibinitperiod}{Makoto}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=f63cb45089a820d8ca017cebc0b7676d}{Besselaar}{B\bibinitperiod}{Peter}{P\bibinitperiod}{van\bibnamedelima den}{v\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}}%
+        {{hash=fb3aca7f426e9b8f35e4399b2bafedf1}{Ishida}{I\bibinitperiod}{Toru}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{8bda43197e6b5412459fcdf200002d26}
+      \strng{fullhash}{8bda43197e6b5412459fcdf200002d26}
+      \field{sortinit}{S}
+      \field{labelyear}{2002}
+      \field{labeltitle}{Digital Cities and Digital Citizens}
+      \field{booktitle}{Digital Cities II: Computational and Sociological Approaches}
+      \field{isbn}{978-3-540-43963-9}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Digital Cities and Digital Citizens}
+      \field{volume}{2362}
+      \field{year}{2002}
+      \field{pages}{71\bibrangedash 85}
+      \verb{doi}
+      \verb 10.1007/3-540-45636-8_6
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/3-540-45636-8_6
+      \endverb
+    \endentry
+    \entry{smart8}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=3719a4376cd60088ca6496d7ac1d7732}{{Setis-Eu}}{S\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=3719a4376cd60088ca6496d7ac1d7732}{{Setis-Eu}}{S\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{3719a4376cd60088ca6496d7ac1d7732}
+      \strng{fullhash}{3719a4376cd60088ca6496d7ac1d7732}
+      \field{sortinit}{S}
+      \field{labelyear}{2012}
+      \field{labeltitle}{European Initiative on Smart Cities}
+      \field{note}{[Online; accessed 24 Nov 2014]}
+      \field{title}{European Initiative on Smart Cities}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://setis.ec.europa.eu/implementation/technology-roadmap/European-initiative-on-smart-cities
+      \endverb
+    \endentry
+    \entry{smart2}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=4c48414d3e85156c37f06d8b6918ccde}{smartcommunities.org}{s\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4c48414d3e85156c37f06d8b6918ccde}{smartcommunities.org}{s\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {California Institute}%
+      }
+      \strng{namehash}{4c48414d3e85156c37f06d8b6918ccde}
+      \strng{fullhash}{4c48414d3e85156c37f06d8b6918ccde}
+      \field{sortinit}{s}
+      \field{labelyear}{2001}
+      \field{labeltitle}{The Smart Community Concept.}
+      \field{note}{[Online; accessed 24 Nov 2014]}
+      \field{title}{The Smart Community Concept.}
+      \field{year}{2001}
+      \verb{url}
+      \verb http://smartcommunities.org
+      \endverb
+    \endentry
+    \entry{stepUpSmartCards}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=252d12a3e3cb5f2a13fc4a095081e14a}{{STEPUP-Smart-Cities}}{S\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=252d12a3e3cb5f2a13fc4a095081e14a}{{STEPUP-Smart-Cities}}{S\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {University of Strathclyde}%
+      }
+      \strng{namehash}{252d12a3e3cb5f2a13fc4a095081e14a}
+      \strng{fullhash}{252d12a3e3cb5f2a13fc4a095081e14a}
+      \field{sortinit}{S}
+      \field{labelyear}{2013}
+      \field{labeltitle}{Smart cards as a transport, social and education policy instrument}
+      \field{note}{[Online; accessed 19 Nov 2014]}
+      \field{title}{Smart cards as a transport, social and education policy instrument}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.stepupsmartcities.eu
+      \endverb
+    \endentry
+    \entry{smart5}{inproceedings}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=3fbec098423fdf5cd02090433bdf6896}{Su}{S\bibinitperiod}{Kehua}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5f61775c2fbdd179d018bb797bd0ce1d}{Li}{L\bibinitperiod}{Jie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8d1e028082ee746f233ba6b3ae403928}{Fu}{F\bibinitperiod}{Hongbo}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=3fbec098423fdf5cd02090433bdf6896}{Su}{S\bibinitperiod}{Kehua}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5f61775c2fbdd179d018bb797bd0ce1d}{Li}{L\bibinitperiod}{Jie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=8d1e028082ee746f233ba6b3ae403928}{Fu}{F\bibinitperiod}{Hongbo}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9b85e124e03a8656df045ba1b26b5343}
+      \strng{fullhash}{112ae1ab856c228df30f16d6861a8924}
+      \field{sortinit}{S}
+      \field{labelyear}{2011}
+      \field{labelmonth}{09}
+      \field{labeltitle}{Smart city and the applications}
+      \field{booktitle}{Electronics, Communications and Control (ICECC), 2011 International Conference on}
+      \field{month}{09}
+      \field{title}{Smart city and the applications}
+      \field{year}{2011}
+      \field{pages}{1028\bibrangedash 1031}
+      \verb{doi}
+      \verb 10.1109/ICECC.2011.6066743
+      \endverb
+      \keyw{social aspects of automation;city services;daily livelihood;digital city;environmental protection;public security;smart city;Cities and towns;Computers;Internet;Planets;Real time systems;Wireless communication;Wireless sensor networks;digital city;smart city;smart planet;the Internet of Things}
+    \endentry
+    \entry{mittr}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=c1f71b17a055463c7c2b3a70021fa7cf}{Technology\_Review\_Custom\_MIT}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c1f71b17a055463c7c2b3a70021fa7cf}{Technology\_Review\_Custom\_MIT}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Technology Review Custom}%
+      }
+      \strng{namehash}{c1f71b17a055463c7c2b3a70021fa7cf}
+      \strng{fullhash}{c1f71b17a055463c7c2b3a70021fa7cf}
+      \field{sortinit}{T}
+      \field{labelyear}{2015}
+      \field{labeltitle}{Technology Insights Portability vs. Privacy: Striking the Right Balance in the Mobile Era}
+      \field{note}{[Online; accessed 15 Apr 2015]}
+      \field{title}{Technology Insights Portability vs. Privacy: Striking the Right Balance in the Mobile Era}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.technologyreview.com/collection/the-mobile-privacy-dilemma/free-report/
+      \endverb
+    \endentry
+    \entry{healthPosition}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=7f89d15646cbc13c7c99e07f840cad19}{{Total\_Communicator\_Solutions\_Inc.}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=7f89d15646cbc13c7c99e07f840cad19}{{Total\_Communicator\_Solutions\_Inc.}}{T\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{7f89d15646cbc13c7c99e07f840cad19}
+      \strng{fullhash}{7f89d15646cbc13c7c99e07f840cad19}
+      \field{sortinit}{T}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Dept. of Health and Human Services Launches Pioneering Mobile App Using Personalized Messages, Gaming to Encourage Healthy Behavior at Work}
+      \field{note}{[Online; accessed 20 Dec 2014]}
+      \field{title}{Dept. of Health and Human Services Launches Pioneering Mobile App Using Personalized Messages, Gaming to Encourage Healthy Behavior at Work}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.marketwatch.com/story/dept-of-health-and-human-services-launches-pioneering-mobile-app-using-personalized-messages-gaming-to-encourage-healthy-behavior-at-work-2014-06-04
+      \endverb
+    \endentry
+    \entry{networkedCities}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=974ab9313fcf32c3a3b07ff8ea2e3494}{Tranos}{T\bibinitperiod}{Emmanouil}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=539e0bc27a624dad4d55cd51ea25ef92}{Gertner}{G\bibinitperiod}{Drew}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=974ab9313fcf32c3a3b07ff8ea2e3494}{Tranos}{T\bibinitperiod}{Emmanouil}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=539e0bc27a624dad4d55cd51ea25ef92}{Gertner}{G\bibinitperiod}{Drew}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{34ab3277f2c214a71b5ea6a64184cc85}
+      \strng{fullhash}{34ab3277f2c214a71b5ea6a64184cc85}
+      \field{sortinit}{T}
+      \field{labelyear}{2012}
+      \field{labeltitle}{Smart networked cities?}
+      \field{journaltitle}{Innovation: The European Journal of Social Science Research}
+      \field{number}{2}
+      \field{title}{Smart networked cities?}
+      \field{volume}{25}
+      \field{year}{2012}
+      \field{pages}{175\bibrangedash 190}
+      \verb{doi}
+      \verb 10.1080/13511610.2012.660327
+      \endverb
+      \verb{eprint}
+      \verb http://dx.doi.org/
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/
+      \endverb
+    \endentry
+    \entry{unitedNations2012}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=0433a030f35fe613ec8cf50417323dea}{UN}{U\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=0433a030f35fe613ec8cf50417323dea}{UN}{U\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {New York: United Nations}%
+      }
+      \strng{namehash}{0433a030f35fe613ec8cf50417323dea}
+      \strng{fullhash}{0433a030f35fe613ec8cf50417323dea}
+      \field{sortinit}{U}
+      \field{labelyear}{2012}
+      \field{labeltitle}{World Population Prospects - The 2012 Revision}
+      \field{note}{[Online; accessed 19 Nov 2014]}
+      \field{title}{World Population Prospects - The 2012 Revision}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://esa.un.org
+      \endverb
+    \endentry
+    \entry{dlrFiebig}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=3ba739aa90aa9cea9b3084bd41a7702b}{{Uwe-Carsten\bibnamedelimb Fiebig}}{U\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=3ba739aa90aa9cea9b3084bd41a7702b}{{Uwe-Carsten\bibnamedelimb Fiebig}}{U\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {German Aerospace Center - Deutsches Zentrum für Luft- und Raumfahrt (DLR)}%
+      }
+      \strng{namehash}{3ba739aa90aa9cea9b3084bd41a7702b}
+      \strng{fullhash}{3ba739aa90aa9cea9b3084bd41a7702b}
+      \field{sortinit}{U}
+      \field{labelyear}{2008}
+      \field{labeltitle}{Navigation World Conference Forum Session Indoornavigation}
+      \field{note}{[Online; accessed 5 May 2015]}
+      \field{title}{Navigation World Conference Forum Session Indoornavigation}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://www.dlr.de/Portaldata/1/Resources/standorte/oberpfaffenhofen/aktuelles/aktuelles-2/News.pdf
+      \endverb
+    \endentry
+    \entry{fluxMap1}{misc}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=41e5a636dc000395d2ecdac25f221b0d}{Vandermeulen}{V\bibinitperiod}{Dries}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5b547497e747b4e2c034a17406657c32}{Vercauteren}{V\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cdd95454e46b4e7dfadcdf70187700d6}{Weyn}{W\bibinitperiod}{Maarten}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=41e5a636dc000395d2ecdac25f221b0d}{Vandermeulen}{V\bibinitperiod}{Dries}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5b547497e747b4e2c034a17406657c32}{Vercauteren}{V\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cdd95454e46b4e7dfadcdf70187700d6}{Weyn}{W\bibinitperiod}{Maarten}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Faculty of Applied Engineering - CoSys-Lab University of Antwerp}%
+      }
+      \strng{namehash}{dd647a3918c9c1fc983ebd5dca396a37}
+      \strng{fullhash}{2726efd3eaff762e9ee248c58af7797d}
+      \field{sortinit}{V}
+      \field{labelyear}{2013}
+      \field{labeltitle}{Indoor localization Using a Magnetic Flux Density Map of a Building}
+      \field{note}{[Online; accessed 15 Apr 2015]}
+      \field{title}{Indoor localization Using a Magnetic Flux Density Map of a Building}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.researchgate.net/profile/Maarten_Weyn/publication/259388843_Indoor_localization_Using_a_Magnetic_Flux_Density_Map_of_a_Building/links/0deec52b545eb3d81d000000.pdf
+      \endverb
+    \endentry
+    \entry{mapCraft}{misc}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=6cd0489e29ad740a63e5e65c6d03321f}{Xiao}{X\bibinitperiod}{Zhuoling}{Z\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4638829e48b2f54ea63807b579f1d22d}{Wen}{W\bibinitperiod}{Hongkai}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d1740fbea2675bcc1d15aca9ec37610a}{Markham}{M\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6419b8bee7fbd257ae96d25c8bded5a2}{Trigoni}{T\bibinitperiod}{Niki}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=6cd0489e29ad740a63e5e65c6d03321f}{Xiao}{X\bibinitperiod}{Zhuoling}{Z\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4638829e48b2f54ea63807b579f1d22d}{Wen}{W\bibinitperiod}{Hongkai}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d1740fbea2675bcc1d15aca9ec37610a}{Markham}{M\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6419b8bee7fbd257ae96d25c8bded5a2}{Trigoni}{T\bibinitperiod}{Niki}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Department of Computer Science, University of Oxford}%
+      }
+      \strng{namehash}{ddc382f48b348aec2c9860a4400b4a3f}
+      \strng{fullhash}{eaad0e5120a72085dd6689b6ecbb873a}
+      \field{sortinit}{X}
+      \field{labelyear}{2014}
+      \field{labeltitle}{Lightweight Map Matching for Indoor Localisation using Conditional Random Fields}
+      \field{note}{[Online; accessed 15 Apr 2015]}
+      \field{title}{Lightweight Map Matching for Indoor Localisation using Conditional Random Fields}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.cs.ox.ac.uk/files/6677/MapCraftPublishedIPSN14.pdf
+      \endverb
+    \endentry
+    \entry{flySfo1}{book}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=4452bd4ef731a8b4de4508ff792cba25}{Yakel}{Y\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4452bd4ef731a8b4de4508ff792cba25}{Yakel}{Y\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4452bd4ef731a8b4de4508ff792cba25}
+      \strng{fullhash}{4452bd4ef731a8b4de4508ff792cba25}
+      \field{sortinit}{Y}
+      \field{labelyear}{2014}
+      \field{labeltitle}{SFO Unveils Mobile App for Visually-Impaired Passengers}
+      \field{title}{SFO Unveils Mobile App for Visually-Impaired Passengers}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.flysfo.com/media/press-releases/sfo-unveils-mobile-app-visually-impaired-passengers
+      \endverb
+    \endentry
+    \entry{HiddenMarkovModel}{book}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=556b4de206e7ee5f888fb021cb7bc21a}{Zhang}{Z\bibinitperiod}{Yingjun}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4d7b40882a0f3cad65155854ac2add23}{Liu}{L\bibinitperiod}{Wen}{W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7e91a80ff2cb1a6a8328462d4b444bcc}{Yang}{Y\bibinitperiod}{Xuefeng}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6db0c8a928e64ef346d71bbd1372b129}{Xing}{X\bibinitperiod}{Shengwei}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=556b4de206e7ee5f888fb021cb7bc21a}{Zhang}{Z\bibinitperiod}{Yingjun}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4d7b40882a0f3cad65155854ac2add23}{Liu}{L\bibinitperiod}{Wen}{W\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=7e91a80ff2cb1a6a8328462d4b444bcc}{Yang}{Y\bibinitperiod}{Xuefeng}{X\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6db0c8a928e64ef346d71bbd1372b129}{Xing}{X\bibinitperiod}{Shengwei}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8018b4805e47ae5f87ec40d25b0b93d4}
+      \strng{fullhash}{8126b4610dc47049bbc1c45b71a08227}
+      \field{sortinit}{Z}
+      \field{labelyear}{2015}
+      \field{labeltitle}{Hidden Markov Model}
+      \field{journaltitle}{MEASUREMENT SCIENCE REVIEW, Volume. 15, No. 1, 2015}
+      \field{title}{Hidden Markov Model}
+      \field{year}{2015}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

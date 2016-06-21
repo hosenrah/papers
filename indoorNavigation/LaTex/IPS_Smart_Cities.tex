@@ -1,0 +1,127 @@
+
+
+\newcommand{\pdftitel}{IPS_Smart_Cities}
+\newcommand{\autorA}{Nico-Alexei Hein}
+\newcommand{\autorB}{Andreas Rau}
+\newcommand{\arbeit}{T-3201}
+
+\input{header}
+
+
+% Ab jetzt können auch Umlaute verwendet werden
+\newcommand{\titel}{Improvement of an Indoor Positioning System with Regard to Smart City Use Cases}
+\newcommand{\matrikelnrA}{7146604}
+\newcommand{\matrikelnrB}{4186494}
+\newcommand{\kurs}{TINF12A}
+\newcommand{\datumAbgabe}{June 2015}
+\newcommand{\firmaA}{Hewlett Packard}
+\newcommand{\firmenortA}{Bad Homburg}
+\newcommand{\firmaB}{IBM}
+\newcommand{\firmenortB}{Böblingen}
+\newcommand{\abgabeort}{Stuttgart}
+\newcommand{\studiengang}{Applied Computer Science}
+\newcommand{\dhbw}{Baden Württemberg in Stuttgart}
+\newcommand{\betreuer}{Prof. Dr. Carmen Winter}
+\newcommand{\zeitraum}{24 Weeks}
+
+\makeglossaries
+\input{glossary}
+
+\begin{document}
+	%Todo
+	%\input{content/todo}
+	%\clearpage
+	
+	% Deckblatt
+	\begin{spacing}{1}
+		\input{deckblatt}
+	\end{spacing}
+	\clearpage
+	
+	
+	
+	% Erklärung
+	\input{erklaerung}
+	\clearpage
+
+	% Abstract
+	\input{abstract}
+	\clearpage
+		
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}
+	\pagestyle{plain}
+
+	% Inhaltsverzeichnis
+	\begin{spacing}{1.1}
+		\setcounter{tocdepth}{3}
+		\tableofcontents
+	\end{spacing}
+	\clearpage
+	
+	% Abbildungsverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listoffig}
+	\addcontentsline{toc}{section}{List of figures}
+	\listoffigures
+	\clearpage
+	
+	% Abkürzungsverzeichnis
+	% vorher in Konsole folgendes aufrufen: 
+	%	makeglossaries makeglossaries dokumentation.acn && makeglossaries dokumentation.glo
+	\printglossary[type=\acronymtype]
+  	\cleardoublepage	
+	
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+
+
+	
+	\pagestyle{fancy} 
+		
+	\rhead{} \chead{\textcolor{grey}{\thepage}} \lhead{} 
+	\lfoot{\textcolor{grey}{\datumAbgabe}} \cfoot{} \rfoot{\textcolor{grey}{Nico-Alexei Hein, Andreas Rau}} 
+		
+	\renewcommand{\headrulewidth}{0.2mm} 
+	\renewcommand{\footrulewidth}{0.2mm} 
+	\setlength{\headheight}{0mm}
+	
+	
+	% Inhalt
+	\input{content/01introduction}
+	\input{content/02theory}
+	\input{content/03praxis}
+	\input{content/04conclusion}
+
+
+	
+	% Anhang
+	\clearpage
+	\pagestyle{plain}
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+
+	%Tabellenverzeichnis
+	%\cleardoublepage
+	%\phantomsection \label{listoftab}
+	%\addcontentsline{toc}{section}{List of tables}
+	%\listoftables
+
+	% Quellcodeverzeichnis
+	%\cleardoublepage
+	%\phantomsection \label{listoflist}
+	%\addcontentsline{toc}{section}{Listings}
+	%\lstlistoflistings
+
+	% Literaturverzeichnis
+	\addcontentsline{toc}{section}{Bibliography}
+	\printbibliography
+	
+	% Glossar
+	\setcounter{subsection}{0}
+	\addcontentsline{toc}{section}{Appendix}
+	\printglossary[style=altlist,title=Glossary]
+	
+	\cleardoublepage
+	\input{content/appendix}
+\end{document}

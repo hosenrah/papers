@@ -1,0 +1,86 @@
+\documentclass[
+	onesided,
+	12pt
+]{article}
+
+\usepackage[british]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
+\DeclareLanguageMapping{british}{british-apa}
+\addbibresource{literature.bib}
+
+\usepackage{tikz}
+\usepackage{tikz,fullpage}
+\usetikzlibrary{arrows,%
+                petri,%
+                topaths}%
+\usepackage{tkz-berge}
+\usepackage[activate]{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage[position=top]{subfig}
+\usepackage{nameref}
+\usepackage{listings}
+\usepackage{epstopdf}
+\lstset{
+	numbers=left,            % Zeilennummern links
+	stepnumber=1,            % Jede Zeile nummerieren.
+	numbersep=5pt,           % 5pt Abstand zum Quellcode
+	numberstyle=\tiny,       % Zeichengrösse 'tiny' für die Nummern.
+	breaklines=true,         % Zeilen umbrechen wenn notwendig.
+	breakautoindent=true,    % Nach dem Zeilenumbruch Zeile einrücken.
+	postbreak=\space,        % Bei Leerzeichen umbrechen.
+	tabsize=2,               % Tabulatorgrösse 2
+	basicstyle=\ttfamily\footnotesize, % Nichtproportionale Schrift, klein für den Quellcode
+	showspaces=false,        % Leerzeichen nicht anzeigen.
+	showstringspaces=false,  % Leerzeichen auch in Strings ('') nicht anzeigen.
+	extendedchars=true,      % Alle Zeichen vom Latin1 Zeichensatz anzeigen.
+	captionpos=b,            % sets the caption-position to bottom
+	backgroundcolor=\color{ListingBackground}, % Hintergrundfarbe des Quellcodes setzen.
+	commentstyle=\color{ListingComment},
+	stringstyle=\textit{}\color{ListingString},
+	keywordstyle=\textbf{}\color{blue}
+}
+\usepackage{color}
+\definecolor{LinkColor}{rgb}{0,0,0.2}
+\definecolor{ListingBackground}{rgb}{0.95,0.95,0.95}
+\definecolor{ListingString}{rgb}{0,0.6,0}
+\definecolor{ListingComment}{rgb}{0.40,0.40,0.40}
+
+\input{cypher}
+
+
+
+\title{Neo4j Graph Database}
+\author{
+	Nico-Alexei Hein, Lucas Thielmann, Andreas Rau \& Lisa Mischer
+}
+\date{\today}
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+This is a short explanation of Neo4j internals. This article gives some advice on how to work with Neo4j, including modeling and Business Intelligence.
+\end{abstract}
+
+\newpage
+
+\input{content/lisa}
+\newpage
+\input{content/lucas}
+\newpage
+\input{content/nico}
+\newpage
+\input{content/andy}
+
+\newpage
+\printbibliography
+
+\end{document}

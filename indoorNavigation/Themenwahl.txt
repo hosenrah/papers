@@ -1,0 +1,53 @@
+Mögliche Themen im Fachbereich Smart City:
+- Ausdehnung des ITS auf Ampelschaltungen durch Sensorik (Traffic Mgmt)
+- Emotion Recognition via camera  (Crowd Guidance, Visitor Feedback)
+- Public Hotspot
+- Dezibel Messer für Voice Recognition/Disturbance Control
+- Visitor Movement Tracking (Resource Optimization, Visitor Tracking)
+	- aktive Ortung
+		- Crowd Control
+	- passiv Ortung
+		- Location-based Markting (Yield Management)
+- Disaster Management/Evacuatio
+- Indoor Navigation
+	(u.a. Disaster Management/Evacuation)
+	- aktive Ortung
+	- Mobile Devices
+	- Wearables
+
+	Ziele:
+	- genaue Ortung
+	- Kontext (Umgebung) bei Ortung mitbeachten
+		- Raumvermessung Leica
+		- 3D Modell der Räumlichkeiten
+		- Flächeneigenschaften z.B. Reflektionen 
+			- Vectorising
+	- wenig Störungsanfällig	
+	
+	Weitere Ziele
+	- Augmantet Reality Anwendungn
+
+	Technik:
+	- Phillips Lichttechnik
+	- iBeakons (Blotooth 4.0)
+	- WLAN
+	- RFID
+	- NFC
+	- evtl. Weitere
+
+	Ideen:
+	- Image Based Processing
+	
+
+Notes
+1. Recherche
+2. Problemstellung
+3. SChwerpunkte
+
+Bis Weihnachten
+	Methodeischen Vorgehen
+	Problemstellung
+	Literaturrecherche
+	 - Liste Erstellen
+	 - titel abs einleitung -> literetur  APA6
+

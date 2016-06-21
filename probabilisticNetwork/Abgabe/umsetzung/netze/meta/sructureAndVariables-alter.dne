@@ -1,0 +1,235 @@
+// ~->[DNET-1]->~
+
+// File created by an unlicensed user using Netica 5.15 on Jan 06, 2015 at 15:30:50.
+
+bnet fulllearned_alter {
+autoupdate = TRUE;
+whenchanged = 1420554640;
+
+visual V2 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 9;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	windowposn = (22, 22, 1458, 773);
+	resolution = 72;
+	drawingbounds = (1453, 779);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0x00E1E1E1;};
+	NodeSet Nature {BuiltIn = 1; Color = 0x00F8EED2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0x00D3CAA6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0x00C8C8C8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0x00FFFFFF;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0x00FFFFB4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0x00FFBDBD;};
+	NodeSet Decision {BuiltIn = 1; Color = 0x00DEE8FF;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0x00F0FAFA;};
+	NodeSet Title {BuiltIn = 1; Color = 0x00FFFFFF;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		};
+	};
+
+node Qualifikation {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (Abitur, Meister, FHReife, Techniker);
+	parents = ();
+	whenchanged = 1420538771;
+	visual V2 {
+		center = (606, 102);
+		height = 2;
+		};
+	};
+
+node Studierfaehigkeitstest {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s7o0, s9o0, s8o0, s6o0);
+	statetitles = ("7.0", "9.0", "8.0", "6.0");
+	parents = (Qualifikation);
+	whenchanged = 1420554452;
+	visual V2 {
+		center = (150, 228);
+		height = 13;
+		};
+	};
+
+node Schultyp {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (AllgemeinbildendesGymnasium, Wirtschaftsgymnasium, TechnischesGymnasium);
+	parents = (Qualifikation);
+	whenchanged = 1420554446;
+	visual V2 {
+		center = (822, 228);
+		height = 1;
+		};
+	};
+
+node Alter {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (teeth, teen, jung);
+	parents = (Qualifikation);
+	whenchanged = 1420554640;
+	visual V2 {
+		center = (1134, 216);
+		height = 7;
+		};
+	};
+
+node Mathe {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s2o5, keine, s1o0, s2o0, s1o5, s3o0, s3o5);
+	statetitles = ("2.5", , "1.0", "2.0", "1.5", "3.0", "3.5");
+	parents = (Schultyp);
+	whenchanged = 1420538795;
+	visual V2 {
+		center = (1254, 390);
+		height = 6;
+		link 1 {
+			path = ((909, 261), (1181, 363));
+			};
+		};
+	};
+
+node Deutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s2o0, keine, s1o0, s1o5, s2o5, s3o5);
+	statetitles = ("2.0", , "1.0", "1.5", "2.5", "3.5");
+	parents = (Schultyp);
+	whenchanged = 1420538792;
+	visual V2 {
+		center = (798, 426);
+		height = 10;
+		};
+	};
+
+node Staatsbuergerschaft {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (deutsch, NonEuropean, EUBuerger);
+	parents = ();
+	whenchanged = 1420538777;
+	visual V2 {
+		center = (450, 228);
+		height = 4;
+		};
+	};
+
+node Bundesland {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (Baden_Wuerttemberg, Nordrhein_Westfalen, Bayern, Sachsen, Thueringen, Bremen);
+	statetitles = ("Baden-Wuerttemberg", "Nordrhein-Westfalen", , , , );
+	parents = (Staatsbuergerschaft);
+	whenchanged = 1420538789;
+	visual V2 {
+		center = (546, 360);
+		height = 3;
+		};
+	};
+
+node Jahreseinkommen {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s0o0, s4o0, s7o0, s5o0, s9o0, s8o0, s1o0, s2o0, s3o0, s6o0);
+	statetitles = ("0.0", "4.0", "7.0", "5.0", "9.0", "8.0", "1.0", "2.0", "3.0", "6.0");
+	parents = (Deutsch, Schultyp, Bundesland);
+	whenchanged = 1420538805;
+	visual V2 {
+		center = (558, 534);
+		height = 14;
+		link 3 {
+			path = ((549, 414), (552, 452));
+			};
+		};
+	};
+
+node OltMathe {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s4o0, s3o0, s9o0, s7o0, s6o0, s1o0, s5o0, s8o0, s2o0);
+	statetitles = ("4.0", "3.0", "9.0", "7.0", "6.0", "1.0", "5.0", "8.0", "2.0");
+	parents = (Mathe, Schultyp);
+	whenchanged = 1420538812;
+	visual V2 {
+		center = (1008, 570);
+		height = 8;
+		link 2 {
+			path = ((840, 261), (968, 495));
+			};
+		};
+	};
+
+node Abschluss {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (abgebrochen, nichtAbgebrochen);
+	parents = (Mathe);
+	whenchanged = 1420554599;
+	visual V2 {
+		center = (1242, 588);
+		height = 5;
+		};
+	};
+
+node OltDeutsch {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s5o0, s9o0, s7o0, s8o0, s2o0, s6o0, s4o0, s3o0);
+	statetitles = ("5.0", "9.0", "7.0", "8.0", "2.0", "6.0", "4.0", "3.0");
+	parents = (Deutsch);
+	whenchanged = 1420538809;
+	visual V2 {
+		center = (810, 606);
+		height = 9;
+		};
+	};
+
+node Geschlecht {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (m, w);
+	parents = ();
+	whenchanged = 1420538802;
+	visual V2 {
+		center = (114, 528);
+		height = 11;
+		};
+	};
+
+node Studiengang {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (Maschinenbau, SozialeArbeit, Elektrotechnik, Wirtschaftswissenschaften, Informatik);
+	parents = (Geschlecht, OltDeutsch, Staatsbuergerschaft);
+	whenchanged = 1420538820;
+	visual V2 {
+		center = (288, 666);
+		height = 15;
+		};
+	};
+
+node Schnitt {
+	kind = NATURE;
+	discrete = TRUE;
+	states = (s2o5, s1o5, s1o0, s3o5, s2o0, s3o0);
+	statetitles = ("2.5", "1.5", "1.0", "3.5", "2.0", "3.0");
+	parents = (Staatsbuergerschaft);
+	whenchanged = 1420538785;
+	visual V2 {
+		center = (180, 396);
+		height = 12;
+		link 1 {
+			path = ((398, 261), (247, 355));
+			};
+		};
+	};
+};

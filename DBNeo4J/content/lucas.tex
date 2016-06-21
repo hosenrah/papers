@@ -1,0 +1,60 @@
+\section{Data Modeling - Describing a Domain}
+Data models in Neo4j are not enforced strictly. Instead the designer has to ensure a consistent database by only adding data that conforms to the desired model. The following paragraphs will describe step by step how such a model can be created.
+
+\subsection{Nodes}
+The process starts with identifying all nodes that exist in your domain. A node is any unique physical or abstract object that is important in the context of the domain.
+
+Examples:
+\begin{itemize}
+	\item theGreatGatsby
+	\item fScottFitzgerald
+	\item reclam
+\end{itemize}
+
+\subsection{Labels}
+In the next step, all labels of the domain have to be identified. Labels assign a specific role to a node. Nodes that have the same label are grouped into a set. These sets can later be used to write more efficient queries by only considering small subsets of a graph.
+
+Examples:
+\begin{tabular}{ | l | l | }
+  \hline
+  \textbf{Label} & \textbf{Node} \\
+  \hline
+  Book & theGreatGatsby \\
+  \hline
+  Author & fScottFitzgerald \\
+  \hline
+  Publisher & reclam \\
+  \hline
+\end{tabular}
+
+\subsection{Relationships}
+To transform the collection of labeled nodes into a graph, the next step identifies the relationships between the nodes. A relationship is a directed arc from one node to another. This relationship has an identifier that can later be used to query connected nodes.
+	
+Examples:
+\begin{tabular}{ | l | l | l | }
+  \hline
+  \textbf{relationship identifier} & \textbf{From Node} & \textbf{To Node} \\
+  \hline
+  HAS\_WRITTEN & fScottFitzgerald & theGreatGatsby \\
+  \hline
+  HAS\_PUBLISHED & reclam & theGreatGatsby \\
+  \hline
+\end{tabular}
+	
+\subsection{Data}
+In the last step, the graph is populated with additional properties. Data can be attached to nodes as well as relationships. These properties are often the information that provide the end result of a query. They can also be used to narrow down result sets and filter for appropriate results.
+
+Examples:
+\begin{tabular}{ | l | l | }
+  \hline
+  \textbf{Property} & \textbf{Node/Relationship} \\
+  \hline
+  title:"The Great Gatsby" & theGreatGatsby \\
+  \hline
+  firstname:"Francis Scott Key" & fScottFitzgerald \\
+  \hline
+  name:"Reclam" & reclam \\
+  \hline
+  year:"1925" & HAS\_WRITTEN \\
+  \hline
+\end{tabular}

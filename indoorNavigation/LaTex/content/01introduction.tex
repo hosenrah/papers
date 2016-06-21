@@ -1,0 +1,73 @@
+ \newpage
+\section{Introduction}  % 8 - 12 Seiten
+
+\subsection{Topic and Motivation} %includes Situatio, Trend and Statement of the problem
+In our century, humanity will be confronted with a lot of challenges like climate changes \parencite{nclimate} and population growth \parencite{unitedNations2012}. Also the rise of new digital technologies is one of these challenges. This can be observed especially in the discussions inter alia driven by Jaron Lanier who was awarded the Peace Prize of the German Book Trade in 2014 \parencite{jaronLanier}. 
+
+The urbanization along with the growth of population is a challenge for many cities. The United Nations is expecting that 67 percent of the world population will live in cities by the year 2015 \parencite{unitedNations2012}. To ensure that cities infrastructure will be capable of additional load, information technologies are used to increase efficiency. This trend, often named as Smart City, can be observed in a lot of projects taking place all over the world. There is for example, the partnership between businesses, authorities, research institutions and people of Amsterdam called "Amsterdam Smart City (ASC)" which is realizing a whole collection of projects including heat networks and flexible street lightning using smart grid systems \parencite{asc:2014}. Another Smart City project focussing on Mobility is the "smart card project" taking place in Riga. The so called Smart Cards are common electronic cards "that can be used as payment method for public transport, to register for different social services (e.g. catering services), for city car parking, park and ride or access to different kinds of discounts for certain social groups" \parencite{stepUpSmartCards}.
+
+Besides infrastructure all over the city, the one inside public buildings is experiencing changes too. As one major pilot project, the San Francisco International Airport (SFO) installed an Indoor Navigation System. A partnership between SFO and Indoo.rs under the lead of San Francisco Mayor Ed Lee has brought a "groundbreaking new innovation", developed in only 16 weeks,  \parencite{flySfo2}. Made possible with "Apple's Voiceover technology to read out points of interest as they apear on screen" \parencite{flySfo2}. Visually-impaired passenger are now able "to navigate through SFO independently without assistance" \parencite{flySfo1}.  The corresponding app gets it's location information from approximately 500 beacons located all over the airport to find points of interests "including gate boarding areas, restaurants, and even power outlets". \parencite{flySfo1}.
+
+Competition never sleeps, in May 2014, Virgin Atlantic announced a testing of Apples's iBeacons at London's Heathrow airport. This project is administrated by indoo.rs's direct rival Estimote. "Major League Baseball installed iBeacons in 28 of its ballparks last year, and is in the process of adding them to others to give attendees point-of-interest information, and push out information about local park concessions. Britain's Odeon Cinemas is testing the same thing at some of its theaters to push out information about movies and get people to go buy popcorn" \textcite{flySfo3}. 
+
+Then the Maze Map, originaly Campus Guide, from the NTNU Gloshaugen Campus in Norway covering 350,000 sqm was released in August 2011 .NTNU was "the first university in the world where you can navigate from inside a building using a mobile phone"  \textcite{campusGuide1}. "MazeMap allows the user to see building maps on campus, locate the user’s own position within the building, search for all rooms and different objects (toilets, parking lots, etc.), and get turn-by-turn directions from where the user is to where he wants to go" \textcite{mazeMap1}. Due to the object density in an indoor navigation solution as well as small distances between them, indoor maps are getting complicated. In order to present readable data to users, Maze Map uses services to scan through construction drawings which "interpret them to recognize different objects, and choose what to show or hide" \textcite{mazeMap1}. The technology developed in Norway was a pilot to show the potentialities (people and asset monitoring, personalized shopping, and improved emergency response) of the system. Now the solution is offered to customers globally.
+ 
+Indoor positioning systems are on the rise and as a result chip manufactures like Broadcom are following the current trend by focusing on the enhancement of indoor positioning chips. Other institutes like the Boston's Children's Hospital and American Museum of Natural History have launched an app providing indoor navigation \parencite{mazeMap1}.
+
+In addition, Googles Project Tango shows in which dimensions this change is going to take place. Instead of using a given infrastructure for positioning, the navigation device (in this case a phone or tablet) is able to imagine the world around itself in 3D. The goal of Project Tango "is to give mobile devices a human-scale understanding of space and motion" \textcite{projectTango}. So the Project Tango devices, equipped with special 3D motion Hardware, are able to create a map of their environment on their own. This research and development is done in collaboration with over 20 partners including Bosch and NVIDIA. \parencite{projectTango}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Übersicht%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%urbanization(cause) -> information technology to increase efficency(task) -> Smart City(goal)
+
+%OUTDOOR
+
+%Amsterdam Smart City -> networks, flexible street lightning 
+%Riga Smart City -> Smart Cards
+
+%INDOOR
+
+%San Francisco Smart City -> indoor navigation system for visually-impaired passenger
+%London Smart City -> indoor navigation system
+%Major League Baseball stadiums -> indoor navigation system and personalized adds
+%British cinemas and theaters -> indoor navigation system and personalized adds
+%Gloshaugen -> indoor/outdoor navigation
+%Broadcom -> focus on enhancement of indoor positioning chips
+%Boston Children's Hospital -> indoor navigation
+%American Museum of Natural History -> indoor navigation
+%Gooogle project Tango -> creating 3D maps of surrounding 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Übersicht%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%state of the art (TODOhistorie)
+Currently dozens of technologies are in development and can be differentiated in two major groups. So called radio and non-radio positioning systems, latter rely on standard physical measurements. Due to the fact that indoor positioning is widely spread in the smartphone segment, it is appropriate to use existing hardware like the gyroscope of the phone. The so called inertial measurements benefit from the users imbalanced way of locomotion in order to count steps to calculate the walked distance. Other value, like the drift experienced in turns, also give information about the pedestrians position and movement. Another non-radio technology is magnetic positioning. This technology has an accuracy of 1-2 meters and 90\% confidence level "without using any wireless infrastructure for positioning" \textcite{geoSpital}. "Magnetic positioning is based on the iron inside buildings that create local variations in the Earth's magnetic field. Un-optimized compass chips inside smartphones can sense and record these magnetic variations to map indoor locations" \textcite{geoSpital}.
+On the other hand, there are radio or wireless technologies. The measurements are nearly all based on intensity measurements of received signal strength (RSS). The accuracy increases with ascending amounts of access points, \textcite{indoorGeolocation}. Examples are Wi-Fi based positioning systems (WPS), Bluetooth, grid point concepts, just to name a few. 
+Sensor Data is only half the job. Once sensor data has been collected, algorithms are used to determine the most likely current location. They use mathematical principles of trilateration (distance from acces points) and triangulation (angle to access points) \parencite{measurement}. There is no one method or vendor that is suitable to all. Achieving good location coverage requires some understanding of customer devices and behaviors to make a correct choice for the customers to be served. In addition to this theory a short look at the global surveillance disclosures published by Edward Snowden is now taken. 
+
+
+%Snowden affairs
+Since this solutions are affecting the privacy of all users the social acceptance of these systems could be crucial to their success. 
+%This was already mentioned by Davis... technology acceptance model...
+According to a report referenced in the Wall Street Journal \parencite{snowdenEffect} the erosion of trust caused by the disclosures has serious consequences for U.S. technology. This knowledge is one of the main reasons why a further discussion on computational social science and psychology is given later in this paper. 
+The development of Indoor Positioning Systems scales up the accuracy of personal tracking and besides all the handy uses for the greenly eyed, naiv and ordinary people there is a real risk in using this technology.   
+Edward Snowdens motivation lies in his conscience and belief in the fact that he doesn't want to live in a world where everyone is tracked by every move they make \parencite{snowdenEffect}. During his work at the CIA and NSA he gathered information which shocked and confronted him to choose between doing the "right" things and the ones he was asked to do.
+"Snowden had come to believe that a dangerous machine of mass surveillance was growing unchecked"  \textcite{snowdenEffect} after encountering closed ears on his executives he decided to share his knowledge with the world. A lot of the aspects revealed by Snowden have awaken many people forcing them to question parts of their lifes, especially technology and surveillance aspects - which includes indoor positioning. 
+
+\subsection{Limitations}
+In addition to social aspects of positioning systems, there are especially legal and medial aspects of positioning systems. Legal aspects are related to data protection to prevent a complete surveillance of individuals. Since the Snowdon affairs caused debates on legal issues \textcite{snowdenEffect} and in order not to exceed the limits of this paper they are not discussed. 
+
+Some of the Indoor Positioning Solutions (IPS) are working with wireless technologies, and there are concerns about radiation and its influence to human health. Since this is an ongiong discussion in the dicipline of applied medicine, it is also not discussed in this paper.
+
+In this paper we do not provide new technology ore complete new approaches. We just collect existing ideas and knowledge about indoor positioning systems to combine them in an efficient way. Existing solutions are compared on a theoretical basis in combination with some experiments to find an optimized concept as basis for further discussions.
+
+
+\subsection{Goals}
+This paper was written in the frame of a seminar work which is a permanent feature on the bachelor of science in "Applied Computer Science" at the Baden-Württemberg Cooperative State University. The goal of this seminar work includes a research on current literature about the Smart Cities Concept and Smart City applications in our professional environment as well as the development of a new concept for an indoor positioning system as Smart City application.
+
+Since Indoor Positioning Systems are one of the topics being discussed and requested for Smart Cities, we decided to support the development by summarizing current solutions including our ideas for improvement. It is of interest to find a solution which is as trustworthy as possible for all users and still accurate and cost efficient. Therefore, this paper includes a collection of indoor positioning systems use cases for Smart Cities which are the basis for later defined measurements for existing technologies.
+
+The primary goal is the improvement of an Indoor Positioning System (IPS) applicable for a set of Smart City use cases. Providing a frame for the technology and use cases, aspects of other sciences are considered. Therefore, theory of computational social science and psychology is reviewed. To find a cost-efficient and accurate IPS, a large set of Smart City IPS use cases is gathered and prioritized. Further, technologies are compared with a view on the primary goal. 
+
+\subsection{Tasks}
+The paper is structured in five parts. To start off, in chapter two "Smart City and Indoor Positioning Systems" basic verbalisms are set in order to clarify a basis for later on dicussions. This includes the definition of a City and later on Smart City, where approaches from different authors are taken as bedrock to build up our definition. Navigation limited to indoor use cases are lighted and later reflected on aspects like trustworthyness. Further on basic approaches on Indoor Positioning are mentioned, divided into two groups radio and non-radio. In chapter three we acquire criterias to come to a decision on the technology we want to use for our Indoor Positioning System. Then measurements are defined to compare existing solutions and work out a concept for our Indoor Positioning Solution.
+
+\pagebreak
+

@@ -1,0 +1,126 @@
+
+
+\newcommand{\pdftitel}{Smarter Home}
+\newcommand{\autor}{Andreas Rau}
+\newcommand{\arbeit}{Bachelor Thesis}
+
+\input{setting/header}
+
+
+% Ab jetzt können auch Umlaute verwendet werden
+\newcommand{\titel}{Smarter Home middleware between IBM IoT Foundation and Apple HomeKit}
+\newcommand{\matrikelnr}{4186494}
+\newcommand{\kurs}{TINF12A}
+\newcommand{\datumAbgabe}{August 31 2015}
+\newcommand{\firma}{IBM}
+\newcommand{\firmenort}{Böblingen}
+\newcommand{\abgabeort}{Stuttgart}
+\newcommand{\studiengang}{Applied Computer Science}
+\newcommand{\dhbw}{Baden Württemberg in Stuttgart}
+\newcommand{\betreuerA}{Jochen Burkhardt}
+\newcommand{\betreuerB}{Hans-Erich Lorke}
+\newcommand{\zeitraum}{12 Weeks}
+
+\makeglossaries
+\input{setting/glossary}
+
+\begin{document}
+	%Todo
+	%\input{content/00Todo}
+	%\clearpage
+	
+	% Deckblatt
+	\begin{spacing}{1}
+		\input{setting/deckblatt}
+	\end{spacing}
+	\clearpage
+
+	% Abstract
+	\input{content/abstract}
+	\clearpage
+
+	% Erklärung
+	\input{setting/erklaerung}
+	\clearpage
+		
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}
+	\pagestyle{plain}
+
+	% Inhaltsverzeichnis
+	\begin{spacing}{1.1}
+		\setcounter{tocdepth}{3}
+		\tableofcontents
+	\end{spacing}
+	\clearpage
+	
+	
+	
+	% Abkürzungsverzeichnis
+	% vorher in Konsole folgendes aufrufen: 
+	%	makeglossaries makeglossaries dokumentation.acn && makeglossaries dokumentation.glo
+	\printglossary[type=\acronymtype]
+  	\cleardoublepage	
+	
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+	
+	\pagestyle{fancy} 
+		
+	\rhead{} \chead{\textcolor{grey}{\thepage}} \lhead{} 
+	\lfoot{\textcolor{grey}{\datumAbgabe}} \cfoot{} \rfoot{\textcolor{grey}{Andreas Rau}} 
+		
+	\renewcommand{\headrulewidth}{0.2mm} 
+	\renewcommand{\footrulewidth}{0.2mm} 
+	\setlength{\headheight}{0mm}
+	
+	
+	% Inhalt
+	\input{content/01introduction}
+	\input{content/02theory}
+	\clearpage
+	\input{content/03praxis}
+	\clearpage
+	\input{content/04conclusion}
+
+
+
+	% Anhang
+	\clearpage
+	\pagestyle{plain}
+	\pagenumbering{Roman}
+	\setcounter{page}{4}
+
+	% Abbildungsverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listoffig}
+	\addcontentsline{toc}{section}{List of figures}
+	\listoffigures
+	\clearpage
+
+	%Tabellenverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listoftab}
+	\addcontentsline{toc}{section}{List of tables}
+	\listoftables
+
+	%Quellcodeverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listoflist}
+	\addcontentsline{toc}{section}{Source code listings}
+	\lstlistoflistings
+
+	% Literaturverzeichnis
+	\cleardoublepage
+	\addcontentsline{toc}{section}{Bibliography}
+	\printbibliography
+	
+	% Glossar
+	\setcounter{subsection}{0}
+	\addcontentsline{toc}{section}{Appendix}
+	\printglossary[style=altlist,title=Glossary]
+	
+	\cleardoublepage
+	\input{content/appendix}
+	%\input{content/notes}
+\end{document}

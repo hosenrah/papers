@@ -1,0 +1,61 @@
+zeit die ich brauch bis ich schwarm hab - winkelabhängig
+
+carefully anwenden
+
+
+regionalisierung im sehen - peripherie sehen
+
+-> sehwinkel von fischen ändern einfluss -> cone of vision
+
+2 mal messen und abziehen
+differenzbildung
+
+alignment neben mir anschaun
+
+kollision von stabilen schwärmen
+
+
+vernünftige auswertung
+
+notitzen
+
+bewegen sich wie einziger Organismus, aber keine leitende rolle vergeben
+
+ohne Hierarchie, zentrale Leitung 
+
+alle individuen reagieren mit anderen Individuen in einem fixen radius -> metrische art und weise der interaktion (vision)
+
+steigende dichte -> hohe Anzahl der Individuen mit denen agiert werden muss
+fallende dichte -> niedrige Anzahl der Individuen mit denen agiert werden muss
+
+
+echte schwärme ändern zu jeder zeit ihre dichte!!! in echt behält jedes Individuum eine feste Anzahl von anderen Individuen unter Kontrolle, egal wo sie sich befinden (Strunks vulgaris)
+6-7 nachbarn
+
+-> nicht abstand sondern dichte wichtig für zusammenhält für schwarm
+
+netlogo dichte Bestimmung der flockmates
+lokale Informationen und lokale Entscheidungen -> kein teil des system hat überblick über das ganze 
+
+interessant wäre ein agent, den man bewusst steuern kann, e.g. wasd 
+
+soziale schwellenwerte bei Individuen, wie viele Individuen müssen eine gemeinsame Entscheidung treffen um den kompletten schwarm zu steuern? Prozentsatz?
+
+
+intelligenz des Schwarms entsteht durch einzelkoordination der Individuen 
+
+
+unterschiedliche gerüche für unterschiedliche Tätigkeiten bei ameisen, Sammlerinnen werden erst hinaus Gesicht wenn Kundschafterinnen im Intervall von 1/10 sec im bau eintreffen (red harvest ant)
+
+zu wenige = unsicher, zu viele = unsicher
+
+
+wegstreckenmessung bei ameisen über Intensität der pheromone, ein kürzerer weg weist weitaus höhere pheromonkonzentrationen auf als ein langer weg, da die Ameisen den kürzeren schneller passieren und somit auch öfters in einem bestimmten Intervall
+
+
+kollektive intelligenz  
+
+
+gesammtblckfeld seitwärts zu allgemein
+formen die sie bilden
+Einfluss von Sehweite auf formbildung und Einfluss von Winkel allgemein auf formbiuldung 
